@@ -5,19 +5,19 @@ import studentImage from "../assets-webp/estudante.webp";
 function CtaSection() {
   return (
     <section className="relative bg-cta-gradient w-full overflow-hidden">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 py-16 px-44">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8 py-16 md:px-44">
         {/* Coluna da Imagem */}
-        <div className="md:w-4/12 flex-shrink-0">
+        <div className="md:w-4/12 flex-shrink-0 flex justify-center">
           <img
             src={studentImage}
             alt="Silhueta de um estudante universitário"
-            className="w-full max-w-xs md:max-w-[60%] mx-auto -scale-x-100"
+            className="w-2/5 md:w-full lg:w-[60%] max-w-sm md:w-full md:max-w-none mx-auto -scale-x-100"
           />
         </div>
 
         {/* Coluna do Texto e Botão */}
         <div className="md:w-6/12 flex flex-col items-center md:items-start text-center md:text-left">
-          <h2 className="font-league text-gray-100 text-[3rem] md:text-[4rem] lg:text-[5rem] uppercase leading-none italic drop-shadow-hard">
+          <h2 className="font-league text-gray-100 text-[3rem] md:text-[4rem] lg:text-[5rem] uppercase leading-none italic drop-shadow-xl">
             Estudante <br /> Universitário?
           </h2>
 
