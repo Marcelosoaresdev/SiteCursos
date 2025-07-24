@@ -31,7 +31,7 @@ function CategoryCard({
       <div
         className={`absolute ${gradientClasses} 
         top-0 left-0 w-full h-4 lg:h-full lg:w-4 rounded-t-3xl lg:rounded-3xl 
-        ${imageOnLeft ? "lg:-left-6" : "lg:-right-6"}`}
+        ${imageOnLeft ? "lg:-left-6" : "lg:-right-6 lg:left-auto"}`}
       ></div>
 
       {/* Container da Imagem */}
@@ -44,7 +44,7 @@ function CategoryCard({
         <img
           src={imageSrc}
           alt={title}
-          className={`w-full max-h-[350px] object-contain pointer-events-none ${scaleClass}`}
+          className={`w-full max-h-[200px] object-contain pointer-events-none ${scaleClass}`}
           style={{ filter: "drop-shadow(0 0 10px rgba(0,0,0,0.5))" }}
         />
       </div>
