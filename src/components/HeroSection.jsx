@@ -1,37 +1,72 @@
 import React from "react";
-import leaoImage from "../assets-webp/leao.webp"; // Usando a imagem .webp otimizada
+import leaoImage from "../assets-webp/leao.webp";
 
 function HeroSection() {
   return (
-    // Padding começa pequeno (px-6) e aumenta em telas maiores.
-    <section className="bg-hero-pattern text-text-light w-full py-20 md:py-24 px-6 sm:px-8 lg:px-16">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-        {/* Coluna do Texto */}
-        {/* No mobile, o texto é centralizado. No desktop (md), alinha à esquerda. */}
-        <div className="md:w-1/2 text-center md:text-left">
-          {/* Títulos com fontes responsivas. Começam menores e crescem com a tela. */}
-          <h1 className="font-league text-5xl sm:text-6xl lg:text-7xl uppercase tracking-tight leading-none mb-2">
-            TODO GIGANTE
-          </h1>
-          <h1 className="font-league text-[6.5rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] uppercase tracking-tighter leading-[0.8] mb-6">
-            JÁ FOI <br /> PEQUENO
-          </h1>
+    <section className="bg-hero-pattern text-text-light w-full relative overflow-hidden">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-16">
+        {/* ================================================================== */}
+        {/* 1. LAYOUT PARA CELULAR E TABLET (Visível até 'lg') */}
+        {/* ================================================================== */}
+        <div className="flex flex-col text-center pt-24 pb-16 lg:hidden">
+          {/* Parágrafo de apoio no topo */}
+          <div className="mb-12">
+            <p className="font-ttnorms text-lg sm:text-xl leading-snug max-w-md mx-auto">
+              O que <strong className="font-bold">TEMOS</strong> em comum não é
+              a ausência de pequenez - mas sim a coragem de crescer a partir
+              dela.
+            </p>
+          </div>
 
-          {/* Parágrafo com fonte responsiva. */}
-          <p className="font-ttnorms text-xl sm:text-2xl max-w-lg mx-auto md:mx-0 leading-snug">
-            O que <strong className="font-bold">TEMOS</strong> em comum não é a
-            ausência de pequenez - mas sim a coragem de crescer a partir dela.
-          </p>
+          {/* Título Principal com margem corrigida */}
+          <div>
+            <h1 className="font-league text-5xl sm:text-6xl uppercase tracking-tight leading-none mb-2 [text-shadow:4px_4px_0_rgba(0,0,0,0.4)]">
+              TODO GIGANTE
+            </h1>
+            <h1 className="font-league text-[6.5rem] sm:text-[8rem] uppercase tracking-tighter leading-[0.8] mb-12 [text-shadow:8px_8px_0_rgba(0,0,0,0.6),_12px_12px_4px_rgba(0,0,0,0.2)]">
+              JÁ FOI <br /> PEQUENO
+            </h1>
+          </div>
+
+          {/* Imagem do Leão na base */}
+          <div>
+            <img
+              src={leaoImage}
+              alt="Leão e seu filhote"
+              className="w-full max-w-sm mx-auto h-auto -scale-x-100"
+            />
+          </div>
         </div>
 
-        {/* Coluna da Imagem */}
-        {/* Garante que a imagem não exceda a largura do seu container e se ajuste bem. */}
-        <div className="w-full max-w-md md:w-1/2 flex justify-center md:justify-end">
+        {/* ================================================================== */}
+        {/* 2. LAYOUT PARA DESKTOP (Visível a partir de 'lg') */}
+        {/* ================================================================== */}
+        <div className="hidden lg:flex container mx-auto px-6 sm:px-8 lg:px-16 items-center min-h-screen">
+          {/* CAMADA 1: TEXTO PRINCIPAL (z-10) - COM SOMBRA CUSTOMIZADA VIA TAILWIND */}
+          <div className="relative z-10 pt-16 pb-20 text-center">
+            <h1 className="font-league text-5xl sm:text-6xl lg:text-8xl uppercase tracking-tight leading-none mb-2 [text-shadow:4px_4px_0_rgba(0,0,0,0.4)]">
+              TODO GIGANTE
+            </h1>
+            <h1 className="font-league text-[6.5rem] sm:text-[8rem] md:text-[10rem] lg:text-[18rem] uppercase tracking-tighter leading-[0.8] mb-40 [text-shadow:8px_8px_0_rgba(0,0,0,0.6),_12px_12px_4px_rgba(0,0,0,0.2)]">
+              JÁ FOI <br /> PEQUENO
+            </h1>
+          </div>
+
+          {/* CAMADA 2: IMAGEM DO LEÃO (z-20) */}
           <img
             src={leaoImage}
             alt="Leão e seu filhote"
-            className="w-full h-auto object-contain -scale-x-100"
+            className="absolute z-20 bottom-0 right-0 w-full md:w-[75%] lg:w-[65%] h-auto -scale-x-100 pointer-events-none"
           />
+
+          {/* CAMADA 3: TEXTO PEQUENO (z-30) */}
+          <div className="absolute z-30 top-28 right-6 sm:right-8 lg:right-16 max-w-sm text-center">
+            <p className="font-ttnorms text-xl sm:text-3xl leading-snug">
+              O que <strong className="font-bold">TEMOS</strong> em comum não é
+              a ausência de pequenez - mas sim a coragem de crescer a partir
+              dela.
+            </p>
+          </div>
         </div>
       </div>
     </section>
