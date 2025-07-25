@@ -2,6 +2,8 @@
 import runnersImage from "../assets-webp/corrida.webp";
 import flaviaThumbnail from "../assets-webp/flavia.webp"; // ⚠️
 import videoBgPattern from "../assets/arvoreVitis.png";
+
+import comboProductsImage from "../assets-webp/corrida.webp"; // Imagem do combo de produtos
 // Use o thumbnail da Flavia aqui
 // Importe aqui as imagens para as outras categorias no futuro
 // import financeImage from '../assets-webp/financeiro.webp';
@@ -27,6 +29,23 @@ export const categories = [
       background: videoBgPattern,
       videoId: "YpDqsoXhA7U", // 👈 COLOQUE AQUI O ID DO VÍDEO DO YOUTUBE
     },
+
+    finalCta: {
+      title: "A Transformação Completa:",
+      mainParagraph:
+        "Quando esses cursos trabalham juntos, algo mágico acontece. Os hábitos que você constrói se tornam a fundação para correr. A corrida se torna seu portal para performance física máxima e clareza mental – o mesmo estado focado que impulsiona sucesso nos negócios, relacionamentos e vida. No final, você não está apenas em forma – você está operando em um nível completamente diferente de potencial humano. É assim que pessoas comuns se tornam extraordinárias.",
+      price: {
+        original: "R$675,00",
+        installments: "R$58,95*",
+        full: "R$570,00",
+      },
+      productImage: comboProductsImage,
+      bonusParagraph:
+        "Ao garantir o Pacote Completo da Transformação da Saúde você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e um caderno de exercícios especial, escrito por Flávia Cavalcante.",
+      buttonText: "QUERO GARANTIR O PACOTE",
+      gradient: "bg-[linear-gradient(to_bottom,_#1e3a8a,_#0ea5e9)]", // Gradiente específico para esta categoria
+    },
+    
   },
   {
     slug: "financeiro",
