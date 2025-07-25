@@ -11,7 +11,7 @@ function CtaSection() {
           <img
             src={studentImage}
             alt="Silhueta de um estudante universitário"
-            className="w-2/5 md:w-full lg:w-[60%] max-w-sm md:w-full md:max-w-none mx-auto -scale-x-100"
+            className="w-2/5 md:w-full lg:w-[60%] max-w-sm  md:max-w-none mx-auto -scale-x-100"
           />
         </div>
 

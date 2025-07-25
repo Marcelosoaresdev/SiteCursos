@@ -60,14 +60,14 @@ const categoriesData = [
 
 function CategoriesSection() {
   return (
-    // Padding e fontes responsivas
-    <section className="text-text-light w-full py-20 px-4 sm:px-6 lg:px-8">
-      {/* Aumenta a largura máxima em telas maiores para os cards terem mais espaço */}
-      <div className="container mx-auto max-w-xl md:max-w-3xl lg:max-w-5xl text-center">
-        <h2 className="font-league text-5xl md:text-7xl lg:text-8xl uppercase mb-12 md:mb-20">
+    <section className="text-text-light w-full py-12 px-4 sm:px-6 md:px-8">
+      <div className="container mx-auto text-center">
+        <h2 className="font-league text-4xl sm:text-5xl md:text-6xl uppercase mb-8 sm:mb-12">
           Escolha começar a mudar sua vida
         </h2>
-        <div className="space-y-16 md:space-y-24">
+
+        {/* Grid responsivo com 3 colunas no desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {categoriesData.map((cat) => (
             <CategoryCard
               key={cat.title}
@@ -75,9 +75,7 @@ function CategoriesSection() {
               description={cat.description}
               gradientClasses={cat.gradientClasses}
               imageSrc={cat.imageSrc}
-              imagePosition={cat.imagePosition}
               buttonText={cat.buttonText}
-              flipImage={cat.flipImage} // flipImage ainda é usado para a direção do -scale-x-100
             />
           ))}
         </div>
@@ -85,5 +83,6 @@ function CategoriesSection() {
     </section>
   );
 }
+
 
 export default CategoriesSection;

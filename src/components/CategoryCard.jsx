@@ -5,72 +5,51 @@ function CategoryCard({
   description,
   gradientClasses,
   imageSrc,
-  imagePosition,
   buttonText,
-  flipImage,
 }) {
-  const firstLetter = title.charAt(0);
-  const restOfTitle = title.substring(1);
-  const imageOnLeft = imagePosition === "left";
-
-  // A lógica de virar a imagem (scale) permanece, pois é uma escolha de design
-  let scaleClass = "-scale-x-100"; // Padrão virado para a esquerda
-  if (imageOnLeft) {
-    scaleClass = "scale-x-100"; // Vira para a direita se a imagem for à esquerda
-  }
-  // A prop flipImage pode forçar uma direção específica se necessário
-  if (flipImage === true) scaleClass = "-scale-x-100";
-  if (flipImage === false) scaleClass = "scale-x-100";
-
   return (
-    // MOBILE-FIRST: O layout base é uma coluna (flex-col).
-    // DESKTOP: Em telas grandes (lg), vira uma linha (lg:flex-row).
-    <div className="relative flex flex-col lg:flex-row items-center border-2 border-white/20 rounded-3xl">
-      {/* Barra de Gradiente Responsiva */}
-      {/* No mobile, é uma borda no topo. No desktop, é uma barra lateral. */}
+    <div className="w-full h-80 rounded-2xl overflow-hidden relative group/card p-6 flex flex-col items-center justify-start text-center bg-brand-purple-light">
+      {/* Círculo de hover */}
       <div
-        className={`absolute ${gradientClasses} 
-        top-0 left-0 w-full h-4 lg:h-full lg:w-4 rounded-t-3xl lg:rounded-3xl 
-        ${imageOnLeft ? "lg:-left-6" : "lg:-right-6 lg:left-auto"}`}
-      ></div>
+        className={`absolute h-24 w-24 -top-12 -right-12 rounded-full ${gradientClasses} group-hover/card:scale-[900%] duration-500 z-0 transition-transform`}
+      />
 
-      {/* Container da Imagem */}
-      {/* A ordem da imagem (1ª ou 2ª) muda no desktop baseado na prop 'imageOnLeft' */}
-      <div
-        className={`w-full lg:w-5/12 p-4 ${
-          imageOnLeft ? "lg:order-1" : "lg:order-2"
-        }`}
-      >
-        <img
-          src={imageSrc}
-          alt={title}
-          className={`w-full max-h-[200px] object-contain pointer-events-none ${scaleClass}`}
-          style={{ filter: "drop-shadow(0 0 10px rgba(0,0,0,0.5))" }}
-        />
-      </div>
+      {/* Imagem com altura aumentada */}
+      <img
+        src={imageSrc}
+        alt={title}
+        className="h-28 object-contain mb-3 pointer-events-none z-10 transition-all duration-500 group-hover/card:scale-110 group-hover/card:-translate-y-2"
+      />
 
-      {/* Container do Texto */}
-      {/* Texto alinha no centro no mobile, e à esquerda no desktop. */}
-      <div
-        className={`w-full lg:w-7/12 p-6 md:p-8 flex flex-col text-center lg:text-left ${
-          imageOnLeft ? "lg:order-2" : "lg:order-1"
-        }`}
-      >
-        {/* Título: fonte responsiva */}
-        <h3 className="text-4xl md:text-5xl lg:text-6xl uppercase text-white drop-shadow-lg flex items-baseline justify-center lg:justify-start">
-          <span className="font-allura text-6xl md:text-7xl lg:text-8xl normal-case">
-            {firstLetter}
+      {/* Título */}
+      <h3 className="z-10 font-league text-3xl sm:text-4xl uppercase text-text-light group-hover/card:text-white duration-500">
+        {title}
+      </h3>
+
+      {/* Descrição */}
+      <p className="z-10 text-sm font-ttnorms mt-2 text-text-light/70 group-hover/card:text-white/90 duration-500">
+        {description}
+      </p>
+
+      {/* Botão */}
+      <div className="z-10 mt-auto w-full">
+        <button
+          type="button"
+          className="flex justify-center gap-2 items-center mx-auto shadow-xl text-sm font-bold bg-white backdrop-blur-md isolation-auto border-white before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-brand-purple hover:text-white before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
+        >
+          <span className="text-brand-purple group-hover:text-white transition-colors duration-300">
+            {buttonText}
           </span>
-          <span className="font-league ml-2">{restOfTitle}</span>
-        </h3>
-
-        <p className="font-ttnorms text-base md:text-lg mt-4 leading-relaxed">
-          {description}
-        </p>
-
-        {/* O botão agora faz parte do fluxo normal, sem position: absolute */}
-        <button className="mt-8 mx-auto lg:mx-0 self-start bg-[#4b1a5a] text-white py-3 px-8 rounded-full text-xs sm:text-sm font-bold uppercase border-2 border-white hover:brightness-125 transition-all w-full max-w-xs lg:w-auto">
-          {buttonText}
+          <svg
+            className="w-6 h-6 justify-end group-hover:rotate-90 group-hover:bg-white text-brand-purple ease-linear duration-300 rounded-full border border-brand-purple group-hover:border-none p-1 rotate-45"
+            viewBox="0 0 16 19"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+              className="fill-current group-hover:fill-brand-purple"
+            />
+          </svg>
         </button>
       </div>
     </div>
