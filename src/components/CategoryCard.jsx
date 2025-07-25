@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CategoryCard({
   title,
@@ -6,9 +7,10 @@ function CategoryCard({
   gradientClasses,
   imageSrc,
   buttonText,
+  linkTo,
 }) {
-  return (
-    // CARD COM TAMANHO AJUSTADO PARA DESKTOP
+  // CARD COM TAMANHO AJUSTADO PARA DESKTOP
+  const cardContent = (
     <div className="w-full  mx-auto bg-brand-purple-light h-80  lg:h-96 rounded-2xl overflow-hidden relative group/card p-6 flex flex-col items-center justify-start text-center">
       {/* Círculo de hover */}
       <div
@@ -55,6 +57,11 @@ function CategoryCard({
       </div>
     </div>
   );
+  if (linkTo) {
+    return <Link to={linkTo}>{cardContent}</Link>;
+  }
+
+  return cardContent;
 }
 
 export default CategoryCard;

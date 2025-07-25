@@ -28,6 +28,15 @@ export default {
         ttnorms: ["TT Norms", "sans-serif"],
         allura: ["Allura", "cursive"],
       },
+      keyframes: {
+        shine: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        }
+      },
+      animation: {
+        shine: 'shine 2.5s linear infinite',
+      },
       backgroundImage: {
         "category-gradient":
           "radial-gradient(circle at 0% 0%, #ba6fef, #8420cb, #58098f)",

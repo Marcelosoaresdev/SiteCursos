@@ -18,6 +18,7 @@ const categoriesData = [
     imageSrc: saudeImg,
     imagePosition: "right",
     buttonText: "QUERO COMEÇAR MINHA TRANSFORMAÇÃO FÍSICA",
+    linkTo: "/categoria/saude-fisica",
   },
   {
     title: "Financeiro",
@@ -76,6 +77,7 @@ function CategoriesSection() {
               gradientClasses={cat.gradientClasses}
               imageSrc={cat.imageSrc}
               buttonText={cat.buttonText}
+              linkTo={cat.linkTo}
             />
           ))}
         </div>
