@@ -4,6 +4,7 @@ import CategoriesSection from "../components/CategoriesSection";
 import CtaSection from "../components/CtaSection";
 import TestimonialSection from "../components/TestimonialSection";
 import EvolutionSection from "../components/EvolutionSection";
+import ComboDetailsSection from "../components/ComboDetailsSection";
 
 function HomePage() {
   return (

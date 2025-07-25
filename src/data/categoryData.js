@@ -1,5 +1,8 @@
 // Importações de imagens que serão usadas nas páginas
 import runnersImage from "../assets-webp/corrida.webp";
+import flaviaThumbnail from "../assets-webp/flavia.webp"; // ⚠️
+import videoBgPattern from "../assets/arvoreVitis.png";
+// Use o thumbnail da Flavia aqui
 // Importe aqui as imagens para as outras categorias no futuro
 // import financeImage from '../assets-webp/financeiro.webp';
 
@@ -19,6 +22,11 @@ export const categories = [
     subtitleColor: "text-[#323232]",
     coursesBackgroundColor:
       "bg-[linear-gradient(135deg,_#d5f5ff,_#a9ebff,_#49d4ff,_#13b8eb)]",
+    videoTestimonial: {
+      text: "Essa jornada te leva do primeiro passo até você se tornar aquela pessoa que outros admiram, um exemplo para vários. Descubra como transformar a corrida (e qualquer exercício) no seu superpoder pessoal.",
+      background: videoBgPattern,
+      videoId: "YpDqsoXhA7U", // 👈 COLOQUE AQUI O ID DO VÍDEO DO YOUTUBE
+    },
   },
   {
     slug: "financeiro",
