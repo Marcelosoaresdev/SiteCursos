@@ -2,7 +2,7 @@ import React from "react";
 
 function EvolutionSection() {
   return (
-    <section className="bg-cta-gradient text-text-dark w-full py-24 px-8">
+    <section className="bg-text-section text-text-dark w-full py-24 px-8">
       <div className="container mx-auto text-center max-w-5xl">
         {/* Primeira linha com tamanho aumentado e ênfase */}
         <p className="font-league text-4xl md:text-5xl lg:text-6xl mb-10 leading-tight">

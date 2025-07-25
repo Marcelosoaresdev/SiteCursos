@@ -34,6 +34,7 @@ export default {
         "cta-gradient": "linear-gradient(90deg, #fbd4b1, #ff961c, #ff4d00)",
         "button-gradient": "linear-gradient(to right, #a855f7, #7e22ce)",
         "hero-pattern": "url('/src/assets/heroBg.jpg')",
+        "text-section": "url('/src/assets/textBg.jpg')",
       },
       dropShadow: {
         hard: "9px 3px 0 rgba(0, 0, 0, 0.25)",
