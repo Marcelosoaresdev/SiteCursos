@@ -7,6 +7,9 @@ export default {
   theme: {
     extend: {
       // Aqui definimos nossas cores customizadas
+      backgroundImage: {
+        "hero-pattern": "url('/src/assets/heroBg.jpg')",
+      },
       colors: {
         "brand-purple": "#2E004B", // O roxo principal do fundo
         "brand-purple-light": "#491272", // Um tom mais claro para os cards
@@ -30,6 +33,7 @@ export default {
           "radial-gradient(circle at 0% 0%, #ba6fef, #8420cb, #58098f)",
         "cta-gradient": "linear-gradient(90deg, #fbd4b1, #ff961c, #ff4d00)",
         "button-gradient": "linear-gradient(to right, #a855f7, #7e22ce)",
+        "hero-pattern": "url('/src/assets-webp/heroBg.webp')",
       },
       dropShadow: {
         hard: "9px 3px 0 rgba(0, 0, 0, 0.25)",

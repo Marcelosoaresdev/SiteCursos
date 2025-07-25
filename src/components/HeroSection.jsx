@@ -4,7 +4,7 @@ import leaoImage from "../assets-webp/leao.webp"; // Usando a imagem .webp otimi
 function HeroSection() {
   return (
     // Padding começa pequeno (px-6) e aumenta em telas maiores.
-    <section className="bg-category-gradient text-text-light w-full py-20 md:py-24 px-6 sm:px-8 lg:px-16">
+    <section className="bg-hero-pattern text-text-light w-full py-20 md:py-24 px-6 sm:px-8 lg:px-16">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
         {/* Coluna do Texto */}
         {/* No mobile, o texto é centralizado. No desktop (md), alinha à esquerda. */}
