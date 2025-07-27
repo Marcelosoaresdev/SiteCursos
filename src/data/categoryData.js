@@ -2,10 +2,9 @@
 import runnersImage from "../assets-webp/corrida.webp";
 import flaviaThumbnail from "../assets-webp/flavia.webp";
 import videoBgPattern from "../assets/arvoreVitis.png";
-import comboProductsImage from "../assets-webp/corrida.webp"; // Imagem do combo de produtos
-import comboImage from "../assets-webp/corrida.webp"; // Imagem para o card do combo
-// Importe aqui as imagens para as outras categorias no futuro
-// import financeiroImg from '../assets-webp/financeiro.webp'; 
+import comboProductsImage from "../assets-webp/corrida.webp";
+import comboPackageImage from "../assets-webp/corrida.webp"; // Imagem para o header do combo
+import comboImage from "../assets-webp/corrida.webp";
 
 // ==================================================================
 // 1. DADOS PARA AS PÁGINAS DE CATEGORIA
@@ -23,26 +22,55 @@ export const categories = [
     coursesBackgroundColor: "bg-saude-gradient",
     
     videoTestimonial: {
-      text: "Essa jornada te leva do primeiro passo até você se tornar aquela pessoa que outros admiram, um exemplo para vários. Descubra como transformar a corrida (e qualquer exercício) no seu superpoder pessoal.",
+      text: "Essa jornada te leva do primeiro passo...",
       background: videoBgPattern,
       videoId: "YpDqsoXhA7U",
     },
     
     finalCta: {
       title: "A Transformação Completa:",
-      mainParagraph:
-        "Quando esses cursos trabalham juntos, algo mágico acontece. Os hábitos que você constrói se tornam a fundação para correr. A corrida se torna seu portal para performance física máxima e clareza mental – o mesmo estado focado que impulsiona sucesso nos negócios, relacionamentos e vida. No final, você não está apenas em forma – você está operando em um nível completamente diferente de potencial humano. É assim que pessoas comuns se tornam extraordinárias.",
+      mainParagraph: "Quando esses cursos trabalham juntos...",
       price: {
         original: "R$675,00",
         installments: "R$58,95*",
         full: "R$570,00",
       },
       productImage: comboProductsImage,
-      bonusParagraph:
-        "Ao garantir o Pacote Completo da Transformação da Saúde você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e um caderno de exercícios especial, escrito por Flávia Cavalcante.",
+      bonusParagraph: "Ao garantir o Pacote Completo...",
       buttonText: "QUERO GARANTIR O PACOTE",
       gradient: "bg-[linear-gradient(to_bottom,_#1e3a8a,_#0ea5e9)]",
     },
+
+    // 👇👇👇 OBJETO FALTANDO ADICIONADO AQUI 👇👇👇
+    comboDetails: {
+      header: {
+        title: 'Premium Combo',
+        subtitle: 'Pacote',
+        image: comboPackageImage,
+      },
+      included: {
+        title: 'O que está incluso?',
+        items: [
+          '<strong>Curso 1. Transforme Sua Vida</strong> – O Caminho Completo para Saúde e Vitalidade',
+          '<strong>Curso 2. Corra para a Vida</strong> – Transforme Corpo e Mente Através do Movimento',
+          '<strong>Curso 3. Corrida Elite</strong> – Performance, Longevidade e Transcendência',
+          '<strong>Bônus: E-book grátis</strong> da nossa coleção especialmente selecionada + <strong>Caderno de exercícios</strong> + <strong>Sistema Integrado</strong> – Desperte o atleta interior, não importa onde você está começando.',
+        ],
+        buttonText: 'Começar minha transformação completa',
+      },
+      why: {
+        line1: 'POR QUE ESCOLHER O',
+        paragraph: 'Cada curso desbloqueia um novo nível de potencial do seu corpo e da sua saúde.',
+        line2: 'PACOTE COMPLETO?',
+      },
+      benefits: [
+        { title: 'Curso 1', text: 'Reprograma seus hábitos diários.' },
+        { title: 'Curso 2', text: 'Canaliza essa energia no movimento.' },
+        { title: 'Curso 3', text: 'Te eleva à performance de elite.' },
+      ],
+      gradient: 'bg-[linear-gradient(to_bottom,_#1e3a8a,_#0ea5e9)]',
+      textColor: 'text-saude-white',
+    }
   },
   {
     slug: "financeiro",
@@ -54,10 +82,9 @@ export const categories = [
     titleColor1: "text-[#0b4e18]",
     titleColor2: "text-[#0f8a26]",
     subtitleColor: "text-[#323232]",
-    coursesBackgroundColor: "bg-green-100", // Exemplo de cor
-    // ⚠️ Lembre-se de adicionar os objetos videoTestimonial e finalCta aqui também
+    coursesBackgroundColor: "bg-green-100",
+    // ⚠️ Lembre-se de adicionar os objetos videoTestimonial, finalCta e comboDetails aqui também
   },
-  // ADICIONE AS OUTRAS 3 CATEGORIAS AQUI
 ];
 
 // ==================================================================

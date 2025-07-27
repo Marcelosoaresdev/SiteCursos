@@ -2,8 +2,8 @@ import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { categories } from "../data/categoryData";
 import CategoryHero from "../components/CategoryHero";
-import CoursesSection from "../components/CoursesSection"; // 1. Importe a nova seção
-import VideoTestimonialSection from "../components/VideoTestimonialSection"; // Importe a seção
+import CoursesSection from "../components/CoursesSection";
+import VideoTestimonialSection from "../components/VideoTestimonialSection";
 import ComboDetailsSection from "../components/ComboDetailsSection"; // Seção de detalhes do combo
 import FinalCtaSection from "../components/FinalCtaSection";
 
@@ -24,9 +24,10 @@ function CategoryPage() {
         backgroundColor={categoryData.coursesBackgroundColor}
       />
       <VideoTestimonialSection content={categoryData.videoTestimonial} />
-      {/* Agora estas seções recebem o conteúdo da categoria específica */}
-      <ComboDetailsSection />{" "}
-      {/* Supondo que esta seção é a mesma para todas as categorias */}
+      
+      {/* ADICIONE A SEÇÃO QUE FALTAVA AQUI */}
+      <ComboDetailsSection content={categoryData.comboDetails} />
+
       <FinalCtaSection content={categoryData.finalCta} />
     </div>
   );
