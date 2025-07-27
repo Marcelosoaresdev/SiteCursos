@@ -1,15 +1,14 @@
+// CoursesSection.jsx
 import React from 'react';
 import CourseCard from './CourseCard';
-import ComboCard from './ComboCard'; // 1. Importe o novo ComboCard
+import ComboCard from './ComboCard';
 import { courses } from '../data/categoryData';
 
 function CoursesSection({ categorySlug, backgroundColor }) {
-  // Filtra todos os itens (cursos e combos) para a categoria atual
   const allItems = categorySlug
     ? courses.filter((course) => course.categorySlug === categorySlug)
     : courses;
 
-  // Separa os cursos normais do combo
   const regularCourses = allItems.filter(item => !item.isCombo);
   const comboCourse = allItems.find(item => item.isCombo);
 
@@ -18,7 +17,7 @@ function CoursesSection({ categorySlug, backgroundColor }) {
   }
 
   return (
-    <section className={`${backgroundColor} py-20 px-6`}>
+    <section className={`${backgroundColor} py-20 px-6 relative`}>
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <p className="font-ttnorms text-gray-500 text-xl uppercase">
@@ -29,18 +28,23 @@ function CoursesSection({ categorySlug, backgroundColor }) {
           </h2>
         </div>
 
-        {/* Renderiza os 3 cards de cursos normais */}
+        {/* Renderiza os 3 cards de cursos normais com posicionamento relativo */}
         {regularCourses.length > 0 && (
-            <div className="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-16 lg:gap-8">
+          <div className="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-16 lg:gap-8 relative">
             {regularCourses.map((course) => (
-                <CourseCard key={course.id} {...course} />
+              <div key={course.id} className="relative">
+                <CourseCard {...course} />
+              </div>
             ))}
-            </div>
+          </div>
         )}
 
         {/* Renderiza o card do combo, se ele existir */}
-        {comboCourse && <ComboCard {...comboCourse} />}
-        
+        {comboCourse && (
+          <div className="relative mt-32">
+            <ComboCard {...comboCourse} />
+          </div>
+        )}
       </div>
     </section>
   );
