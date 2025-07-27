@@ -30,7 +30,7 @@ function CoursesSection({ categorySlug, backgroundColor }) {
 
         {/* Renderiza os 3 cards de cursos normais com posicionamento relativo */}
         {regularCourses.length > 0 && (
-          <div className="flex flex-col lg:flex-row items-center lg:items-end justify-center gap-16 lg:gap-8 relative">
+          <div className="flex flex-col md:flex-row items-center lg:items-end justify-center gap-16 md:gap-6 relative">
             {regularCourses.map((course) => (
               <div key={course.id} className="relative">
                 <CourseCard {...course} />

@@ -109,7 +109,7 @@ export const courses = [
     heading: "Pacote Premium Combo",
     imageSrc: comboImage,
     description: "Pacote Completo de Transformação da Saúde: receba todos os 3 Cursos + Materiais Completos para máximos resultados.",
-    priceInstallments: "12x de R$ 58,95* ou",
+    priceInstallments: "12x de R$ 58,95*",
     priceFull: "R$ 570,00",
   },
 ];
