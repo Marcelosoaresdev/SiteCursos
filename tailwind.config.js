@@ -21,6 +21,12 @@ export default {
         "brand-green": "#00FF85",
         "text-light": "#F5F5F5",
         "text-dark": "#333333",
+        "saude": {
+          "dark-blue": "#203162",
+          "vivid-azure": "#00afdb",
+          "dark-gray": "#323232",
+          "white": "#f8f8f8",
+        },
       },
       // Aqui definimos nossas fontes customizadas
       fontFamily: {
@@ -38,12 +44,11 @@ export default {
         shine: 'shine 2.5s linear infinite',
       },
       backgroundImage: {
-        "category-gradient":
-          "radial-gradient(circle at 0% 0%, #ba6fef, #8420cb, #58098f)",
+        "category-gradient": "radial-gradient(circle at 0% 0%, #ba6fef, #8420cb, #58098f)",
         "cta-gradient": "linear-gradient(90deg, #fbd4b1, #ff961c, #ff4d00)",
         "button-gradient": "linear-gradient(to right, #a855f7, #7e22ce)",
-        "hero-pattern": "url('/src/assets/heroBg.jpg')",
-        "text-section": "url('/src/assets/textBg.jpg')",
+        "hero-pattern": "url('/src/assets-webp/heroBg.webp')",
+        "saude-gradient": "linear-gradient(135deg, #d5f5ff, #a9ebff, #49d4ff, #13b8eb)",
       },
       dropShadow: {
         hard: "9px 3px 0 rgba(0, 0, 0, 0.25)",

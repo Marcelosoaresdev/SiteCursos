@@ -1,12 +1,11 @@
 // Importações de imagens que serão usadas nas páginas
 import runnersImage from "../assets-webp/corrida.webp";
-import flaviaThumbnail from "../assets-webp/flavia.webp"; // ⚠️
+import flaviaThumbnail from "../assets-webp/flavia.webp";
 import videoBgPattern from "../assets/arvoreVitis.png";
-
 import comboProductsImage from "../assets-webp/corrida.webp"; // Imagem do combo de produtos
-// Use o thumbnail da Flavia aqui
+import comboImage from "../assets-webp/corrida.webp"; // Imagem para o card do combo
 // Importe aqui as imagens para as outras categorias no futuro
-// import financeImage from '../assets-webp/financeiro.webp';
+// import financeiroImg from '../assets-webp/financeiro.webp'; 
 
 // ==================================================================
 // 1. DADOS PARA AS PÁGINAS DE CATEGORIA
@@ -17,19 +16,18 @@ export const categories = [
     title: "Saúde Física",
     subtitle: "A Jornada Definitiva: Do Primeiro Passo ao Pódio",
     heroImage: runnersImage,
-    gradient:
-      "bg-[linear-gradient(135deg,_#d5f5ff,_#a9ebff,_#49d4ff,_#13b8eb)]",
-    titleColor1: "text-[#203162]",
-    titleColor2: "text-[#00afdb]",
-    subtitleColor: "text-[#323232]",
-    coursesBackgroundColor:
-      "bg-[linear-gradient(135deg,_#d5f5ff,_#a9ebff,_#49d4ff,_#13b8eb)]",
+    gradient: "bg-saude-gradient",
+    titleColor1: "text-saude-dark-blue",
+    titleColor2: "text-saude-vivid-azure",
+    subtitleColor: "text-saude-dark-gray",
+    coursesBackgroundColor: "bg-saude-gradient",
+    
     videoTestimonial: {
       text: "Essa jornada te leva do primeiro passo até você se tornar aquela pessoa que outros admiram, um exemplo para vários. Descubra como transformar a corrida (e qualquer exercício) no seu superpoder pessoal.",
       background: videoBgPattern,
-      videoId: "YpDqsoXhA7U", // 👈 COLOQUE AQUI O ID DO VÍDEO DO YOUTUBE
+      videoId: "YpDqsoXhA7U",
     },
-
+    
     finalCta: {
       title: "A Transformação Completa:",
       mainParagraph:
@@ -43,9 +41,8 @@ export const categories = [
       bonusParagraph:
         "Ao garantir o Pacote Completo da Transformação da Saúde você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e um caderno de exercícios especial, escrito por Flávia Cavalcante.",
       buttonText: "QUERO GARANTIR O PACOTE",
-      gradient: "bg-[linear-gradient(to_bottom,_#1e3a8a,_#0ea5e9)]", // Gradiente específico para esta categoria
+      gradient: "bg-[linear-gradient(to_bottom,_#1e3a8a,_#0ea5e9)]",
     },
-    
   },
   {
     slug: "financeiro",
@@ -58,12 +55,13 @@ export const categories = [
     titleColor2: "text-[#0f8a26]",
     subtitleColor: "text-[#323232]",
     coursesBackgroundColor: "bg-green-100", // Exemplo de cor
+    // ⚠️ Lembre-se de adicionar os objetos videoTestimonial e finalCta aqui também
   },
   // ADICIONE AS OUTRAS 3 CATEGORIAS AQUI
 ];
 
 // ==================================================================
-// 2. DADOS PARA OS CARDS DE CURSOS
+// 2. DADOS PARA OS CARDS DE CURSOS E COMBOS
 // ==================================================================
 export const courses = [
   {
@@ -102,5 +100,16 @@ export const courses = [
     priceFull: "R$ 225,00",
     isHighlighted: false,
   },
-  // Futuramente, adicione cursos de outras categorias aqui
+  // OBJETO DO COMBO ADICIONADO AQUI
+  {
+    id: 100,
+    isCombo: true, // Flag para identificar que é o combo
+    categorySlug: "saude-fisica",
+    title: "Combo",
+    heading: "Pacote Premium Combo",
+    imageSrc: comboImage,
+    description: "Pacote Completo de Transformação da Saúde: receba todos os 3 Cursos + Materiais Completos para máximos resultados.",
+    priceInstallments: "12x de R$ 58,95* ou",
+    priceFull: "R$ 570,00",
+  },
 ];
