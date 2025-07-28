@@ -1,4 +1,4 @@
-// CourseCard.jsx - VERSÃO FINAL E ROBUSTA
+// CourseCard.jsx - VERSÃO CORRIGIDA
 
 import React from 'react';
 import LearnMoreButton from './LearnMoreButton';
@@ -15,7 +15,6 @@ function CourseCard({
   purchaseLink,
   theme,
 }) {
-  // Se por algum motivo o tema não for fornecido, não renderiza o card para evitar quebras.
   if (!theme) {
     console.error(`O curso com id ${id} não possui um objeto de tema definido.`);
     return null;
@@ -33,9 +32,6 @@ function CourseCard({
     document.getElementById(`curso-${id}`)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // ✅ LÓGICA DE ESTILO SIMPLIFICADA E CORRETA
-  // Pega o conjunto de estilos (normal ou destacado) com base na prop 'isHighlighted'.
-  // Não existe mais nenhum estilo fixo no componente!
   const cardStyle = isHighlighted ? theme.highlighted : theme.normal;
 
   return (
@@ -45,15 +41,16 @@ function CourseCard({
       }`}
     >
       {!isHighlighted && (
-        <div onClick={handleLearnMoreClick} className="absolute top-0 w-full text-center z-10">
+        // 1. onClick REMOVIDO DAQUI
+        <div className="absolute top-0 w-full text-center z-10">
           <h2 className={`font-league uppercase ${cardStyle.titleColor} text-5xl md:text-6xl tracking-tighter mb-4`}>
             {title}
           </h2>
         </div>
       )}
 
+      {/* 2. onClick REMOVIDO DAQUI */}
       <div
-        onClick={handleLearnMoreClick}
         className={`w-full h-full flex flex-col p-4 md:p-5 rounded-2xl border-2 transition-all duration-500 ease-out shadow-[12px_17px_51px_rgba(0,0,0,0.22)] md:hover:scale-105 active:scale-95 active:rotate-1.7 relative ${cardStyle.cardBg} ${cardStyle.borderColor}`}
       >
         {isHighlighted && (
@@ -86,7 +83,9 @@ function CourseCard({
           >
             Compre Agora
           </button>
-          <div onClick={handleLearnMoreClick} className="transform scale-75 md:scale-90 lg:scale-100">
+
+          {/* 3. O único onClick para o scroll foi MANTIDO AQUI, no botão 'Saiba Mais' */}
+          <div onClick={handleLearnMoreClick} className="transform scale-75 md:scale-90 lg:scale-100 cursor-pointer">
             <LearnMoreButton text="Saiba Mais" variant={cardStyle.learnMoreVariant} />
           </div>
         </div>
