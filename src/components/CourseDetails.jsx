@@ -24,10 +24,10 @@ function CourseDetailsHero({ details }) {
           <p className="font-league text-4xl opacity-80">
             {details.pageSubtitle}
           </p>
-          <h1 className="font-league text-8xl md:text-9xl uppercase leading-none my-2">
+          <h1 className="font-league text-5xl md:text-9xl uppercase leading-none my-2">
             {details.pageTitle}
           </h1>
-          <p className="font-ttnorms text-2xl mt-4">{details.description}</p>
+          <p className="font-ttnorms text-xl mt-4">{details.description}</p>
           {details.longDescription && (
             <p className="font-ttnorms text-lg mt-8">
               {details.longDescription}
@@ -55,7 +55,7 @@ function CourseDetails({ details, isFirst, id }) {
 
   return (
     // ESTE É O CONTAINER COM O FUNDO GRADIENTE ÚNICO
-    <div id={id} className="bg-[linear-gradient(90deg,_#203162,_#00afdb)]">
+    <div id={id} className={details.detailsBackgroundColor}>
       <CourseDetailsHero details={details} />
       <DominationSection data={details.domination} />
       <InclusionsSection

@@ -28,6 +28,7 @@ const categoriesData = [
     imageSrc: financeiroImg,
     imagePosition: "left",
     buttonText: "QUERO CONSTRUIR MINHA PROSPERIDADE",
+    linkTo: "/categoria/financeiro",
   },
   {
     title: "Conquista",

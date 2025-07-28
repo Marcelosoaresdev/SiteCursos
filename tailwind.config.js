@@ -27,6 +27,10 @@ export default {
           "dark-gray": "#323232",
           "white": "#f8f8f8",
         },
+        "financeiro": {
+          "dark-green": "#23451e",
+          "light-green": "#c8f0c2",
+        },
       },
       // Aqui definimos nossas fontes customizadas
       fontFamily: {

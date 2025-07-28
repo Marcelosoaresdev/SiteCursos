@@ -40,6 +40,7 @@ function CategoryPage() {
         categorySlug={slug}
         backgroundColor={categoryData.coursesBackgroundColor}
         onLearnMoreClick={handleScrollToDetails}
+        titleColor={categoryData.titleColor1}
       />
       <VideoTestimonialSection content={categoryData.videoTestimonial} />
       <ComboDetailsSection
