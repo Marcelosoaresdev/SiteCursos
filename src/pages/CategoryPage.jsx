@@ -10,6 +10,8 @@ import DominationSection from '../components/DominationSection';
 import InclusionsSection from '../components/InclusionsSection';
 import CourseDetails from '../components/CourseDetails'; // Importação que faltava
 
+import AnimatedPage from '../components/AnimatedPage'; // 👈 1. IMPORTE O COMPONENTE
+
 function CategoryPage() {
   const { slug } = useParams();
   const categoryData = categories.find((cat) => cat.slug === slug);
@@ -33,34 +35,36 @@ function CategoryPage() {
 
   // Renderiza a página com todas as seções na ordem correta
   return (
-    <div>
-      <CategoryHero {...categoryData} />
-
-      <CoursesSection
-        categorySlug={slug}
-        backgroundColor={categoryData.coursesBackgroundColor}
-        onLearnMoreClick={handleScrollToDetails}
-        titleColor={categoryData.titleColor1}
-      />
-      <VideoTestimonialSection content={categoryData.videoTestimonial} />
-      <ComboDetailsSection
-        content={categoryData.comboDetails}
-        id="combo-section"
-      />
-      <FinalCtaSection content={categoryData.finalCta} />
-
-      {/* Loop que renderiza os detalhes de cada curso individualmente */}
+    <AnimatedPage>
       <div>
-        {coursesForThisCategory.map((course, index) => (
-          <CourseDetails
-            key={course.id}
-            details={course.details}
-            isFirst={index === 0}
-            id={`curso-${course.id}`} // Adicione esta linha
-          />
-        ))}
+        <CategoryHero {...categoryData} />
+
+        <CoursesSection
+          categorySlug={slug}
+          backgroundColor={categoryData.coursesBackgroundColor}
+          onLearnMoreClick={handleScrollToDetails}
+          titleColor={categoryData.titleColor1}
+        />
+        <VideoTestimonialSection content={categoryData.videoTestimonial} />
+        <ComboDetailsSection
+          content={categoryData.comboDetails}
+          id="combo-section"
+        />
+        <FinalCtaSection content={categoryData.finalCta} />
+
+        {/* Loop que renderiza os detalhes de cada curso individualmente */}
+        <div>
+          {coursesForThisCategory.map((course, index) => (
+            <CourseDetails
+              key={course.id}
+              details={course.details}
+              isFirst={index === 0}
+              id={`curso-${course.id}`} // Adicione esta linha
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </AnimatedPage>
   );
 }
 

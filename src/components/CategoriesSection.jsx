@@ -1,5 +1,7 @@
 import React from 'react';
 import CategoryCard from './CategoryCard';
+import AnimatedPage from '../components/AnimatedPage'; // 👈 1. IMPORTE O COMPONENTE
+
 
 // Importando todas as imagens das categorias
 import saudeImg from '../assets/corrida.png';
@@ -62,6 +64,7 @@ const categoriesData = [
 
 function CategoriesSection() {
   return (
+    <AnimatedPage>
     <section className="text-text-light w-full py-12 px-4 sm:px-6 md:px-8">
       <div className="container mx-auto text-center">
         <h2 className="font-league text-4xl sm:text-5xl md:text-6xl uppercase mb-8 sm:mb-12">
@@ -84,6 +87,7 @@ function CategoriesSection() {
         </div>
       </div>
     </section>
+    </AnimatedPage>
   );
 }
 
