@@ -1,5 +1,5 @@
 import React from "react";
-import leaoImage from "../assets-webp/leao.webp";
+import leaoImage from "../assets/leao.png";
 
 function HeroSection() {
   return (

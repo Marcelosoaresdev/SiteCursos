@@ -1,5 +1,5 @@
 import React from "react";
-import studentImage from "../assets-webp/estudante.webp";
+import studentImage from "../assets/estudante.png";
 
 function CtaSection() {
   return (

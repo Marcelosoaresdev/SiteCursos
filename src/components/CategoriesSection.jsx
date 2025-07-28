@@ -2,11 +2,11 @@ import React from "react";
 import CategoryCard from "./CategoryCard";
 
 // Importando todas as imagens das categorias
-import saudeImg from "../assets-webp/corrida.webp";
-import financeiroImg from "../assets-webp/financeiro.webp";
-import conquistaImg from "../assets-webp/conquista.webp";
-import autoestimaImg from "../assets-webp/autoestima.webp";
-import relacionamentoImg from "../assets-webp/relacionamento.webp";
+import saudeImg from "../assets/corrida.png";
+import financeiroImg from "../assets/financeiro.png";
+import conquistaImg from "../assets/conquista.png";
+import autoestimaImg from "../assets/autoestima.png";
+import relacionamentoImg from "../assets/relacionamento.png";
 
 // Array de dados completo com todas as propriedades para cada card
 const categoriesData = [

@@ -1,6 +1,6 @@
 import React from "react";
 // A imagem otimizada que você já importou.
-import profilePic from "../assets-webp/flavia.webp";
+import profilePic from "../assets/flavia.png";
 
 function TestimonialSection() {
   return (

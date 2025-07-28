@@ -1,7 +1,28 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [
+    react(),
+    ViteImageOptimizer({
+      // Configurações para converter PNG para WebP
+      png: {
+        webp: {
+          quality: 80,
+        },
+      },
+      // Configurações para converter JPG/JPEG para WebP
+      jpeg: {
+        webp: {
+          quality: 80,
+        },
+      },
+      jpg: {
+        webp: {
+          quality: 80,
+        },
+      },
+    }),
+  ],
+});

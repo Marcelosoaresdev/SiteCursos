@@ -4,13 +4,13 @@ import CourseCard from './CourseCard';
 import ComboCard from './ComboCard';
 import { courses } from '../data/categoryData';
 
-function CoursesSection({ categorySlug, backgroundColor }) {
+function CoursesSection({ categorySlug, backgroundColor, onLearnMoreClick }) {
   const allItems = categorySlug
     ? courses.filter((course) => course.categorySlug === categorySlug)
     : courses;
 
-  const regularCourses = allItems.filter(item => !item.isCombo);
-  const comboCourse = allItems.find(item => item.isCombo);
+  const regularCourses = allItems.filter((item) => !item.isCombo);
+  const comboCourse = allItems.find((item) => item.isCombo);
 
   if (allItems.length === 0) {
     return null;
@@ -33,7 +33,13 @@ function CoursesSection({ categorySlug, backgroundColor }) {
           <div className="flex flex-col md:flex-row items-center lg:items-end justify-center gap-16 md:gap-6 relative">
             {regularCourses.map((course) => (
               <div key={course.id} className="relative">
-                <CourseCard {...course} />
+                {/* 2. Passe a prop para o CourseCard */}
+                {/* Envolvemos em uma arrow function para passar o slug específico do curso */}
+                <CourseCard
+                  {...course}
+                  key={course.id}
+                  id={course.id}
+                />
               </div>
             ))}
           </div>
