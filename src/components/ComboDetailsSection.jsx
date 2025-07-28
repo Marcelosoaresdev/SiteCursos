@@ -45,12 +45,18 @@ function ComboDetailsSection({ content, id }) {
             ))}
           </div>
           <div className="mt-12">
-            <button className="relative group overflow-hidden font-ttnorms font-bold text-saude-white text-md md:text-lg uppercase rounded-full px-8 py-4 border-2 border-saude-white hover:border-saude-dark-blue transition-all duration-300 hover:scale-105 active:scale-95">
+            {/* Transformamos o botão em um link (<a>) */}
+            <a
+              href={content.included.buttonLink} // 1. Usamos o link do objeto de dados
+              target="_blank" // 2. Abre o link em uma nova aba
+              rel="noopener noreferrer" // 3. Boa prática de segurança para links externos
+              className="relative group inline-block overflow-hidden font-ttnorms font-bold text-saude-white text-md md:text-lg uppercase rounded-full px-8 py-4 border-2 border-saude-white hover:border-saude-dark-blue transition-all duration-300 hover:scale-105 active:scale-95"
+            >
               <span className="relative z-10">
                 {content.included.buttonText}
               </span>
               <span className="absolute top-0 left-0 w-full h-full bg-saude-dark-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out z-0" />
-            </button>
+            </a>
           </div>
         </div>
 

@@ -74,6 +74,7 @@ export const categories = [
           '<strong>Bônus: E-book grátis</strong> da nossa coleção especialmente selecionada + <strong>Caderno de exercícios</strong> + <strong>Sistema Integrado</strong> – Desperte o atleta interior, não importa onde você está começando.',
         ],
         buttonText: 'Começar minha transformação completa',
+        buttonLink: 'https://pay.hotmart.com/J100521738O',
       },
       why: { line1: 'POR QUE ESCOLHER O', paragraph: ' Cada curso desbloqueia um novo nível de potêncial do seu corpo e da sua saúde.', line2: 'PACOTE COMPLETO?' },
       benefits: [
