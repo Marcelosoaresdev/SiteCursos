@@ -9,35 +9,38 @@ function CategoryCard({
   buttonText,
   linkTo,
 }) {
-  // CARD COM TAMANHO AJUSTADO PARA DESKTOP
-  const cardContent = (
-    <div className="w-full  mx-auto bg-brand-purple-light h-80  lg:h-96 rounded-2xl overflow-hidden relative group/card p-6 flex flex-col items-center justify-start text-center">
+  // 1. A lógica condicional no final foi removida.
+  //    Agora o componente retorna diretamente o JSX do card.
+  return (
+    <div className="w-full mx-auto bg-brand-purple-light h-80 lg:h-96 rounded-2xl overflow-hidden relative group/card p-6 flex flex-col items-center justify-start text-center">
       {/* Círculo de hover */}
       <div
         className={`absolute h-24 w-24 -top-12 -right-12 rounded-full ${gradientClasses} group-hover/card:scale-[900%] duration-500 z-0 transition-transform`}
       />
 
-      {/* IMAGEM: Altura aumenta no desktop */}
+      {/* IMAGEM */}
       <img
         src={imageSrc}
         alt={title}
         className="h-32 lg:h-40 object-contain mb-3 pointer-events-none z-10 transition-all duration-500 group-hover/card:scale-110 group-hover/card:-translate-y-2"
       />
 
-      {/* TÍTULO: Fonte aumenta no desktop */}
+      {/* TÍTULO */}
       <h3 className="z-10 font-league text-3xl sm:text-4xl lg:text-5xl uppercase text-text-light group-hover/card:text-white duration-500">
         {title}
       </h3>
 
-      {/* DESCRIÇÃO: Fonte aumenta no desktop */}
+      {/* DESCRIÇÃO */}
       <p className="z-10 text-sm lg:text-base font-ttnorms mt-2 text-text-light/70 group-hover/card:text-white/90 duration-500">
         {description}
       </p>
 
-      {/* BOTÃO: Todo o botão escala no desktop */}
+      {/* BOTÃO */}
       <div className="z-10 md:mt-auto mt-2 w-full">
-        <button
-          type="button"
+        {/* 2. O elemento <button> foi substituído por <Link>. */}
+        {/* Todas as classes de estilo do botão foram aplicadas diretamente no Link. */}
+        <Link
+          to={linkTo}
           className="flex justify-center gap-2 items-center mx-auto shadow-xl lg:text-sm text-xs font-bold bg-white backdrop-blur-md isolation-auto border-white before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-brand-purple hover:text-white before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group"
         >
           <span className="text-brand-purple group-hover:text-white transition-colors duration-300">
@@ -53,15 +56,10 @@ function CategoryCard({
               className="fill-current group-hover:fill-brand-purple"
             />
           </svg>
-        </button>
+        </Link>
       </div>
     </div>
   );
-  if (linkTo) {
-    return <Link to={linkTo}>{cardContent}</Link>;
-  }
-
-  return cardContent;
 }
 
 export default CategoryCard;

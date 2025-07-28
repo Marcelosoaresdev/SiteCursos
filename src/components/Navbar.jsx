@@ -21,6 +21,12 @@ function Navbar() {
           >
             Saúde Física
           </Link>
+          <Link
+            to="/categoria/financeiro"
+            className="font-ttnorms text-lg text-white hover:text-brand-yellow transition-colors"
+          >
+            Financeiro
+          </Link>
           {/* Adicione links para outras páginas aqui */}
         </div>
       </nav>

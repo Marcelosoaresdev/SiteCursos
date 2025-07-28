@@ -71,11 +71,11 @@ function CourseCard({
           <img src={imageSrc} alt={heading} className="rounded-xl w-full h-full object-cover" />
         </div>
 
-        <h3 className={`font-league uppercase ${cardStyle.titleColor} ${isHighlighted ? 'text-3xl' : 'text-2xl'} mb-3 text-center`}>
+        <h3 className={`font-league uppercase ${cardStyle.titleColor} ${isHighlighted ? 'text-4xl' : 'text-3xl'} mb-3 text-center`}>
           {heading}
         </h3>
 
-        <p className={`font-ttnorms mt-1 mb-4 flex-grow ${cardStyle.textColor} ${isHighlighted ? 'text-sm' : 'text-xs'} text-center px-3`}>
+        <p className={`font-ttnorms mt-1 mb-4 flex-grow ${cardStyle.textColor} ${isHighlighted ? 'text-lg' : 'text-md'} text-center px-3`}>
           {description}
         </p>
 

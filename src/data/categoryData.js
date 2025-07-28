@@ -138,7 +138,7 @@ export const categories = [
   gradient: "bg-[linear-gradient(to_bottom,_#065f46,_#10b981)]",
   textColor: "text-white",
   borderColor: "border-white",
-  buttonLink: "#SEU-LINK-DE-CHECKOUT-COMBO-FINANCEIRO", // Coloque o link do pacote completo aqui
+  buttonLink: "https://pay.hotmart.com/L100489758W", // Coloque o link do pacote completo aqui
   buttonClasses: "bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30",
 },
     
@@ -154,7 +154,7 @@ export const categories = [
           '<strong>Sistema Integrado</strong> - Reprograme seu DNA financeiro e construa riqueza que se multiplica',
         ],
         buttonText: 'COMEÇAR MINHA TRANSFORMAÇÃO COMPLETA',
-        buttonLink: '#SEU-LINK-DE-CHECKOUT-COMBO-FINANCEIRO', // ⚠️ SUBSTITUA PELO SEU LINK DE CHECKOUT
+        buttonLink: 'https://pay.hotmart.com/L100489758W',
       },
       why: { 
         line1: 'POR QUE ESCOLHER O', 
@@ -225,6 +225,7 @@ export const courses = [
       longDescription: "Esta jornada abrangente de 3 horas ensina os pilares da verdadeira transformação da saúde através de pequenas mudanças sustentáveis que criam resultados extraordinários.",
       heroImage: capaSaude1,
       purchaseLink: "https://pay.hotmart.com/I100520899F",
+      detailsBackgroundColor: 'bg-gradient-to-r from-[#203162] to-[#00afdb]',
       domination: {
         title: "Você vai Dominar",
         items: [
@@ -296,6 +297,7 @@ export const courses = [
       longDescription: "Do sofá aos 5Km e além - descubra como a corrida se torna meditação em movimento. Junte-se a milhares que transformaram suas vidas um passo de cada vez, independente da idade ou nível de condicionamento.",
       heroImage: capaSaude2,
       purchaseLink: "https://pay.hotmart.com/C100521124R",
+      detailsBackgroundColor: 'bg-gradient-to-r from-[#203162] to-[#00afdb]',
       domination: {
         title: "VOCÊ VAI DOMINAR",
         items: [
@@ -366,6 +368,7 @@ export const courses = [
       longDescription: "Para corredores prontos para quebrar barreiras e correr forte por décadas. Domine técnicas avançadas usadas por atletas olímpicos enquanto aprende a manter performance máxima em qualquer idade.",
       heroImage: capaSaude3,
       purchaseLink: "https://pay.hotmart.com/E100521352K",
+      detailsBackgroundColor: 'bg-gradient-to-r from-[#203162] to-[#00afdb]',
       domination: {
         title: "VOCÊ VAI DOMINAR",
         items: [
@@ -402,7 +405,7 @@ export const courses = [
     priceInstallments: "12x de R$ 23,27*",
     priceFull: "R$ 225,00",
     isHighlighted: false,
-    purchaseLink: "#SEU-LINK-FINANCEIRO-CURSO1", // ⚠️ Link do curso 1
+    purchaseLink: "https://pay.hotmart.com/V100472955W", // ⚠️ Link do curso 1
 
 theme: {
     normal: { // <--- Estilos para o card normal
@@ -435,7 +438,7 @@ theme: {
       description: "Reprograme sua consciência de riqueza",
       longDescription: "O curso Mentalidade e Fundamentos da Independência Financeira oferece as bases cognitivas e estratégicas essenciais para quem deseja romper com ciclos de escassez e construir, de forma consistente, um caminho sólido rumo à liberdade financeira.",
       heroImage: capaFinanceiro1, // ⚠️ Use a variável da imagem correta
-      purchaseLink: "#SEU-LINK-FINANCEIRO-CURSO1", // ⚠️ Link do curso 1
+      purchaseLink: "https://pay.hotmart.com/V100472955W", // ⚠️ Link do curso 1
       domination: {
         title: "Você vai Dominar:",
         items: [
@@ -475,7 +478,7 @@ theme: {
     priceInstallments: "12x de R$ 23,27*",
     priceFull: "R$ 225,00",
     isHighlighted: true,
-    purchaseLink: "#SEU-LINK-FINANCEIRO-CURSO2", // ⚠️ Link do curso 2
+    purchaseLink: "https://pay.hotmart.com/G100474282P", // ⚠️ Link do curso 2
     
 theme: {
     normal: { // <--- Estilos para o card normal
@@ -508,7 +511,7 @@ theme: {
       description: "Como criar fontes de renda a partir de suas paixões",
       longDescription: "Descubra um modelo estruturado para identificar habilidades pessoais com potencial de monetização, desenvolver visão estratégica e implementar fontes de renda alinhadas com propósito, gerando autonomia financeira com base em princípios validados do empreendedorismo moderno.",
       heroImage: capaFinanceiro2, // ⚠️ Use a variável da imagem correta
-      purchaseLink: "#SEU-LINK-FINANCEIRO-CURSO2", // ⚠️ Link do curso 2
+      purchaseLink: "https://pay.hotmart.com/G100474282P", // ⚠️ Link do curso 2
       domination: {
         title: "Você vai Dominar:",
         items: [
@@ -547,7 +550,7 @@ theme: {
     priceInstallments: "12x de R$ 23,27*",
     priceFull: "R$ 225,00",
     isHighlighted: false,
-    purchaseLink: "#SEU-LINK-FINANCEIRO-CURSO3", // ⚠️ Link do curso 3
+    purchaseLink: "https://pay.hotmart.com/N100484594S", // ⚠️ Link do curso 3
     
     theme: {
     normal: { // <--- Estilos para o card normal
@@ -580,7 +583,7 @@ theme: {
       description: "Como multiplicar essa renda enquanto você dorme.",
       longDescription: "Uma abordagem estratégica para alavancar negócios e otimizar capital, integrando técnicas de crescimento escalável com inteligência financeira aplicada - ideal para quem busca alta performance e liberdade econômica real.",
       heroImage: capaFinanceiro3, // ⚠️ Use a variável da imagem correta
-      purchaseLink: "#SEU-LINK-FINANCEIRO-CURSO3", // ⚠️ Link do curso 3
+      purchaseLink: "https://pay.hotmart.com/N100484594S", // ⚠️ Link do curso 3
       domination: {
         title: "As Estratégias Avançadas Incluem:",
         items: [
@@ -618,6 +621,7 @@ theme: {
     description: "Pacote Completo de Transformação da Saúde: receba todos os 3 Cursos + Materiais Completos para máximos resultados.",
     priceInstallments: "12x de R$ 58,95*",
     priceFull: "R$ 570,00",
+    purchaseLink: 'https://pay.hotmart.com/J100521738O', 
     theme: {
     titleColor: 'text-saude-dark-blue',
     cardBg: 'bg-white/10 backdrop-blur-md',
@@ -641,7 +645,7 @@ theme: {
     description: "Domine Todos os 3 Cursos + Materiais para Liberdade Financeira Total.",
     priceInstallments: "12x de R$ 58,95*",
     priceFull: "R$ 570,00",
-    purchaseLink: '#SEU-LINK-DE-CHECKOUT-COMBO-FINANCEIRO', // O mesmo link do seu comboDetails
+    purchaseLink: 'https://pay.hotmart.com/L100489758W', 
   theme: {
     titleColor: 'text-financeiro-dark-green',
     cardBg: 'bg-financeiro-dark-green/10 backdrop-blur-md',
