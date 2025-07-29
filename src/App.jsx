@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 /**
  * Componente interno que lida com a lógica de roteamento e animação.
@@ -34,6 +35,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       {/* A tag <main> agora tem uma cor de fundo escura.
           Isso evita o "flash branco" durante a transição de páginas. */}
