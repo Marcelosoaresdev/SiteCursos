@@ -30,6 +30,16 @@ import comboPackageAutoestima from "../assets/autoestima/combo_autoestima.png";
 import autoestimaImg from "../assets/autoestima.png"; // Hero image da categoria Autoestima
 
 /*------------------------------------------------------------*/
+
+// ✅ NOVAS IMAGENS PARA RELACIONAMENTO
+import capaRelacionamento1 from "../assets/relacionamento/capa_relacionamento1.png"; // Substitua com o nome real do arquivo
+import capaRelacionamento2 from "../assets/relacionamento/capa_relacionamento2.png"; // Substitua com o nome real do arquivo
+import capaRelacionamento3 from "../assets/relacionamento/capa_relacionamento3.png"; // Substitua com o nome real do arquivo
+import comboPackageRelacionamento from "../assets/relacionamento/combo_relacionamento.png"; // Substitua com o nome real do arquivo
+import heroRelacionamentoImg from "../assets/relacionamento.png"; // Substitua com o nome real do arquivo
+
+/*------------------------------------------------------------*/
+
 import comboProductsImage from "../assets/books.png"; // Imagem de exemplo
 
 /*------------------------------------------------------------*/
@@ -444,6 +454,88 @@ export const categories = [
       ],
       // ✅ PADRONIZADO
       gradient: "bg-gradient-to-r from-[#4c007a] via-[#7e22ce] to-[#c084fc]",
+      textColor: "text-white",
+    },
+  },
+
+  {
+    slug: "relacionamento",
+    title: "Relacionamento",
+    subtitle:
+      "Seu padrão no amor não é má sorte - é programação que você pode mudar!",
+    heroImage: heroRelacionamentoImg,
+    gradient: "bg-[radial-gradient(circle_at_top,_#fecaca,_#f87171,_#dc2626)]",
+    titleColor1: "text-[#7f1d1d]",
+    titleColor2: "text-[#7f1d1d]",
+    subtitleColor: "text-[#7f1d1d]",
+    coursesBackgroundColor:
+      "bg-[radial-gradient(circle_at_top,_#fecaca,_#f87171,_#dc2626)]",
+
+    // Seções de conteúdo da página da categoria
+    videoTestimonial: {
+      text: "Aprenda a construir o amor que você sempre quis, começando por dentro. Liberte-se de padrões tóxicos e construa um amor que se aprofunda com o tempo.",
+      videoId: "SEU_ID_DE_VIDEO_AQUI",
+      gradient: "bg-gradient-to-r from-[#7f1d1d] via-[#b91c1c] to-[#ef4444]",
+      textColor: "text-white",
+    },
+    finalCta: {
+      title: "O EFEITO MULTIPLICAÇÃO DO AMOR:",
+      mainParagraph:
+        "Quando esses cursos trabalham juntos, os relacionamentos se tornam mágicos. Os padrões curados criam espaço para o amor real crescer. As habilidades de comunicação criam segurança onde a vulnerabilidade se torna força. A mentalidade de crescimento transforma conflitos em catalisadores para conexão mais profunda. Isso não é apenas sobre encontrar ou consertar amor - é sobre se tornar alguém que cria relacionamentos extraordinários naturalmente. É assim que pessoas que foram feridas se tornam curadoras do amor.",
+      price: {
+        original: "R$ 675,00",
+        installments: "12x de R$58,95*",
+        full: "R$ 570,00",
+      },
+      productImage: comboProductsImage, // Use a imagem correta do combo
+      bonusParagraph:
+        "Ao garantir o Pacote Completo de Transformação Relacional você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+      buttonText: "QUERO GARANTIR O PACOTE",
+      gradient: "bg-gradient-to-r from-[#7f1d1d] via-[#b91c1c] to-[#ef4444]",
+      textColor: "text-white",
+      borderColor: "border-white",
+      buttonLink: "https://pay.hotmart.com/B100554508D", // Inserir link do pacote
+      buttonClasses:
+        "bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30",
+    },
+    comboDetails: {
+      header: {
+        title: "Pacote Premium Combo",
+        subtitle: "Transformação Relacional",
+        image: comboPackageRelacionamento,
+      },
+      included: {
+        title: "O QUE ESTÁ INCLUSO:",
+        items: [
+          "<strong>Curso 1. Revolução do Amor</strong> – Quebrando Ciclos, Construindo Fundações",
+          "<strong>Curso 2. Comunicação e Intimidade</strong> – A Arte da Conexão Real",
+          "<strong>Curso 3. Crescimento e Evolução</strong> – Relacionamentos Como Prática Espiritual",
+          "<strong>Bônus: E-book grátis</strong> da nossa coleção especialmente selecionada + <strong>Caderno de exercícios + Sistema Revolucionário</strong> - liberte-se de padrões tóxicos e construa amor que se aprofunda com o tempo.",
+        ],
+        buttonText: "COMEÇAR MINHA TRANSFORMAÇÃO COMPLETA",
+        buttonLink: "https://pay.hotmart.com/B100554508D", // Inserir link do pacote
+      },
+      why: {
+        line1: "POR QUE ESCOLHER O",
+        paragraph:
+          "Aprenda a construir o amor que você sempre quis, começando por dentro.",
+        line2: "PACOTE COMPLETO?",
+      },
+      benefits: [
+        {
+          title: "Curso 1",
+          text: "Constrói a base de amor-próprio que os relacionamentos saudáveis exigem.",
+        },
+        {
+          title: "Curso 2",
+          text: "Ensina a arte sagrada da intimidade verdadeira.",
+        },
+        {
+          title: "Curso 3",
+          text: "Eleva seu relacionamento a uma versão mais elevada.",
+        },
+      ],
+      gradient: "bg-gradient-to-r from-[#7f1d1d] via-[#b91c1c] to-[#ef4444]",
       textColor: "text-white",
     },
   },
@@ -1348,6 +1440,219 @@ export const courses = [
     },
   },
 
+  {
+    id: 13,
+    categorySlug: "relacionamento",
+    slug: "revolucao-do-amor",
+    title: "Curso 1",
+    imageSrc: capaRelacionamento1,
+    imageText: "Revolução do Amor",
+    heading: "Revolução do Amor",
+    description: "Quebrando Ciclos, Construindo Fundações.",
+    priceInstallments: "12x de R$ 23,27*",
+    priceFull: "R$ 225,00",
+    isHighlighted: false,
+    purchaseLink: "https://pay.hotmart.com/Y100554251R",
+    theme: {
+      normal: {
+        cardBg: "bg-white/10 backdrop-blur-md",
+        borderColor: "border-white hover:border-relacionamento-light",
+        titleColor: "text-relacionamento-dark",
+        textColor: "text-relacionamento-dark",
+        buttonBg: "bg-relacionamento-dark",
+        buttonText: "text-white",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "dark",
+      },
+      highlighted: {
+        cardBg: "bg-relacionamento-dark",
+        borderColor: "border-relacionamento-light",
+        titleColor: "text-white",
+        textColor: "text-white/80",
+        buttonBg: "bg-white",
+        buttonText: "text-relacionamento-dark",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "light",
+      },
+    },
+    details: {
+      pageTitle: "REVOLUÇÃO DO AMOR",
+      pageSubtitle: "CURSO 1",
+      description:
+        "Quebrando Ciclos, Construindo Fundações para um Amor Consciente.",
+      longDescription:
+        "A base de todo relacionamento saudável começa com você. Este curso te guia para curar padrões passados, construir uma base sólida de amor-próprio e entender as dinâmicas que criam conexões verdadeiras e duradouras.",
+      heroImage: capaRelacionamento1,
+      purchaseLink: "https://pay.hotmart.com/Y100554251R",
+      detailsBackgroundColor:
+        "bg-gradient-to-r from-[#7f1d1d] via-[#b91c1c] to-[#ef4444]",
+      domination: {
+        title: "Você vai Dominar:",
+        items: [
+          "Identificar e quebrar padrões de relacionamento tóxicos.",
+          "Construir uma autoestima inabalável como base para o amor.",
+          "As linguagens do amor e como aplicá-las.",
+          "Estabelecer limites saudáveis desde o início.",
+        ],
+      },
+      inclusions: {
+        title: "O que está incluso:",
+        items: [
+          "Módulos focados em autoconhecimento e cura.",
+          "Ferramentas para identificar seus padrões.",
+          "Exercícios práticos de amor-próprio.",
+          "BÔNUS: Guia de Primeiros Encontros Conscientes.",
+        ],
+        price: {
+          original: "R$ 297,00",
+          installments: "12x de R$ 23,27*",
+          full: "R$ 225,00",
+        },
+      },
+    },
+  },
+  {
+    id: 14,
+    categorySlug: "relacionamento",
+    slug: "comunicacao-e-intimidade",
+    title: "Curso 2",
+    imageSrc: capaRelacionamento2,
+    imageText: "Comunicação e Intimidade",
+    heading: "Comunicação e Intimidade",
+    description: "A Arte da Conexão Real.",
+    priceInstallments: "12x de R$ 23,27*",
+    priceFull: "R$ 225,00",
+    isHighlighted: true,
+    purchaseLink: "https://pay.hotmart.com/L100554305P",
+    theme: {
+      normal: {
+        cardBg: "bg-white/10 backdrop-blur-md",
+        borderColor: "border-white hover:border-relacionamento-light",
+        titleColor: "text-relacionamento-dark",
+        textColor: "text-relacionamento-dark",
+        buttonBg: "bg-relacionamento-dark",
+        buttonText: "text-white",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "dark",
+      },
+      highlighted: {
+        cardBg: "bg-relacionamento-dark",
+        borderColor: "border-relacionamento-light",
+        titleColor: "text-white",
+        textColor: "text-white/80",
+        buttonBg: "bg-white",
+        buttonText: "text-relacionamento-dark",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "light",
+      },
+    },
+    details: {
+      pageTitle: "COMUNICAÇÃO E INTIMIDADE",
+      pageSubtitle: "CURSO 2",
+      description: "Aprenda a Arte da Conexão Emocional e Física Real.",
+      longDescription:
+        "Vá além das conversas superficiais. Este curso ensina as ferramentas para uma comunicação empática e vulnerável, criando um espaço seguro para que a intimidade emocional, mental e física floresça.",
+      heroImage: capaRelacionamento2,
+      purchaseLink: "https://pay.hotmart.com/L100554305P",
+      detailsBackgroundColor:
+        "bg-gradient-to-r from-[#7f1d1d] via-[#b91c1c] to-[#ef4444]",
+      domination: {
+        title: "Você vai Dominar:",
+        items: [
+          "Comunicação Não-Violenta para resolver conflitos com amor.",
+          "A arte de ouvir ativamente para criar conexão.",
+          "Como expressar suas necessidades sem gerar brigas.",
+          "Técnicas para aprofundar a intimidade e a paixão.",
+        ],
+      },
+      inclusions: {
+        title: "O que está incluso:",
+        items: [
+          "Scripts e role-playing para conversas difíceis.",
+          "Exercícios de escuta ativa para casais.",
+          "Guias para noites de encontro focadas em conexão.",
+          "BÔNUS: Meditações guiadas para intimidade.",
+        ],
+        price: {
+          original: "R$ 297,00",
+          installments: "12x de R$ 23,27*",
+          full: "R$ 225,00",
+        },
+      },
+    },
+  },
+  {
+    id: 15,
+    categorySlug: "relacionamento",
+    slug: "crescimento-e-evolucao",
+    title: "Curso 3",
+    imageSrc: capaRelacionamento3,
+    imageText: "Crescimento e Evolução",
+    heading: "Crescimento e Evolução",
+    description: "Relacionamentos Como Prática Espiritual.",
+    priceInstallments: "12x de R$ 23,27*",
+    priceFull: "R$ 225,00",
+    isHighlighted: false,
+    purchaseLink: "https://pay.hotmart.com/Q100554367R",
+    theme: {
+      normal: {
+        cardBg: "bg-white/10 backdrop-blur-md",
+        borderColor: "border-white hover:border-relacionamento-light",
+        titleColor: "text-relacionamento-dark",
+        textColor: "text-relacionamento-dark",
+        buttonBg: "bg-relacionamento-dark",
+        buttonText: "text-white",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "dark",
+      },
+      highlighted: {
+        cardBg: "bg-relacionamento-dark",
+        borderColor: "border-relacionamento-light",
+        titleColor: "text-white",
+        textColor: "text-white/80",
+        buttonBg: "bg-white",
+        buttonText: "text-relacionamento-dark",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "light",
+      },
+    },
+    details: {
+      pageTitle: "CRESCIMENTO E EVOLUÇÃO",
+      pageSubtitle: "CURSO 3",
+      description:
+        "Transforme Seu Relacionamento em uma Jornada de Crescimento Mútuo.",
+      longDescription:
+        "Relacionamentos estagnados morrem. Aprenda a usar seu relacionamento como um catalisador para o crescimento pessoal e espiritual, tanto individualmente quanto como casal, garantindo que a parceria evolua e prospere ao longo do tempo.",
+      heroImage: capaRelacionamento3,
+      purchaseLink: "https://pay.hotmart.com/Q100554367R",
+      detailsBackgroundColor:
+        "bg-gradient-to-r from-[#7f1d1d] via-[#b91c1c] to-[#ef4444]",
+      domination: {
+        title: "Você vai Dominar:",
+        items: [
+          "Como criar uma visão de futuro compartilhada.",
+          "Rituais e práticas para manter a conexão viva.",
+          "Navegar pelas diferentes fases de um relacionamento.",
+          "Usar os desafios como oportunidades para crescer juntos.",
+        ],
+      },
+      inclusions: {
+        title: "O que está incluso:",
+        items: [
+          "Template para criar o 'Manifesto do Casal'.",
+          "Calendário de rituais de conexão.",
+          "Plano de crescimento pessoal e do casal.",
+          "BÔNUS: Workshop sobre metas e sonhos em conjunto.",
+        ],
+        price: {
+          original: "R$ 297,00",
+          installments: "12x de R$ 23,27*",
+          full: "R$ 225,00",
+        },
+      },
+    },
+  },
+
   // OBJETO DO COMBO ADICIONADO AQUI
   {
     id: 100,
@@ -1355,7 +1660,7 @@ export const courses = [
     categorySlug: "saude-fisica",
     title: "Combo",
     heading: "Pacote Premium Combo",
-    imageSrc: comboPackageSaude,
+    imageSrc: comboPackageRelacionamento,
     description:
       "Pacote Completo de Transformação da Saúde: receba todos os 3 Cursos + Materiais Completos para máximos resultados.",
     priceInstallments: "12x de R$ 58,95*",
@@ -1444,6 +1749,31 @@ export const courses = [
       headingColor: "text-[#4c007a]",
       textColor: "text-gray-800",
       buttonBg: "bg-[#4c007a]",
+      buttonText: "text-white",
+      priceBg: "bg-red-500",
+      learnMoreVariant: "dark",
+    },
+  },
+
+  {
+    id: 104,
+    isCombo: true,
+    categorySlug: "relacionamento",
+    title: "Combo",
+    heading: "Pacote Premium Combo",
+    imageSrc: comboPackageRelacionamento,
+    description:
+      "Receba todos os 3 Cursos e Materiais para transformar seus padrões e criar um amor consciente que evolui.",
+    priceInstallments: "12x de R$ 58,95*",
+    priceFull: "R$ 570,00",
+    purchaseLink: "https://pay.hotmart.com/B100554508D",
+    theme: {
+      titleColor: "text-relacionamento-dark",
+      cardBg: "bg-white/10 backdrop-blur-md",
+      cardBorder: "border-white",
+      headingColor: "text-relacionamento-dark",
+      textColor: "text-gray-800",
+      buttonBg: "bg-relacionamento-dark",
       buttonText: "text-white",
       priceBg: "bg-red-500",
       learnMoreVariant: "dark",

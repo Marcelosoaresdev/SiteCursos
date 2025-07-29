@@ -31,6 +31,10 @@ export default {
           "dark-green": "#23451e",
           "light-green": "#c8f0c2",
         },
+        "relacionamento": {
+          "dark": '#7f1d1d  ',
+          "light": '#f87171',
+        }
       },
       // Aqui definimos nossas fontes customizadas
       fontFamily: {
