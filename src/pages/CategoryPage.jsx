@@ -6,8 +6,6 @@ import CoursesSection from '../components/CoursesSection';
 import VideoTestimonialSection from '../components/VideoTestimonialSection';
 import ComboDetailsSection from '../components/ComboDetailsSection';
 import FinalCtaSection from '../components/FinalCtaSection';
-import DominationSection from '../components/DominationSection';
-import InclusionsSection from '../components/InclusionsSection';
 import CourseDetails from '../components/CourseDetails'; // Importação que faltava
 
 import AnimatedPage from '../components/AnimatedPage'; // 👈 1. IMPORTE O COMPONENTE

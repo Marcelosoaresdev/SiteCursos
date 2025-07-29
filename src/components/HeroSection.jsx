@@ -3,7 +3,7 @@ import leaoImage from "../assets/leao.png";
 
 function HeroSection() {
   return (
-    <div className="bg-gradient-to-br from-[#9933FF] to-[#5B1FA6] text-white overflow-hidden relative">
+    <div className="bg-gradient-to-br from-[#761cc7] to-[#b362ff] text-white overflow-hidden relative">
       {/* === EFEITO DE PARTÍCULAS === */}
       <div className="absolute inset-0 overflow-hidden z-0">
         {[...Array(25)].map((_, i) => (
@@ -81,7 +81,6 @@ function HeroSection() {
               comum não é a ausência de pequenez — mas sim a coragem de crescer
               a partir dela.
             </p>
-            <div className="absolute top-0 left-0 w-3 h-3 bg-white rounded-full -translate-x-1/2" />
           </div>
         </div>
 

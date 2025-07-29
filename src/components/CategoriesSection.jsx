@@ -13,52 +13,55 @@ import relacionamentoImg from '../assets/relacionamento.png';
 // Array de dados completo com todas as propriedades para cada card
 const categoriesData = [
   {
-    title: 'Saúde Física',
+    title: "Saúde Física",
     description:
-      'Descubra como transformar a corrida (e qualquer exercício) no seu superpoder pessoal.',
-    gradientClasses: 'bg-gradient-to-r from-[#203162] to-[#00afdb]',
+      "Descubra como transformar a corrida (e qualquer exercício) no seu superpoder pessoal.",
+    gradientClasses: "bg-gradient-to-r from-[#203162] to-[#00afdb]",
     imageSrc: saudeImg,
-    imagePosition: 'right',
-    buttonText: 'QUERO COMEÇAR MINHA TRANSFORMAÇÃO FÍSICA',
-    linkTo: '/categoria/saude-fisica',
+    imagePosition: "right",
+    buttonText: "QUERO COMEÇAR MINHA TRANSFORMAÇÃO FÍSICA",
+    linkTo: "/categoria/saude-fisica",
   },
   {
-    title: 'Financeiro',
+    title: "Financeiro",
     description:
-      'Do primeiro real ao seu próprio império. Não é sobre trabalhar mais, é sobre trabalhar diferente.',
-    gradientClasses: 'bg-gradient-to-b from-green-400 to-green-600',
+      "Do primeiro real ao seu próprio império. Não é sobre trabalhar mais, é sobre trabalhar diferente.",
+    gradientClasses: "bg-gradient-to-b from-green-400 to-green-600",
     imageSrc: financeiroImg,
-    imagePosition: 'left',
-    buttonText: 'QUERO CONSTRUIR MINHA PROSPERIDADE',
-    linkTo: '/categoria/financeiro',
+    imagePosition: "left",
+    buttonText: "QUERO CONSTRUIR MINHA PROSPERIDADE",
+    linkTo: "/categoria/financeiro",
   },
   {
-    title: 'Conquista',
+    title: "Conquista",
     description:
-      'Domine cada etapa da sua evolução e acelere suas conquistas até se tornar um elite.',
-    gradientClasses: 'bg-gradient-to-b from-brand-yellow to-brand-orange',
+      "Domine cada etapa da sua evolução e acelere suas conquistas até se tornar um elite.",
+    gradientClasses: "bg-gradient-to-b from-brand-yellow to-brand-orange",
     imageSrc: conquistaImg,
-    imagePosition: 'right',
-    buttonText: 'QUERO ACELERAR MINHAS CONQUISTAS',
+    imagePosition: "right",
+    buttonText: "QUERO ACELERAR MINHAS CONQUISTAS",
     flipImage: false, // Forçando a imagem a não virar
+    linkTo: "/categoria/conquista",
   },
   {
-    title: 'Autoestima',
+    title: "Autoestima",
     description:
-      'Não é sobre fingir confiança - é sobre construir um valor real que ninguém pode tirar de você.',
-    gradientClasses: 'bg-gradient-to-b from-pink-500 to-brand-pink',
+      "Não é sobre fingir confiança - é sobre construir um valor real que ninguém pode tirar de você.",
+    gradientClasses: "bg-gradient-to-b from-pink-500 to-brand-pink",
     imageSrc: autoestimaImg,
-    imagePosition: 'left',
-    buttonText: 'QUERO DESPERTAR MINHA CONFIANÇA TOTAL',
+    imagePosition: "left",
+    buttonText: "QUERO DESPERTAR MINHA CONFIANÇA TOTAL",
+    linkTo: "/categoria/autoestima",
   },
   {
-    title: 'Relacionamento',
+    title: "Relacionamento",
     description:
-      'Aprenda a construir o amor que você sempre quis, começando por dentro.',
-    gradientClasses: 'bg-gradient-to-b from-red-500 to-brand-red',
+      "Aprenda a construir o amor que você sempre quis, começando por dentro.",
+    gradientClasses: "bg-gradient-to-b from-red-500 to-brand-red",
     imageSrc: relacionamentoImg,
-    imagePosition: 'right',
-    buttonText: 'QUERO TRANSFORMAR MEUS RELACIONAMENTOS',
+    imagePosition: "right",
+    buttonText: "QUERO TRANSFORMAR MEUS RELACIONAMENTOS",
+    linkTo: "/categoria/relacionamento",
   },
 ];
 
