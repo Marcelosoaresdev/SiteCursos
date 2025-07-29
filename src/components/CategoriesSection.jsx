@@ -1,6 +1,8 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import CategoryCard from './CategoryCard';
 import AnimatedPage from '../components/AnimatedPage'; // 👈 1. IMPORTE O COMPONENTE
+import { fadeInUp, containerStagger } from '../utils/animationVariants';
 
 
 // Importando todas as imagens das categorias
@@ -68,28 +70,38 @@ const categoriesData = [
 function CategoriesSection() {
   return (
     <AnimatedPage>
-    <section className="text-text-light w-full py-12 px-4 sm:px-6 md:px-8">
-      <div className="container mx-auto text-center">
-        <h2 className="font-league text-4xl sm:text-5xl md:text-6xl uppercase mb-8 sm:mb-12">
-          Escolha começar a mudar sua vida
-        </h2>
+      <motion.section
+        className="text-text-light w-full py-12 px-4 sm:px-6 md:px-8"
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="container mx-auto text-center">
+          <h2 className="font-league text-4xl sm:text-5xl md:text-6xl uppercase mb-8 sm:mb-12">
+            Escolha começar a mudar sua vida
+          </h2>
 
-        {/* Grid responsivo com 3 colunas no desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {categoriesData.map((cat) => (
-            <CategoryCard
-              key={cat.title}
-              title={cat.title}
-              description={cat.description}
-              gradientClasses={cat.gradientClasses}
-              imageSrc={cat.imageSrc}
-              buttonText={cat.buttonText}
-              linkTo={cat.linkTo}
-            />
-          ))}
+          {/* Grid responsivo com 3 colunas no desktop */}
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+            variants={containerStagger}
+          >
+            {categoriesData.map((cat) => (
+              <motion.div key={cat.title} variants={fadeInUp}>
+                <CategoryCard
+                  title={cat.title}
+                  description={cat.description}
+                  gradientClasses={cat.gradientClasses}
+                  imageSrc={cat.imageSrc}
+                  buttonText={cat.buttonText}
+                  linkTo={cat.linkTo}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </div>
-    </section>
+      </motion.section>
     </AnimatedPage>
   );
 }

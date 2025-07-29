@@ -1,9 +1,11 @@
 // CoursesSection.jsx - VERSÃO CORRIGIDA
 
 import React from 'react';
+import { motion } from 'framer-motion';
 import CourseCard from './CourseCard';
 import ComboCard from './ComboCard';
 import { courses } from '../data/categoryData';
+import { fadeInUp, containerStagger } from '../utils/animationVariants';
 
 // 1. Adicionamos a nova prop 'titleColor' com um valor padrão
 function CoursesSection({ categorySlug, backgroundColor, titleColor = 'text-gray-800' }) {
@@ -19,7 +21,13 @@ function CoursesSection({ categorySlug, backgroundColor, titleColor = 'text-gray
   }
 
   return (
-    <section className={`${backgroundColor} py-20 px-6 relative`}>
+    <motion.section
+      className={`${backgroundColor} py-20 px-6 relative`}
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <p className="font-ttnorms text-gray-500 text-xl uppercase">
@@ -33,23 +41,26 @@ function CoursesSection({ categorySlug, backgroundColor, titleColor = 'text-gray
 
         {/* Renderiza os 3 cards de cursos normais */}
         {regularCourses.length > 0 && (
-          <div className="flex flex-col md:flex-row items-center lg:items-end justify-center gap-16 md:gap-6 relative">
+          <motion.div
+            className="flex flex-col md:flex-row items-center lg:items-end justify-center gap-16 md:gap-6 relative"
+            variants={containerStagger}
+          >
             {regularCourses.map((course) => (
-              <div key={course.id} className="relative">
-                <CourseCard {...course} key={course.id} id={course.id} />
-              </div>
+              <motion.div key={course.id} className="relative" variants={fadeInUp}>
+                <CourseCard {...course} id={course.id} />
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
 
         {/* Renderiza o card do combo */}
         {comboCourse && (
-          <div className="relative mt-32">
+          <motion.div className="relative mt-32" variants={fadeInUp}>
             <ComboCard {...comboCourse} />
-          </div>
+          </motion.div>
         )}
       </div>
-    </section>
+    </motion.section>
   );
 }
 

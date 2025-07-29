@@ -1,9 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
 import studentImage from "../assets/estudante.png";
+import { fadeInUp } from "../utils/animationVariants";
 
 function CtaSection() {
   return (
-    <section className="relative w-full overflow-hidden py-12 md:py-16 lg:py-20">
+    <motion.section
+      className="relative w-full overflow-hidden py-12 md:py-16 lg:py-20"
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       {/* Background complexo com gradientes e elementos SVG leves */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Gradiente principal */}
@@ -96,7 +104,7 @@ function CtaSection() {
       {/* Elementos gráficos adicionais leves */}
       <div className="absolute bottom-10 left-10 w-8 h-8 rounded-full border-2 border-white/20"></div>
       <div className="absolute top-20 right-20 w-6 h-6 rotate-45 border-2 border-white/20"></div>
-    </section>
+    </motion.section>
   );
 }
 

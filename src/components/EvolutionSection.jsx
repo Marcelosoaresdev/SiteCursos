@@ -1,8 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeInUp } from "../utils/animationVariants";
 
 function EvolutionSection() {
   return (
-    <section className="relative w-full py-20 md:py-24 lg:py-32 overflow-hidden">
+    <motion.section
+      className="relative w-full py-20 md:py-24 lg:py-32 overflow-hidden"
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 z-0">
         {/* Gradiente complexo */}
@@ -64,7 +72,7 @@ function EvolutionSection() {
       {/* Elementos flutuantes decorativos */}
       <div className="absolute top-10 left-1/4 w-6 h-6 rounded-full border border-white/20"></div>
       <div className="absolute bottom-20 right-1/3 w-5 h-5 rotate-45 border border-white/20"></div>
-    </section>
+    </motion.section>
   );
 }
 

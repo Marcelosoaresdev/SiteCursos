@@ -1,9 +1,17 @@
 import React from "react";
+import { motion } from "framer-motion";
 import profilePic from "../assets/fotoFlavia.jpg";
+import { fadeInUp } from "../utils/animationVariants";
 
 function TestimonialSection() {
   return (
-    <section className="relative w-full py-16 md:py-24 overflow-hidden bg-gradient-to-br from-purple-900 to-brand-purple">
+    <motion.section
+      className="relative w-full py-16 md:py-24 overflow-hidden bg-gradient-to-br from-purple-900 to-brand-purple"
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/3 -left-10 w-64 h-64 rounded-full bg-white/5 blur-3xl"></div>
@@ -118,7 +126,7 @@ function TestimonialSection() {
       {/* Elementos decorativos flutuantes */}
       <div className="absolute top-20 left-10 w-8 h-8 rounded-full border-2 border-white/20"></div>
       <div className="absolute bottom-20 right-10 w-6 h-6 rotate-45 border-2 border-white/20"></div>
-    </section>
+    </motion.section>
   );
 }
 

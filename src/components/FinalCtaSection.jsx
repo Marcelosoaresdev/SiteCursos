@@ -1,6 +1,8 @@
 // FinalCtaSection.jsx - VERSÃO REATORADA
 
 import React from 'react';
+import { motion } from 'framer-motion';
+import { fadeInUp } from '../utils/animationVariants';
 
 function FinalCtaSection({ content }) {
   if (!content) {
@@ -11,7 +13,13 @@ function FinalCtaSection({ content }) {
 
   return (
     // 2. Fundo e cor do texto da seção agora são dinâmicos
-    <section className={`w-full ${content.gradient} ${content.textColor} py-20 px-6`}>
+    <motion.section
+      className={`w-full ${content.gradient} ${content.textColor} py-20 px-6`}
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="container mx-auto">
         {/* TÍTULO E DESCRIÇÃO INICIAL */}
         <div className="max-w-4xl mx-auto text-center md:text-left">
@@ -71,7 +79,7 @@ function FinalCtaSection({ content }) {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
