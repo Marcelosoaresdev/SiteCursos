@@ -9,20 +9,6 @@ function DecoratedBackground({ children }) {
         {/* Gradiente complexo */}
         <div className="absolute inset-0 bg-[#761cc7]"></div>
 
-        {/* Formas geométricas sutis */}
-        <svg
-          className="absolute top-0 left-0 w-full h-full opacity-10"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,0 C30,10 70,20 100,0 L100,100 C70,90 30,80 0,100 Z"
-            fill="white"
-          />
-          <circle cx="20" cy="30" r="15" fill="white" opacity="0.3" />
-          <circle cx="80" cy="70" r="12" fill="white" opacity="0.3" />
-        </svg>
-
         {/* Padrão de pontos */}
         <div
           className="absolute inset-0 opacity-10"

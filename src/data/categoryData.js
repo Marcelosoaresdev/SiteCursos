@@ -1660,7 +1660,7 @@ export const courses = [
     categorySlug: "saude-fisica",
     title: "Combo",
     heading: "Pacote Premium Combo",
-    imageSrc: comboPackageRelacionamento,
+    imageSrc: comboPackageSaude,
     description:
       "Pacote Completo de Transformação da Saúde: receba todos os 3 Cursos + Materiais Completos para máximos resultados.",
     priceInstallments: "12x de R$ 58,95*",
