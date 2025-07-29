@@ -23,7 +23,16 @@ import conquistaImg from "../assets/conquista.png"; // Hero image da categoria C
 
 /*------------------------------------------------------------*/
 
+import capaAutoestima1 from "../assets/autoestima/capa_autoestima1.png";
+import capaAutoestima2 from "../assets/autoestima/capa_autoestima2.png";
+import capaAutoestima3 from "../assets/autoestima/capa_autoestima3.png";
+import comboPackageAutoestima from "../assets/autoestima/combo_autoestima.png";
+import autoestimaImg from "../assets/autoestima.png"; // Hero image da categoria Autoestima
+
+/*------------------------------------------------------------*/
 import comboProductsImage from "../assets/books.png"; // Imagem de exemplo
+
+/*------------------------------------------------------------*/
 
 //
 
@@ -323,6 +332,118 @@ export const categories = [
         },
       ],
       gradient: "bg-gradient-to-r from-[#8c2100] via-[#d14900] to-[#ff6c2e]",
+      textColor: "text-white",
+    },
+  },
+
+  {
+    slug: "autoestima",
+    title: "Autoestima",
+    subtitle:
+      "Não é sobre fingir confiança, é construir um valor real que ninguém pode tirar de você.",
+    heroImage: autoestimaImg,
+    gradient:
+      "bg-[radial-gradient(circle_at_0%_0%,_#eac7ff,_#bc6cff,_#7d3cb5)]",
+    titleColor1: "text-[#4c007a]",
+    titleColor2: "text-[#4c007a]",
+    subtitleColor: "text-[#4c007a]",
+    coursesBackgroundColor:
+      "bg-[radial-gradient(circle_at_0%_0%,_#eac7ff,_#bc6cff,_#7d3cb5)]",
+
+    domination: {
+      title: "Você vai Descobrir",
+      items: [
+        "Como construir um valor autêntico e sólido que não depende da opinião dos outros",
+        "Ferramentas práticas para reescrever sua história e dissolver autocrítica",
+        "Hábitos diários que fortalecem a confiança de dentro pra fora",
+        "Como transformar suas dores e desafios em fontes de força pessoal",
+      ],
+    },
+
+    inclusions: {
+      title: "O que está incluso:",
+      items: [
+        "Curso 1 – Autoestima Verdadeira – As Raízes da Confiança Autêntica",
+        "Curso 2 – Transformando Sua História Pessoal – Reescreva Sua Narrativa",
+        "Curso 3 – Autoestima na Prática – Vivendo Seu Valor Diariamente",
+        "Bônus – E-book GRÁTIS da nossa coleção + Caderno de Exercícios + Jornada Integrada: Dissolva auto dúvida para sempre e construa confiança que vem de dentro",
+      ],
+      price: {
+        original: "R$ 297,00",
+        installments: "12x de R$ 23,27*",
+        full: "R$ 225,00",
+      },
+    },
+
+    videoTestimonial: {
+      text: "Construa autovalor inabalável de dentro para fora através de autoconhecimento profundo, transformação de história e práticas diárias que tornam a confiança seu estado natural.",
+      videoId: "SEU_ID_DE_VIDEO_AQUI",
+      // ✅ PADRONIZADO
+      gradient: "bg-gradient-to-r from-[#4c007a] via-[#7e22ce] to-[#c084fc]",
+      textColor: "text-white",
+    },
+
+    finalCta: {
+      title: "O EFEITO COMPOSTO DA CONFIANÇA:",
+      mainParagraph:
+        "Quando esses cursos se unem, algo profundo acontece. A autoconfiança cria compaixão que derrete anos de crítica. A nova história cria permissão para brilhar sem pedir desculpas. As práticas diárias criam evidências que provam seu valor além de qualquer dúvida. Isso não é apenas sobre se sentir melhor – é sobre finalmente se tornar quem você deveria ser antes que o mundo te dissesse o contrário. É assim que pessoas que nunca se sentiram boas o suficiente se tornam imparáveis.",
+      price: {
+        original: "R$675,00",
+        installments: "12x de R$58,95*",
+        full: "R$570,00",
+      },
+      productImage: comboProductsImage,
+      bonusParagraph:
+        "Ao garantir o Pacote Completo de Transformação do Autovalor você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+      buttonText: "QUERO GARANTIR O PACOTE",
+      // ✅ PADRONIZADO
+      gradient: "bg-gradient-to-r from-[#4c007a] via-[#7e22ce] to-[#c084fc]",
+      textColor: "text-white",
+      borderColor: "border-white",
+      buttonLink: "https://pay.hotmart.com/D100553828O",
+      buttonClasses:
+        "bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30",
+    },
+
+    comboDetails: {
+      header: {
+        title: "PACOTE PREMIUM COMBO",
+        subtitle: "Transformação do Autovalor",
+        image: comboPackageAutoestima,
+      },
+      included: {
+        title: "O QUE ESTÁ INCLUSO:",
+        items: [
+          "<strong>Curso 1 – Autoestima Verdadeira</strong> – As Raízes da Confiança Autêntica",
+          "<strong>Curso 2 – Transformando Sua História Pessoal</strong> – Reescreva Sua Narrativa",
+          "<strong>Curso 3 – Autoestima na Prática</strong> – Vivendo Seu Valor Diariamente",
+          "<strong>Bônus:</strong> E-book gratuito + Caderno de exercícios + Jornada Integrada",
+        ],
+        buttonText: "COMEÇAR MINHA TRANSFORMAÇÃO COMPLETA",
+        buttonLink: "https://pay.hotmart.com/D100553828O",
+      },
+      why: {
+        line1: "POR QUE ESCOLHER O",
+        paragraph:
+          "Aprenda a brilhar sem pedir desculpas – é sobre finalmente se tornar quem você deveria ser.",
+        line2: "PACOTE COMPLETO?",
+      },
+      benefits: [
+        {
+          title: "Curso 1",
+          text: "Revela seu valor autêntico que sempre esteve lá.",
+        },
+        {
+          title: "Curso 2",
+          text: "Ajuda você a reescrever a sua vida.",
+        },
+        {
+          title: "Curso 3",
+          text: "Mostra como ter uma confiança inabalável.",
+        },
+      ],
+      // ✅ PADRONIZADO
+      gradient: "bg-gradient-to-r from-[#4c007a] via-[#7e22ce] to-[#c084fc]",
       textColor: "text-white",
     },
   },
@@ -828,8 +949,7 @@ export const courses = [
     details: {
       pageTitle: "CONQUISTE SEUS OBJETIVOS",
       pageSubtitle: "CURSO 1",
-      description:
-        "Objetivos Claros e Diretos Que Te Puxam Para Frente",
+      description: "Objetivos Claros e Diretos Que Te Puxam Para Frente",
       longDescription:
         "Esta jornada abrangente é um método prático e validado de definição, planejamento e execução de metas, desenvolvido para maximizar desempenho pessoal e acelerar resultados em qualquer área da vida.",
       heroImage: capaConquista1,
@@ -1010,6 +1130,224 @@ export const courses = [
     },
   },
 
+  {
+    id: 10,
+    categorySlug: "autoestima",
+    slug: "autoestima-verdadeira",
+    title: "Curso 1",
+    imageSrc: capaAutoestima1,
+    imageText: "Autoestima Verdadeira",
+    heading: "Autoestima Verdadeira",
+    description: "Mostrando o valor autêntico que sempre esteve com você",
+    priceInstallments: "12x de R$ 23,27*",
+    priceFull: "R$ 225,00",
+    isHighlighted: false,
+    purchaseLink: "https://pay.hotmart.com/P100553270H",
+    theme: {
+      normal: {
+        cardBg: "bg-white/10 backdrop-blur-md",
+        borderColor: "border-white hover:border-[#c084fc]",
+        titleColor: "text-[#4c007a]",
+        textColor: "text-[#4c007a]",
+        buttonBg: "bg-[#4c007a]",
+        buttonText: "text-white",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "dark",
+      },
+      highlighted: {
+        cardBg: "bg-[#4c007a]",
+        borderColor: "border-[#c084fc]",
+        titleColor: "text-white",
+        textColor: "text-white/80",
+        buttonBg: "bg-white",
+        buttonText: "text-[#4c007a]",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "light",
+      },
+    },
+    details: {
+      pageTitle: "AUTOESTIMA VERDADEIRA",
+      pageSubtitle: "CURSO 1",
+      description: "Mostrando o valor autêntico que sempre esteve com você",
+      longDescription:
+        "Propõe um modelo estruturado de desenvolvimento da autoestima baseado em ciência comportamental, promovendo mudanças na forma como você se posiciona, decide e age – impactando diretamente seus resultados pessoais e profissionais.",
+      heroImage: capaAutoestima1,
+      purchaseLink: "https://pay.hotmart.com/P100553270H",
+      // ✅ PADRONIZADO
+      detailsBackgroundColor:
+        "bg-gradient-to-r from-[#4c007a] via-[#7e22ce] to-[#c084fc]",
+      domination: {
+        title: "Você vai Descobrir:",
+        items: [
+          "A diferença fundamental entre confiança genuína e aparência superficial",
+          "Como funciona a neurociência por trás da autoestima sólida",
+          "Estratégias para sair do ciclo vicioso de buscar aprovação externa",
+          "Métodos para quebrar padrões tóxicos de pensamento",
+          "Como fortalecer seu autovalor mesmo em momentos difíceis",
+        ],
+      },
+      inclusions: {
+        title: "O que está incluso:",
+        items: [
+          "6 módulos transformadores (2.5 horas no total)",
+          "Todo o conteúdo em vídeo do Curso 1 em Vídeo",
+          "Ferramentas completas de avaliação de autoestima",
+          "Roteiro de transformação de 90 dias",
+          "BÔNUS: E-book gratuito da nossa coleção especialmente selecionada + caderno de exercícios",
+        ],
+        price: {
+          original: "R$ 297,00",
+          installments: "12x de R$ 23,27*",
+          full: "R$ 225,00",
+        },
+      },
+    },
+  },
+  {
+    id: 11,
+    categorySlug: "autoestima",
+    slug: "transformando-sua-historia-pessoal",
+    title: "Curso 2",
+    imageSrc: capaAutoestima2,
+    imageText: "Transformando Sua História Pessoal",
+    heading: "Transformando Sua História Pessoal",
+    description: "Rescreva Seu Passado para Empoderar Seu Futuro",
+    priceInstallments: "12x de R$ 23,27*",
+    priceFull: "R$ 225,00",
+    isHighlighted: true, // DESTAQUE ADICIONADO PARA CURSO 2
+    purchaseLink: "https://pay.hotmart.com/G100553495U",
+    theme: {
+      normal: {
+        cardBg: "bg-white/10 backdrop-blur-md",
+        borderColor: "border-white hover:border-[#c084fc]",
+        titleColor: "text-[#4c007a]",
+        textColor: "text-[#4c007a]",
+        buttonBg: "bg-[#4c007a]",
+        buttonText: "text-white",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "dark",
+      },
+      highlighted: {
+        cardBg: "bg-[#4c007a]",
+        borderColor: "border-[#c084fc]",
+        titleColor: "text-white",
+        textColor: "text-white/80",
+        buttonBg: "bg-white",
+        buttonText: "text-[#4c007a]",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "light",
+      },
+    },
+    details: {
+      pageTitle: "TRANSFORMANDO SUA HISTÓRIA PESSOAL",
+      pageSubtitle: "CURSO 2",
+      description: "Rescreva Seu Passado para Empoderar Seu Futuro",
+      longDescription:
+        "É um convite para olhar com coragem para sua trajetória, ressignificar dores do passado e construir, com consciência e leveza, uma nova versão de si mesmo – mais alinhada com quem você realmente é.",
+      heroImage: capaAutoestima2,
+      purchaseLink: "https://pay.hotmart.com/G100553495U",
+      // ✅ PADRONIZADO
+      detailsBackgroundColor:
+        "bg-gradient-to-r from-[#4c007a] via-[#7e22ce] to-[#c084fc]",
+      domination: {
+        title: "Você vai Descobrir:",
+        items: [
+          "Técnicas para se libertar do peso emocional do passado",
+          "Como transformar experiências dolorosas em fontes de força",
+          "O processo do perdão verdadeiro (não superficial)",
+          "Métodos para rescrever sua narrativa pessoal de forma empoderada",
+          "Como valorizar sua jornada, incluindo os desafios",
+        ],
+      },
+      inclusions: {
+        title: "O que está incluso:",
+        items: [
+          "6 módulos poderosos (2.5 horas no total)",
+          "Todo o conteúdo em vídeo do Curso 2",
+          "Templates de transformação de história",
+          "Ferramentas de reconstrução de narrativa pessoal",
+        ],
+        price: {
+          original: "R$ 297,00",
+          installments: "12x de R$ 23,27*",
+          full: "R$ 225,00",
+        },
+      },
+    },
+  },
+  {
+    id: 12,
+    categorySlug: "autoestima",
+    slug: "autoestima-na-pratica",
+    title: "Curso 3",
+    imageSrc: capaAutoestima3,
+    imageText: "Autoestima na Prática",
+    heading: "Autoestima na Prática",
+    description: "Como ter uma Confiança Inabalável",
+    priceInstallments: "12x de R$ 23,27*",
+    priceFull: "R$ 225,00",
+    isHighlighted: false,
+    purchaseLink: "https://pay.hotmart.com/O100553728D",
+    theme: {
+      normal: {
+        cardBg: "bg-white/10 backdrop-blur-md",
+        borderColor: "border-white hover:border-[#c084fc]",
+        titleColor: "text-[#4c007a]",
+        textColor: "text-[#4c007a]",
+        buttonBg: "bg-[#4c007a]",
+        buttonText: "text-white",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "dark",
+      },
+      highlighted: {
+        cardBg: "bg-[#4c007a]",
+        borderColor: "border-[#c084fc]",
+        titleColor: "text-white",
+        textColor: "text-white/80",
+        buttonBg: "bg-white",
+        buttonText: "text-[#4c007a]",
+        priceBg: "bg-red-500",
+        learnMoreVariant: "light",
+      },
+    },
+    details: {
+      pageTitle: "AUTOESTIMA NA PRÁTICA",
+      pageSubtitle: "CURSO 3",
+      description: "Como ter uma Confiança Inabalável",
+      longDescription:
+        "Teoria sem prática é apenas pensamento desejoso. Construa os hábitos diários, limites e habilidades de comunicação que tornam a autoestima sua forma automática de ser.",
+      heroImage: capaAutoestima3,
+      purchaseLink: "https://pay.hotmart.com/O100553728D",
+      // ✅ PADRONIZADO
+      detailsBackgroundColor:
+        "bg-gradient-to-r from-[#4c007a] via-[#7e22ce] to-[#c084fc]",
+      domination: {
+        title: "Você vai Descobrir:",
+        items: [
+          "Hábitos diários que fortalecem a autoestima",
+          "Como estabelecer limites saudáveis",
+          "Técnicas de comunicação que refletem seu autovalor",
+          "Práticas de autocuidado eficazes",
+          "Como viver de forma autêntica no dia a dia",
+        ],
+      },
+      inclusions: {
+        title: "O que está incluso:",
+        items: [
+          "6 módulos práticos (2.5 horas no total)",
+          "Todo o conteúdo em vídeo do Curso 3",
+          "Templates de práticas diárias e ferramentas de acompanhamento",
+          "Scripts de limites e guias de comunicação",
+        ],
+        price: {
+          original: "R$ 297,00",
+          installments: "12x de R$ 23,27*",
+          full: "R$ 225,00",
+        },
+      },
+    },
+  },
+
   // OBJETO DO COMBO ADICIONADO AQUI
   {
     id: 100,
@@ -1081,6 +1419,31 @@ export const courses = [
       headingColor: "text-[#8c2100]",
       textColor: "text-gray-800",
       buttonBg: "bg-[#8c2100]",
+      buttonText: "text-white",
+      priceBg: "bg-red-500",
+      learnMoreVariant: "dark",
+    },
+  },
+
+  {
+    id: 103,
+    isCombo: true,
+    categorySlug: "autoestima",
+    title: "Combo",
+    heading: "Pacote Premium Combo",
+    imageSrc: comboPackageAutoestima,
+    description:
+      "Acesso completo aos 3 cursos para construir uma confiança inabalável e transformar seu autovalor.",
+    priceInstallments: "12x de R$ 58,95*",
+    priceFull: "R$ 570,00",
+    purchaseLink: "https://pay.hotmart.com/D100553828O",
+    theme: {
+      titleColor: "text-[#4c007a]",
+      cardBg: "bg-white/10 backdrop-blur-md",
+      cardBorder: "border-white",
+      headingColor: "text-[#4c007a]",
+      textColor: "text-gray-800",
+      buttonBg: "bg-[#4c007a]",
       buttonText: "text-white",
       priceBg: "bg-red-500",
       learnMoreVariant: "dark",

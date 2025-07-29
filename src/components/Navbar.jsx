@@ -34,6 +34,13 @@ function Navbar() {
           >
             Conquista
           </Link>
+
+          <Link
+            to="/categoria/autoestima"
+            className="font-ttnorms text-lg text-white hover:text-brand-yellow transition-colors"
+          >
+            Autoestima
+          </Link>
         </div>
       </nav>
     </header>
