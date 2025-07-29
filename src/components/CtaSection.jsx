@@ -1,16 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
 import studentImage from "../assets/estudante.png";
-import { fadeInUp } from "../utils/animationVariants";
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 function CtaSection() {
+  const scrollAnimation = useScrollAnimation();
   return (
     <motion.section
+      ref={scrollAnimation.ref}
       className="relative w-full overflow-hidden py-12 md:py-16 lg:py-20"
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      variants={scrollAnimation.variants}
+      initial={scrollAnimation.initial}
+      animate={scrollAnimation.animate}
+      transition={scrollAnimation.transition}
     >
       {/* Background complexo com gradientes e elementos SVG leves */}
       <div className="absolute inset-0 z-0 overflow-hidden">

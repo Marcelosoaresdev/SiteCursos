@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import CategoryCard from './CategoryCard';
 import { fadeInUp, containerStagger } from '../utils/animationVariants';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 
 // Importando todas as imagens das categorias
@@ -67,13 +68,15 @@ const categoriesData = [
 ];
 
 function CategoriesSection() {
+  const scrollAnimation = useScrollAnimation();
   return (
       <motion.section
+        ref={scrollAnimation.ref}
         className="text-text-light w-full py-12 px-4 sm:px-6 md:px-8"
-        variants={fadeInUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        variants={scrollAnimation.variants}
+        initial={scrollAnimation.initial}
+        animate={scrollAnimation.animate}
+        transition={scrollAnimation.transition}
       >
         <div className="container mx-auto text-center">
           <h2 className="font-league text-4xl sm:text-5xl md:text-6xl uppercase mb-8 sm:mb-12">
