@@ -12,7 +12,13 @@ function CategoryCard({
   // 1. A lógica condicional no final foi removida.
   //    Agora o componente retorna diretamente o JSX do card.
   return (
-    <div className="w-full mx-auto bg-brand-purple-light h-80 lg:h-96 rounded-2xl overflow-hidden relative group/card p-6 flex flex-col items-center justify-start text-center">
+    <div
+      className="w-full mx-auto 
+  bg-white/10 backdrop-blur-md 
+  h-80 lg:h-96 rounded-2xl 
+  overflow-hidden relative group/card p-6 flex flex-col items-center justify-start text-center
+  border border-white/10 shadow-lg shadow-black/20"
+    >
       {/* Círculo de hover */}
       <div
         className={`absolute h-24 w-24 -top-12 -right-12 rounded-full ${gradientClasses} group-hover/card:scale-[900%] duration-500 z-0 transition-transform`}
@@ -36,7 +42,7 @@ function CategoryCard({
       </p>
 
       {/* BOTÃO */}
-      <div className="z-10 md:mt-auto mt-2 w-full">
+      <div className="z-10  md:my-2 mt-2 w-full">
         {/* 2. O elemento <button> foi substituído por <Link>. */}
         {/* Todas as classes de estilo do botão foram aplicadas diretamente no Link. */}
         <Link
