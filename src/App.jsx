@@ -1,9 +1,14 @@
 import React from "react";
-// 1. Importe 'useLocation' para rastrear a URL atual
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-// 2. Importe 'AnimatePresence' da biblioteca framer-motion
+// As importações do router e framer-motion permanecem as mesmas
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
+// Importações das suas páginas e componentes
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import Navbar from "./components/Navbar";
@@ -11,23 +16,26 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
 /**
- * Componente interno que lida com a lógica de roteamento e animação.
- * É necessário porque o hook 'useLocation' precisa estar dentro do <Router>.
+ * Componente que lida com a lógica de roteamento e animação.
  */
 function AnimatedRoutes() {
   const location = useLocation();
 
   return (
-    // 3. AnimatePresence gerencia as animações de entrada e saída das páginas.
-    //    mode="wait" garante que a página antiga termine sua animação de saída
-    //    antes que a nova página comece sua animação de entrada.
     <AnimatePresence mode="wait">
-      {/* 4. A 'key' e a 'location' são cruciais. Elas informam ao AnimatePresence
-          que a página mudou e que uma transição deve ser acionada. */}
+      {/* O 'key' garante que o AnimatePresence detecte a mudança de página */} {" "}
       <Routes location={location} key={location.pathname}>
+        {/* --- Rotas para o site padrão --- */}
         <Route path="/" element={<HomePage />} />
         <Route path="/categoria/:slug" element={<CategoryPage />} />
-      </Routes>
+        {/* --- ✅ NOVAS ROTAS PARA A VERSÃO UNIVERSITÁRIO --- */}
+        {/* Ambas apontam para os mesmos componentes, que carregarão os dados corretos. */}
+        <Route path="/universitario" element={<HomePage />} />{" "}
+        <Route
+          path="/universitario/categoria/:slug"
+          element={<CategoryPage />}
+        />{" "}
+      </Routes>{" "}
     </AnimatePresence>
   );
 }
@@ -36,14 +44,12 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Navbar />
-      {/* A tag <main> agora tem uma cor de fundo escura.
-          Isso evita o "flash branco" durante a transição de páginas. */}
+      <Navbar /> {" "}
       <main className="bg-slate-900">
-        {/* 5. Usamos nosso novo componente de rotas animadas aqui */}
-        <AnimatedRoutes />
+        {/* Usamos nosso componente de rotas animadas que agora inclui as rotas de estudante */}
+        <AnimatedRoutes />{" "}
       </main>
-      <Footer />
+      <Footer />{" "}
     </Router>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import studentImage from "../assets/estudante.png";
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { Link } from "react-router-dom";
 
 function CtaSection() {
   const scrollAnimation = useScrollAnimation();
@@ -70,30 +71,28 @@ function CtaSection() {
                 POR VOCÊ:
               </p>
 
-              <button
+              <Link
+                to="/universitario"
                 className="
-                  font-league text-white text-base sm:text-lg md:text-xl lg:text-2xl
-                  px-4 py-2 sm:px-5 sm:py-3 md:px-6 md:py-3
-                  bg-gradient-to-r from-purple-600 to-blue-500
-                  hover:from-purple-700 hover:to-blue-600
-                  rounded-xl sm:rounded-2xl
-                  shadow-[0_3px_0_0_#6b21a8]
+                  inline-block text-center {/* Garante que o link se comporte como um bloco */}
+                  font-league text-white text-xl md:text-2xl
+                  px-8 py-4 md:px-10 md:py-5
+                  bg-button-gradient
+                  rounded-2xl
+                  shadow-[0_4px_0_0_#6b21a8]
                   hover:translate-y-0.5
-                  hover:shadow-[0_1px_0_0_#6b21a8]
+                  hover:shadow-[0_2px_0_0_#6b21a8]
                   active:translate-y-1
                   active:shadow-none
                   transition-all duration-150
-                  mt-4 sm:mt-5 md:mt-6
+                  mt-8
                   cursor-pointer
                   select-none
-                  w-full max-w-[180px] sm:max-w-xs
-                  relative overflow-hidden
+                  w-full max-w-xs md:max-w-sm
                 "
               >
-                {/* Efeito de brilho no botão */}
-                <span className="absolute top-0 left-0 w-full h-full bg-white/10 opacity-0 hover:opacity-30 transition-opacity duration-300"></span>
                 CLIQUE AQUI!
-              </button>
+              </Link>
             </div>
           </div>
         </div>

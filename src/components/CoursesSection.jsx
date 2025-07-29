@@ -1,15 +1,17 @@
-// CoursesSection.jsx - VERSÃO CORRIGIDA
+import React from "react";
+import CourseCard from "./CourseCard";
+import ComboCard from "./ComboCard";
+// ❌ REMOVIDO: A importação direta de 'courses' foi removida daqui.
+// import { courses } from '../data/categoryData';
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import CourseCard from './CourseCard';
-import ComboCard from './ComboCard';
-import { courses } from '../data/categoryData';
-import { fadeInUp, containerStagger } from '../utils/animationVariants';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
-
-// 1. Adicionamos a nova prop 'titleColor' com um valor padrão
-function CoursesSection({ categorySlug, backgroundColor, titleColor = 'text-gray-800' }) {
+// ✅ AQUI: O componente agora recebe 'courses' como uma prop
+function CoursesSection({
+  courses,
+  categorySlug,
+  backgroundColor,
+  titleColor = "text-gray-800",
+}) {
+  // A lógica interna agora usa a prop 'courses' que veio da página pai
   const allItems = categorySlug
     ? courses.filter((course) => course.categorySlug === categorySlug)
     : courses;
@@ -21,49 +23,38 @@ function CoursesSection({ categorySlug, backgroundColor, titleColor = 'text-gray
     return null;
   }
 
-  const scrollAnimation = useScrollAnimation();
   return (
-    <motion.section
-      ref={scrollAnimation.ref}
-      className={`${backgroundColor} py-20 px-6 relative`}
-      variants={scrollAnimation.variants}
-      initial={scrollAnimation.initial}
-      animate={scrollAnimation.animate}
-      transition={scrollAnimation.transition}
-    >
+    <section className={`${backgroundColor} py-20 px-6 relative`}>
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <p className="font-ttnorms text-gray-500 text-xl uppercase">
             Pré-venda
           </p>
-          {/* 2. A cor do título agora vem da prop 'titleColor' */}
-          <h2 className={`font-league text-7xl md:text-8xl ${titleColor} uppercase`}>
+          <h2
+            className={`font-league text-7xl md:text-8xl ${titleColor} uppercase`}
+          >
             Categorias
           </h2>
         </div>
 
-        {/* Renderiza os 3 cards de cursos normais */}
+        {/* Este mapeamento agora usará os dados corretos (gerais ou de estudante) */}
         {regularCourses.length > 0 && (
-          <motion.div
-            className="flex flex-col md:flex-row items-center lg:items-end justify-center gap-16 md:gap-6 relative"
-            variants={containerStagger}
-          >
+          <div className="flex flex-col md:flex-row items-center lg:items-end justify-center gap-16 md:gap-6 relative">
             {regularCourses.map((course) => (
-              <motion.div key={course.id} className="relative" variants={fadeInUp}>
-                <CourseCard {...course} id={course.id} />
-              </motion.div>
+              <div key={course.id} className="relative">
+                <CourseCard {...course} />
+              </div>
             ))}
-          </motion.div>
+          </div>
         )}
 
-        {/* Renderiza o card do combo */}
         {comboCourse && (
-          <motion.div className="relative mt-32" variants={fadeInUp}>
+          <div className="relative mt-32">
             <ComboCard {...comboCourse} />
-          </motion.div>
+          </div>
         )}
       </div>
-    </motion.section>
+    </section>
   );
 }
 

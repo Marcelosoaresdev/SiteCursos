@@ -1,29 +1,68 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
+// 👈 1. Importe o hook para detectar a versão do site
+import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // 👈 2. Verifique qual versão do site está ativa
+  const isStudentVersion = useIsStudentVersion();
 
-  // Array de links para facilitar a manutenção
+  // 👈 3. Crie os links dinamicamente com base na versão
   const navLinks = [
-    { title: "Início", path: "/" },
-    { title: "Saúde Física", path: "/categoria/saude-fisica" },
-    { title: "Financeiro", path: "/categoria/financeiro" },
-    { title: "Conquista", path: "/categoria/conquista" },
-    { title: "Autoestima", path: "/categoria/autoestima" },
-    { title: "Relacionamento", path: "/categoria/relacionamento" },
+    // ✅ CORREÇÃO: Adicionada a propriedade 'end: true' para o link de Início
+    {
+      title: "Início",
+      path: isStudentVersion ? "/universitario" : "/",
+      end: true,
+    },
+    {
+      title: "Saúde Física",
+      path: `${
+        isStudentVersion ? "/universitario" : ""
+      }/categoria/saude-fisica`,
+    },
+    {
+      title: "Financeiro",
+      path: `${isStudentVersion ? "/universitario" : ""}/categoria/financeiro`,
+    },
+    {
+      title: "Conquista",
+      path: `${isStudentVersion ? "/universitario" : ""}/categoria/conquista`,
+    },
+    {
+      title: "Autoestima",
+      path: `${isStudentVersion ? "/universitario" : ""}/categoria/autoestima`,
+    },
+    {
+      title: "Relacionamento",
+      path: `${
+        isStudentVersion ? "/universitario" : ""
+      }/categoria/relacionamento`,
+    },
   ];
 
-  // Efeito para detectar scroll
+  // Efeito para detectar scroll (sem alteração)
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Efeito para travar o scroll do body (sem alteração)
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
@@ -35,22 +74,23 @@ function Navbar() {
         }`}
       >
         <nav className="container mx-auto px-4 sm:px-6 flex justify-between items-center">
-          {/* Logo */}
+          {/* Logo com link dinâmico */}
           <Link
-            to="/"
-            className={`font-league text-2xl sm:text-2xl uppercase tracking-tight transition-colors ${
+            to={isStudentVersion ? "/universitario" : "/"} // 👈 4. Link do logo corrigido
+            className={`font-league text-xl sm:text-2xl uppercase font-bold tracking-tight transition-colors ${
               scrolled ? "text-brand-purple" : "text-white"
             }`}
           >
             Vitis Souls
           </Link>
 
-          {/* Links para Desktop */}
+          {/* Links para Desktop (agora usam os links dinâmicos) */}
           <div className="hidden lg:flex space-x-1">
             {navLinks.map((link) => (
               <NavLink
                 key={link.title}
                 to={link.path}
+                end={link.end} // ✅ CORREÇÃO: Passando a propriedade 'end' para o NavLink
                 className={({ isActive }) =>
                   `font-medium px-4 py-2 rounded-lg transition-all duration-300 ${
                     isActive
@@ -68,13 +108,13 @@ function Navbar() {
             ))}
           </div>
 
-          {/* Botão do Menu Hambúrguer para Mobile */}
+          {/* Botão do Menu Hambúrguer para Mobile (sem alteração na lógica de clique) */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`p-2 rounded-lg transition-all ${
                 isMenuOpen
-                  ? "bg-brand-purple text-white hover:bg-brand-purple/90" // cor chamativa quando menu está aberto
+                  ? "text-gray-800"
                   : scrolled
                   ? "bg-brand-purple/10 text-brand-purple hover:bg-brand-purple/20"
                   : "bg-white/10 text-white hover:bg-white/20"
@@ -104,9 +144,9 @@ function Navbar() {
         </nav>
       </header>
 
-      {/* Painel do Menu Mobile */}
+      {/* Painel do Menu Mobile (agora usa os links dinâmicos) */}
       <div
-        className={`fixed inset-0 z-40 bg-white/95 backdrop-blur-lg transition-all duration-300 lg:hidden pt-16 ${
+        className={`fixed inset-0 z-40 bg-white/95 backdrop-blur-lg transition-all duration-300 lg:hidden pt-20 ${
           isMenuOpen
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-full pointer-events-none"
@@ -117,6 +157,7 @@ function Navbar() {
             <NavLink
               key={link.title}
               to={link.path}
+              end={link.end} // ✅ CORREÇÃO: Passando a propriedade 'end' também para o menu mobile
               className={({ isActive }) =>
                 `w-full text-center py-4 px-6 mb-3 rounded-xl text-lg font-medium transition-all ${
                   isActive
@@ -129,7 +170,6 @@ function Navbar() {
               {link.title}
             </NavLink>
           ))}
-
           <div className="mt-8 flex flex-col items-center">
             <div className="bg-gray-200 w-32 h-1 rounded-full mb-6"></div>
             <p className="text-gray-500 text-sm">Vitis Souls Cursos</p>
