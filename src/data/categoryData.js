@@ -306,8 +306,8 @@ export const categories = [
 
     comboDetails: {
       header: {
-        title: "PACOTE PREMIUM COMBO",
-        subtitle: "Pacote Completo",
+        title: "PREMIUM COMBO",
+        subtitle: "Pacote",
         image: comboPackageConquista,
       },
       included: {
@@ -417,8 +417,8 @@ export const categories = [
 
     comboDetails: {
       header: {
-        title: "PACOTE PREMIUM COMBO",
-        subtitle: "Transformação do Autovalor",
+        title: "PREMIUM COMBO",
+        subtitle: "Pacote",
         image: comboPackageAutoestima,
       },
       included: {
@@ -500,8 +500,8 @@ export const categories = [
     },
     comboDetails: {
       header: {
-        title: "Pacote Premium Combo",
-        subtitle: "Transformação Relacional",
+        title: "Premium Combo",
+        subtitle: "Pacote",
         image: comboPackageRelacionamento,
       },
       included: {
