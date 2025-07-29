@@ -796,7 +796,7 @@ export const courses = [
     imageSrc: capaConquista1,
     imageText: "Conquiste Seus Objetivos",
     heading: "Conquiste Seus Objetivos",
-    description: "A Ciência de Objetivos Cristalinos Que Te Puxam Para Frente",
+    description: "Objetivos Claros e Diretos",
     priceInstallments: "12x de R$ 23,27*",
     priceFull: "R$ 225,00",
     isHighlighted: false,
@@ -829,7 +829,7 @@ export const courses = [
       pageTitle: "CONQUISTE SEUS OBJETIVOS",
       pageSubtitle: "CURSO 1",
       description:
-        "A Ciência de Objetivos Cristalinos Que Te Puxam Para Frente",
+        "Objetivos Claros e Diretos Que Te Puxam Para Frente",
       longDescription:
         "Esta jornada abrangente é um método prático e validado de definição, planejamento e execução de metas, desenvolvido para maximizar desempenho pessoal e acelerar resultados em qualquer área da vida.",
       heroImage: capaConquista1,
@@ -872,7 +872,7 @@ export const courses = [
     imageSrc: capaConquista2,
     imageText: "Estratégia e Planejamento",
     heading: "Estratégia e Planejamento",
-    description: "Do Ponto A ao Ponto B Sem Se Perder",
+    description: "Seu Mapa de Sucesso",
     priceInstallments: "12x de R$ 23,27*",
     priceFull: "R$ 225,00",
     isHighlighted: true,
@@ -904,7 +904,7 @@ export const courses = [
     details: {
       pageTitle: "ESTRATÉGIA E PLANEJAMENTO",
       pageSubtitle: "CURSO 2",
-      description: "Do Ponto A ao Ponto B Sem Se Perder",
+      description: "Seu Mapa de Sucesso",
       longDescription:
         "A diferença entre sonhadores e conquistadores não é talento – é ter um mapa. Crie seu GPS para o sucesso com estratégias que antecipam obstáculos antes que apareçam.",
       heroImage: capaConquista2,
@@ -944,7 +944,7 @@ export const courses = [
     imageSrc: capaConquista3,
     imageText: "Execução e Hábitos",
     heading: "Execução e Hábitos",
-    description: "O Sistema de 1% Diário que Cria Resultados Incríveis",
+    description: "Hábitos Diários para Vitória",
     priceInstallments: "12x de R$ 23,27*",
     priceFull: "R$ 225,00",
     isHighlighted: false,
