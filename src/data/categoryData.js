@@ -2,7 +2,7 @@
 import capaSaude1 from "../assets/saude/capa_saude1.png";
 import capaSaude2 from "../assets/saude/capa_saude2.png";
 import capaSaude3 from "../assets/saude/capa_saude3.png";
-import comboPackageImage from "../assets/saude/combo_saude.png"; // Imagem do pacote combo
+import comboPackageSaude from "../assets/saude/combo_saude.png"; // Imagem do pacote combo
 import corrida from "../assets/corrida.png"; // Hero image da categoria Saúde Física
 
 /*------------------------------------------------------------*/
@@ -101,7 +101,7 @@ export const categories = [
       header: {
         title: "Premium Combo",
         subtitle: "Pacote",
-        image: comboPackageImage,
+        image: comboPackageSaude,
       },
       included: {
         title: "O que está incluso?",
@@ -289,7 +289,7 @@ export const categories = [
       header: {
         title: "PACOTE PREMIUM COMBO",
         subtitle: "Pacote Completo",
-        image: comboPackageImage,
+        image: comboPackageConquista,
       },
       included: {
         title: "O QUE ESTÁ INCLUSO:",
@@ -1017,7 +1017,7 @@ export const courses = [
     categorySlug: "saude-fisica",
     title: "Combo",
     heading: "Pacote Premium Combo",
-    imageSrc: comboPackageImage,
+    imageSrc: comboPackageSaude,
     description:
       "Pacote Completo de Transformação da Saúde: receba todos os 3 Cursos + Materiais Completos para máximos resultados.",
     priceInstallments: "12x de R$ 58,95*",
