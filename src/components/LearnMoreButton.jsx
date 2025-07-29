@@ -49,7 +49,7 @@ function LearnMoreButton({ text, variant = 'dark', onClick }) {
 
       <span
         className={`
-        absolute inset-0 py-1.5 my-0 ml-6  text-[0.7rem] leading-relaxed text-center uppercase
+        absolute inset-0 py-1.5 my-0 ml-6  text-[0.8rem] leading-relaxed text-center uppercase
         transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)]
         ${initialTextColor}
         ${hoverTextColor}
