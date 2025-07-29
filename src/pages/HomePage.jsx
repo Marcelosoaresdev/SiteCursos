@@ -5,12 +5,10 @@ import CategoriesSection from "../components/CategoriesSection";
 import CtaSection from "../components/CtaSection";
 import TestimonialSection from "../components/TestimonialSection";
 import EvolutionSection from "../components/EvolutionSection";
-import AnimatedPage from "../components/AnimatedPage";
 import DecoratedBackground from "../components/DecoratedBackground"; // 👈 Importe o novo componente
 
 function HomePage() {
   return (
-    <AnimatedPage>
       <DecoratedBackground>
         <main>
           <HeroSection />
@@ -20,7 +18,6 @@ function HomePage() {
           <TestimonialSection />
         </main>
       </DecoratedBackground>
-    </AnimatedPage>
   );
 }
 

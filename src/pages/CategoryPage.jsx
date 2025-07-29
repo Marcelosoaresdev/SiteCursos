@@ -8,7 +8,6 @@ import ComboDetailsSection from '../components/ComboDetailsSection';
 import FinalCtaSection from '../components/FinalCtaSection';
 import CourseDetails from '../components/CourseDetails'; // Importação que faltava
 
-import AnimatedPage from '../components/AnimatedPage'; // 👈 1. IMPORTE O COMPONENTE
 
 function CategoryPage() {
   const { slug } = useParams();
@@ -33,7 +32,6 @@ function CategoryPage() {
 
   // Renderiza a página com todas as seções na ordem correta
   return (
-    <AnimatedPage>
       <div>
         <CategoryHero {...categoryData} />
 
@@ -62,7 +60,6 @@ function CategoryPage() {
           ))}
         </div>
       </div>
-    </AnimatedPage>
   );
 }
 

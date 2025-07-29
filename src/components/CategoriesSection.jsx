@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import CategoryCard from './CategoryCard';
-import AnimatedPage from '../components/AnimatedPage'; // 👈 1. IMPORTE O COMPONENTE
 import { fadeInUp, containerStagger } from '../utils/animationVariants';
 
 
@@ -69,7 +68,6 @@ const categoriesData = [
 
 function CategoriesSection() {
   return (
-    <AnimatedPage>
       <motion.section
         className="text-text-light w-full py-12 px-4 sm:px-6 md:px-8"
         variants={fadeInUp}
@@ -102,7 +100,6 @@ function CategoriesSection() {
           </motion.div>
         </div>
       </motion.section>
-    </AnimatedPage>
   );
 }
 
