@@ -1,10 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { fadeInUp } from "../utils/animationVariants";
 
 function Footer() {
   const currentYear = new Date().getFullYear(); // Pega o ano atual automaticamente
 
   return (
-    <footer className="relative w-full overflow-hidden bg-gradient-to-br from-purple-900 to-brand-purple text-white/60 py-8">
+    <motion.footer
+      className="relative w-full overflow-hidden bg-gradient-to-br from-purple-900 to-brand-purple text-white/60 py-8"
+      variants={fadeInUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 z-0">
         {/* Bolhas decorativas */}
@@ -27,7 +35,7 @@ function Footer() {
           &copy; {currentYear} Vitis Souls. Todos os direitos reservados.
         </p>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
 
