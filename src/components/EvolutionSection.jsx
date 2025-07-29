@@ -1,15 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeInUp } from "../utils/animationVariants";
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 function EvolutionSection() {
+  const scrollAnimation = useScrollAnimation();
   return (
     <motion.section
+      ref={scrollAnimation.ref}
       className="relative w-full py-20 md:py-24 lg:py-32 overflow-hidden"
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      variants={scrollAnimation.variants}
+      initial={scrollAnimation.initial}
+      animate={scrollAnimation.animate}
+      transition={scrollAnimation.transition}
     >
       {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 z-0">

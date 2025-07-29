@@ -6,6 +6,7 @@ import CourseCard from './CourseCard';
 import ComboCard from './ComboCard';
 import { courses } from '../data/categoryData';
 import { fadeInUp, containerStagger } from '../utils/animationVariants';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 // 1. Adicionamos a nova prop 'titleColor' com um valor padrão
 function CoursesSection({ categorySlug, backgroundColor, titleColor = 'text-gray-800' }) {
@@ -20,13 +21,15 @@ function CoursesSection({ categorySlug, backgroundColor, titleColor = 'text-gray
     return null;
   }
 
+  const scrollAnimation = useScrollAnimation();
   return (
     <motion.section
+      ref={scrollAnimation.ref}
       className={`${backgroundColor} py-20 px-6 relative`}
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      variants={scrollAnimation.variants}
+      initial={scrollAnimation.initial}
+      animate={scrollAnimation.animate}
+      transition={scrollAnimation.transition}
     >
       <div className="container mx-auto">
         <div className="text-center mb-16">

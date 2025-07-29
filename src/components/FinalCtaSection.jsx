@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { fadeInUp } from '../utils/animationVariants';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 function FinalCtaSection({ content }) {
   if (!content) {
@@ -10,15 +10,17 @@ function FinalCtaSection({ content }) {
   }
 
   // 1. A constante com o link fixo foi REMOVIDA.
+  const scrollAnimation = useScrollAnimation();
 
   return (
     // 2. Fundo e cor do texto da seção agora são dinâmicos
     <motion.section
+      ref={scrollAnimation.ref}
       className={`w-full ${content.gradient} ${content.textColor} py-20 px-6`}
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      variants={scrollAnimation.variants}
+      initial={scrollAnimation.initial}
+      animate={scrollAnimation.animate}
+      transition={scrollAnimation.transition}
     >
       <div className="container mx-auto">
         {/* TÍTULO E DESCRIÇÃO INICIAL */}

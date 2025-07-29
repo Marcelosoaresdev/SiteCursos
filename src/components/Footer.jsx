@@ -1,17 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { fadeInUp } from "../utils/animationVariants";
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 function Footer() {
   const currentYear = new Date().getFullYear(); // Pega o ano atual automaticamente
+  const scrollAnimation = useScrollAnimation();
 
   return (
     <motion.footer
+      ref={scrollAnimation.ref}
       className="relative w-full overflow-hidden bg-gradient-to-br from-purple-900 to-brand-purple text-white/60 py-8"
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      variants={scrollAnimation.variants}
+      initial={scrollAnimation.initial}
+      animate={scrollAnimation.animate}
+      transition={scrollAnimation.transition}
     >
       {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 z-0">
