@@ -27,7 +27,13 @@ function Navbar() {
           >
             Financeiro
           </Link>
-          {/* Adicione links para outras páginas aqui */}
+
+          <Link
+            to="/categoria/conquista"
+            className="font-ttnorms text-lg text-white hover:text-brand-yellow transition-colors"
+          >
+            Conquista
+          </Link>
         </div>
       </nav>
     </header>
