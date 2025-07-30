@@ -26,7 +26,7 @@ function EvolutionSection() {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Primeira linha com tamanho aumentado e ênfase */}
-          <p className="font-league text-5xl md:text-5xl lg:text-[3.5rem] text-white mb-8 md:mb-12 leading-tight">
+          <p className="font-league text-4xl md:text-5xl lg:text-[3.5rem] text-white mb-8 md:mb-12 leading-tight">
             Não precisa de ser uma revolução.
             <br />
             Precisa de ser uma{" "}
@@ -39,8 +39,8 @@ function EvolutionSection() {
           </div>
 
           {/* Segunda parte com hierarquia clara */}
-          <div className="space-y-6 md:space-y-8">
-            <p className="font-league text-5xl md:text-5xl lg:text-[3.5rem] text-white/90 leading-relaxed">
+          <div className=" md:space-y-8">
+            <p className="font-league text-4xl md:text-5xl mb-8 lg:text-[3.5rem] text-white/90 leading-relaxed">
               Sua história real começa quando você decide escrevê-la{" "}
               <strong className="text-6xl text-brand-yellow underline decoration-brand-yellow/50">
                 conscientemente
@@ -48,11 +48,11 @@ function EvolutionSection() {
               :
             </p>
 
-            <p className="font-league text-6xl md:text-6xl lg:text-[3.5rem] text-brand-yellow tracking-tight">
+            <p className="font-league text-4xl md:text-5xl lg:text-[3.5rem] text-brand-yellow tracking-tight">
               Um passo, uma decisão
             </p>
 
-            <p className="font-league text-5xl md:text-5xl lg:text-[3.5rem] text-white/90 leading-relaxed">
+            <p className="font-league text-4xl md:text-5xl lg:text-[3.5rem] text-white/90 leading-relaxed">
               que leva você a{" "}
               <strong className="text-brand-yellow">
                 várias conquistas
