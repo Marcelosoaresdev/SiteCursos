@@ -1,7 +1,9 @@
 // ComboCard.jsx - VERSÃO REATORADA E GENÉRICA
 
-import React from 'react';
-import LearnMoreButton from './LearnMoreButton';
+import React from "react";
+import LearnMoreButton from "./LearnMoreButton";
+
+import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
 
 function ComboCard({
   heading,
@@ -11,11 +13,15 @@ function ComboCard({
   priceInstallments,
   priceFull,
   purchaseLink, // 1. Recebendo o link de compra
-  theme,          // 2. Recebendo o objeto de tema
+  theme, // 2. Recebendo o objeto de tema
 }) {
+  const isStudentVersion = useIsStudentVersion();
+
   const handleLearnMoreClick = () => {
     // O scroll para a seção de detalhes do combo
-    document.getElementById(`combo-section`)?.scrollIntoView({ behavior: 'smooth' });
+    document
+      .getElementById(`combo-section`)
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   // Se o tema não for passado, define um objeto vazio para não quebrar
@@ -23,8 +29,19 @@ function ComboCard({
 
   return (
     <div className="w-full px-4 md:px-8 mt-24 md:mt-32">
+      {/* 3. BANNER ADICIONADO AQUI */}
+      {isStudentVersion && (
+        <div className="flex justify-center mb-4">
+          <div className="bg-red-600 text-white font-league text-4xl uppercase rounded-lg px-6 py-1.5 shadow-lg">
+            Espaço do Universitário
+          </div>
+        </div>
+      )}
+
       {/* 3. Título "Combo" agora usa a cor do tema */}
-      <h2 className={`text-center font-league text-7xl md:text-8xl ${safeTheme.titleColor} uppercase mb-8`}>
+      <h2
+        className={`text-center font-league text-7xl md:text-8xl ${safeTheme.titleColor} uppercase mb-8`}
+      >
         Combo
       </h2>
 
@@ -45,10 +62,14 @@ function ComboCard({
         <div className="w-full md:w-2/3 flex flex-col justify-between text-center md:text-left">
           <div>
             {/* 5. Heading e descrição agora usam a cor do tema */}
-            <h3 className={`font-league text-3xl ${safeTheme.headingColor} uppercase`}>
+            <h3
+              className={`font-league text-3xl ${safeTheme.headingColor} uppercase`}
+            >
               {heading}
             </h3>
-            <p className={`font-ttnorms ${safeTheme.textColor} mt-2`}>{description}</p>
+            <p className={`font-ttnorms ${safeTheme.textColor} mt-2`}>
+              {description}
+            </p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 justify-center md:justify-start">
@@ -61,16 +82,20 @@ function ComboCard({
             >
               Compre Agora
             </a>
-            <LearnMoreButton 
-              text="Saiba Mais" 
-              onClick={handleLearnMoreClick} 
+            <LearnMoreButton
+              text="Saiba Mais"
+              onClick={handleLearnMoreClick}
               variant={safeTheme.learnMoreVariant}
             />
           </div>
 
-          <div className={`mt-6 w-full sm:max-w-xs mx-auto md:mx-0 font-ttnorms ${safeTheme.headingColor}`}>
-             {/* 7. Caixa de preço agora usa a cor do tema */}
-            <div className={`${safeTheme.priceBg} text-white rounded-lg p-2 inline-block shadow-lg`}>
+          <div
+            className={`mt-6 w-full sm:max-w-xs mx-auto md:mx-0 font-ttnorms ${safeTheme.headingColor}`}
+          >
+            {/* 7. Caixa de preço agora usa a cor do tema */}
+            <div
+              className={`${safeTheme.priceBg} text-white rounded-lg p-2 inline-block shadow-lg`}
+            >
               <p className="font-bold text-2xl">{priceInstallments}</p>
             </div>
             <p className="mt-2 text-sm">

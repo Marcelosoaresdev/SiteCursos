@@ -1,17 +1,18 @@
 import React from "react";
 import CourseCard from "./CourseCard";
 import ComboCard from "./ComboCard";
-// ❌ REMOVIDO: A importação direta de 'courses' foi removida daqui.
-// import { courses } from '../data/categoryData';
+import { useIsStudentVersion } from "../hooks/useIsStudentVersion"; // <-- 1. IMPORTE O HOOK (ajuste o caminho se necessário)
 
-// ✅ AQUI: O componente agora recebe 'courses' como uma prop
+// 2. REMOVA a prop 'showUniversityBanner' daqui
 function CoursesSection({
   courses,
   categorySlug,
   backgroundColor,
   titleColor = "text-gray-800",
 }) {
-  // A lógica interna agora usa a prop 'courses' que veio da página pai
+  // 3. CHAME O HOOK para saber se é a versão de estudante
+  const isStudentVersion = useIsStudentVersion();
+
   const allItems = categorySlug
     ? courses.filter((course) => course.categorySlug === categorySlug)
     : courses;
@@ -30,6 +31,16 @@ function CoursesSection({
           <p className="font-ttnorms text-gray-500 text-xl uppercase">
             Pré-venda
           </p>
+
+          {/* 4. USE A VARIÁVEL DO HOOK para mostrar o banner */}
+          {isStudentVersion && (
+            <div className="flex justify-center mb-4">
+              <div className="bg-red-600 text-white font-league text-2xl uppercase rounded-lg px-8 py-2 shadow-lg">
+                Espaço do Universitário
+              </div>
+            </div>
+          )}
+
           <h2
             className={`font-league text-7xl md:text-8xl ${titleColor} uppercase`}
           >
@@ -37,7 +48,6 @@ function CoursesSection({
           </h2>
         </div>
 
-        {/* Este mapeamento agora usará os dados corretos (gerais ou de estudante) */}
         {regularCourses.length > 0 && (
           <div className="flex flex-col md:flex-row items-center lg:items-end justify-center gap-16 md:gap-6 relative">
             {regularCourses.map((course) => (

@@ -1,7 +1,10 @@
-import React from 'react';
+import React from "react";
+import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
 
 // O componente agora recebe uma prop 'content'
 function ComboDetailsSection({ content, id }) {
+  const isStudentVersion = useIsStudentVersion();
+
   // Se não houver conteúdo para esta seção, não renderiza nada
   if (!content) {
     return null;
@@ -14,6 +17,14 @@ function ComboDetailsSection({ content, id }) {
       className={`w-full ${content.textColor} ${content.gradient} py-20 px-6`}
     >
       <div className="container mx-auto">
+        {/* 3. BANNER ADICIONADO AQUI */}
+        {isStudentVersion && (
+          <div className="flex justify-center mb-12">
+            <div className="bg-red-600 text-white font-league text-4xl uppercase rounded-lg px-8 py-2 shadow-lg">
+              Espaço do Universitário
+            </div>
+          </div>
+        )}
         {/* --- CABEÇALHO DA SEÇÃO --- */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 text-center md:text-left">
           <div className="md:w-1/2 flex flex-col items-center md:items-end">

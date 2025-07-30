@@ -2,9 +2,11 @@ import React from 'react';
 // Importe os componentes que ele vai renderizar
 import DominationSection from './DominationSection';
 import InclusionsSection from './InclusionsSection';
+import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
 
 // Este é o Hero que fica no topo do bloco de detalhes
 function CourseDetailsHero({ details }) {
+  const isStudentVersion = useIsStudentVersion();
   return (
     <section className="w-full text-white pt-20">
       {' '}
@@ -24,6 +26,12 @@ function CourseDetailsHero({ details }) {
           <p className="font-league text-4xl opacity-80">
             {details.pageSubtitle}
           </p>
+          {/* Banner ao lado do subtitle */}
+            {isStudentVersion && (
+              <span className="inline-block bg-red-600 text-white font-league text-xl md:text-4xl rounded-md uppercase px-4 py-1 shadow-md">
+                Espaço do Universitário
+              </span>
+            )}
           <h1 className="font-league text-5xl md:text-9xl uppercase leading-none my-2">
             {details.pageTitle}
           </h1>
