@@ -1,16 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import CategoryCard from './CategoryCard';
-import { fadeInUp, containerStagger } from '../utils/animationVariants';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
-
+import React from "react";
+import { motion } from "framer-motion";
+import CategoryCard from "./CategoryCard";
+import { fadeInUp, containerStagger } from "../utils/animationVariants";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
 
 // Importando todas as imagens das categorias
-import saudeImg from '../assets/corrida.png';
-import financeiroImg from '../assets/financeiro.png';
-import conquistaImg from '../assets/conquista.png';
-import autoestimaImg from '../assets/autoestima.png';
-import relacionamentoImg from '../assets/relacionamento.png';
+import saudeImg from "../assets/corrida.png";
+import financeiroImg from "../assets/financeiro.png";
+import conquistaImg from "../assets/conquista.png";
+import autoestimaImg from "../assets/autoestima.png";
+import relacionamentoImg from "../assets/relacionamento.png";
 
 // Array de dados completo com todas as propriedades para cada card
 const categoriesData = [
@@ -42,7 +42,7 @@ const categoriesData = [
     imageSrc: conquistaImg,
     imagePosition: "right",
     buttonText: "QUERO ACELERAR MINHAS CONQUISTAS",
-    flipImage: false, // Forçando a imagem a não virar
+    flipImage: false,
     linkTo: "/categoria/conquista",
   },
   {
@@ -69,26 +69,33 @@ const categoriesData = [
 
 function CategoriesSection() {
   const scrollAnimation = useScrollAnimation();
-  return (
-      <motion.section
-        ref={scrollAnimation.ref}
-        className="text-text-light w-full py-12 px-4 sm:px-6 md:px-8"
-        variants={scrollAnimation.variants}
-        initial={scrollAnimation.initial}
-        animate={scrollAnimation.animate}
-        transition={scrollAnimation.transition}
-      >
-        <div className="container mx-auto text-center">
-          <h2 className="font-league text-4xl sm:text-5xl md:text-6xl uppercase mb-8 sm:mb-12">
-            Escolha começar a mudar sua vida
-          </h2>
+  const isStudentVersion = useIsStudentVersion(); // Verifica a versão do site
 
-          {/* Grid responsivo com 3 colunas no desktop */}
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
-            variants={containerStagger}
-          >
-            {categoriesData.map((cat) => (
+  return (
+    <motion.section
+      ref={scrollAnimation.ref}
+      className="text-text-light w-full py-12 px-4 sm:px-6 md:px-8"
+      variants={scrollAnimation.variants}
+      initial={scrollAnimation.initial}
+      animate={scrollAnimation.animate}
+      transition={scrollAnimation.transition}
+    >
+      <div className="container mx-auto text-center">
+        <h2 className="font-league text-4xl sm:text-5xl md:text-6xl uppercase mb-8 sm:mb-12">
+          Escolha começar a mudar sua vida
+        </h2>
+
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+          variants={containerStagger}
+        >
+          {categoriesData.map((cat) => {
+            // Lógica para criar o link dinâmico
+            const dynamicLink = isStudentVersion
+              ? `/universitario${cat.linkTo}`
+              : cat.linkTo;
+
+            return (
               <motion.div key={cat.title} variants={fadeInUp}>
                 <CategoryCard
                   title={cat.title}
@@ -96,13 +103,14 @@ function CategoriesSection() {
                   gradientClasses={cat.gradientClasses}
                   imageSrc={cat.imageSrc}
                   buttonText={cat.buttonText}
-                  linkTo={cat.linkTo}
+                  linkTo={dynamicLink} // Usando o link dinâmico aqui
                 />
               </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </motion.section>
+            );
+          })}
+        </motion.div>
+      </div>
+    </motion.section>
   );
 }
 
