@@ -9,7 +9,7 @@ function VideoTestimonialSection({ content }) {
   }
 
   return (
-    <section className="relative w-full py-20 px-6 sm:px-8">
+    <section className="hidden relative w-full py-20 px-6 sm:px-8">
       {/* CAMADA 1: Imagem de fundo (já estava genérica) */}
       {content.background && (
         <div
