@@ -1,4 +1,5 @@
 import React from "react";
+import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
 
 function CategoryHero({
   title,
@@ -9,12 +10,28 @@ function CategoryHero({
   titleColor2,
   subtitleColor,
 }) {
+  // Detecta se está no modo universitário
+  const isStudentVersion = useIsStudentVersion();
+
   // Quebra o título em duas palavras
   const [word1, word2] = title.split(" ");
 
   return (
-    <section className={`relative w-full overflow-hidden ${gradient}`}>
-      <div className="container mx-auto px-6 sm:px-8 lg:px-16 py-10 md:py-14 lg:py-20">
+    <section
+      className={`relative w-full overflow-hidden ${gradient} ${
+        isStudentVersion ? "pt-28 md:pt-36" : "" // cria espaço extra se for universitário
+      }`}
+    >
+      {/* Banner especial para universitário */}
+      {isStudentVersion && (
+        <div className="absolute top-10 md:top-20 left-1/2 -translate-x-1/2 bg-red-600 text-white px-6 py-3 rounded-lg shadow-lg text-center">
+          <span className="font-bold text-lg sm:text-xl md:text-2xl uppercase">
+            ESPAÇO DO UNIVERSITÁRIO
+          </span>
+        </div>
+      )}
+
+      <div className="container mx-auto px-6 sm:px-8 lg:px-16 pb-10 md:pb-14 lg:pb-20">
         {/* ================= MOBILE / TABLET ================= */}
         <div className="flex flex-col-reverse lg:hidden items-center text-center gap-8">
           {/* Texto */}
@@ -45,9 +62,7 @@ function CategoryHero({
           {/* Texto */}
           <div className="w-1/2 relative z-10">
             <h1 className="font-league text-8xl xl:text-[12rem] leading-none uppercase font-extrabold tracking-tight">
-              <span className={`${titleColor1} drop-shadow-lg`}>
-                {word1}
-              </span>
+              <span className={`${titleColor1} drop-shadow-lg`}>{word1}</span>
               <br />
               <span className={`${titleColor2} drop-shadow-lg`}>
                 {word2 || ""}
