@@ -44,7 +44,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <Navbar /> {" "}
+      <Navbar />
       <main className="bg-slate-900">
         {/* Usamos nosso componente de rotas animadas que agora inclui as rotas de estudante */}
         <AnimatedRoutes />{" "}
