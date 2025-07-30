@@ -19,6 +19,7 @@ import VideoTestimonialSection from "../components/VideoTestimonialSection";
 import ComboDetailsSection from "../components/ComboDetailsSection";
 import FinalCtaSection from "../components/FinalCtaSection";
 import CourseDetails from "../components/CourseDetails";
+import CallToActionSection from '../components/CallToActionSection'; // 1. Importe o novo componente
 
 function CategoryPage() {
   // 👈 2. DETECTA A VERSÃO E CARREGA OS DADOS CORRETOS
@@ -49,33 +50,35 @@ function CategoryPage() {
 
   return (
     // 👈 3. PÁGINA ENVOLVIDA COM O COMPONENTE DE ANIMAÇÃO
-      <div>
-        <CategoryHero {...categoryData} />
+    <div>
+      <CategoryHero {...categoryData} />
 
-        <CoursesSection
-          courses={courses} // ✅ AQUI: Passando a lista de cursos correta para o componente filho
-          categorySlug={slug}
-          backgroundColor={categoryData.coursesBackgroundColor}
-          onLearnMoreClick={handleScrollToDetails}
-          titleColor={categoryData.titleColor1}
-        />
-        <VideoTestimonialSection content={categoryData.videoTestimonial} />
+      <CoursesSection
+        id="courses-section"
+        courses={courses} // ✅ AQUI: Passando a lista de cursos correta para o componente filho
+        categorySlug={slug}
+        backgroundColor={categoryData.coursesBackgroundColor}
+        onLearnMoreClick={handleScrollToDetails}
+        titleColor={categoryData.titleColor1}
+      />
+      <VideoTestimonialSection content={categoryData.videoTestimonial} />
 
-        <div id="combo-section">
-          <ComboDetailsSection content={categoryData.comboDetails} />
-        </div>
-
-        <FinalCtaSection content={categoryData.finalCta} />
-
-        {/* Loop que renderiza os detalhes de cada curso */}
-        <div>
-          {coursesForThisCategory.map((course) => (
-            <div key={course.id} id={`curso-${course.id}`}>
-              <CourseDetails details={course.details} />
-            </div>
-          ))}
-        </div>
+      <div id="combo-section">
+        <ComboDetailsSection content={categoryData.comboDetails} />
       </div>
+
+      <FinalCtaSection content={categoryData.finalCta} />
+
+      {/* Loop que renderiza os detalhes de cada curso */}
+      <div>
+        {coursesForThisCategory.map((course) => (
+          <div key={course.id} id={`curso-${course.id}`}>
+            <CourseDetails details={course.details} />
+          </div>
+        ))}
+      </div>
+      <CallToActionSection content={categoryData.callToAction} />
+    </div>
   );
 }
 

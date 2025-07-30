@@ -147,6 +147,13 @@ export const categories = [
       gradient: "bg-[linear-gradient(to_bottom,_#1e3a8a,_#0ea5e9)]",
       textColor: "text-saude-white",
     },
+    callToAction: {
+      text: "SUA SAÚDE NÃO ESPERA. DECIDA POR VOCÊ HOJE!",
+      buttonText: "QUERO TRANSFORMAR MINHA SAÚDE",
+      gradient: "bg-gradient-to-r from-cyan-500 to-blue-500",
+      textColor: "text-white",
+      buttonClasses: "bg-blue-900 text-white border-blue-900 hover:bg-blue-800",
+    },
   },
   {
     // ==========================================================
@@ -231,6 +238,14 @@ export const categories = [
       ],
       gradient: "bg-gradient-to-r from-[#1a300f] via-[#3e722f] to-[#8aaf76]",
       textColor: "text-white",
+    },
+    callToAction: {
+      text: "VOCÊ NÃO SERÁ MAIS UM FUNCIONÁRIO DA VIDA – VOCÊ SERÁ O CEO DA SUA EXISTÊNCIA.",
+      buttonText: "QUERO MINHA LIBERDADE FINANCEIRA",
+      gradient: "bg-gradient-to-r from-lime-400 to-green-500",
+      textColor: "text-green-900",
+      buttonClasses:
+        "bg-green-900 text-white border-green-900 hover:bg-green-800",
     },
   },
   // ==========================================================
@@ -344,6 +359,14 @@ export const categories = [
       gradient: "bg-gradient-to-r from-[#8c2100] via-[#d14900] to-[#ff6c2e]",
       textColor: "text-white",
     },
+    callToAction: {
+      text: "O TEMPO NÃO PARA. SEU RESULTADO DEPENDE DO QUE VOCÊ FAZ AGORA!",
+      buttonText: "QUERO CONQUISTAR AGORA",
+      gradient: "bg-gradient-to-r from-amber-500 to-orange-500",
+      textColor: "text-orange-900",
+      buttonClasses:
+        "bg-orange-900 text-white border-orange-900 hover:bg-orange-800",
+    },
   },
 
   {
@@ -456,6 +479,14 @@ export const categories = [
       gradient: "bg-gradient-to-r from-[#4c007a] via-[#7e22ce] to-[#c084fc]",
       textColor: "text-white",
     },
+    callToAction: {
+      text: "SUA AUTOESTIMA NASCE DE UMA DECISÃO, DÊ O PRIMEIRO PASSO HOJE!",
+      buttonText: "COMEÇAR MINHA AUTOESTIMA",
+      gradient: "bg-gradient-to-r from-fuchsia-500 to-purple-600",
+      textColor: "text-white",
+      buttonClasses:
+        "bg-purple-900 text-white border-purple-900 hover:bg-purple-800",
+    },
   },
 
   {
@@ -537,6 +568,14 @@ export const categories = [
       ],
       gradient: "bg-gradient-to-r from-[#7f1d1d] via-[#b91c1c] to-[#ef4444]",
       textColor: "text-white",
+    },
+    // ✅ NOVA SEÇÃO DE DADOS ADICIONADA
+    callToAction: {
+      text: 'CRIE NATURALMENTE RELACIONAMENTOS EXTRAORDINÁRIOS, PASSANDO DE UMA PESSOA QUE FOI FERIDA, PARA ALGUÉM QUE SE TORNA "CURADORA DO AMOR".',
+      buttonText: "VIVER UM AMOR DE VERDADE",
+      gradient: "bg-gradient-to-r from-red-500 to-rose-500",
+      textColor: "text-white",
+      buttonClasses: "bg-rose-900 text-white border-rose-900 hover:bg-rose-800",
     },
   },
 ];

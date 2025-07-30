@@ -9,6 +9,7 @@ function CoursesSection({
   categorySlug,
   backgroundColor,
   titleColor = "text-gray-800",
+  id,
 }) {
   // 3. CHAME O HOOK para saber se é a versão de estudante
   const isStudentVersion = useIsStudentVersion();
@@ -25,7 +26,7 @@ function CoursesSection({
   }
 
   return (
-    <section className={`${backgroundColor} py-20 px-6 relative`}>
+    <section id={id} className={`${backgroundColor} py-20 px-6 relative`}>
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <p className="font-ttnorms text-gray-500 text-xl uppercase">
