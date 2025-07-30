@@ -89,18 +89,26 @@ function HeroSection() {
 
         {isStudentVersion ? (
           <p className="font-ttnorms text-lg sm:text-xl max-w-md leading-snug mb-6 whitespace-pre-line">
-            {`Chegou a sua hora, o mais importante é
-dar o PRIMEIRO PASSO para
-transformar tudo!
-
-Comece agora a
-jornada rumo à vida que você merece!`}
+            Chegou a sua hora, o mais importante é{" "}
+            <strong className="font-bold text-white">
+              dar o PRIMEIRO PASSO
+            </strong>{" "}
+            para transformar tudo! <br />
+            <br />
+            Comece agora a{" "}
+            <strong className="font-bold text-white">jornada</strong> rumo à
+            vida que você merece!
           </p>
         ) : (
           <p className="font-ttnorms text-lg sm:text-xl max-w-md leading-snug mb-6">
             O que <strong className="text-white font-bold">TEMOS</strong> em
-            comum não é a ausência de pequenez — mas sim a coragem de crescer a
-            partir dela.
+            comum não é a{" "}
+            <strong className="text-white font-bold">
+              ausência de pequenez
+            </strong>{" "}
+            — mas sim a{" "}
+            <strong className="text-white font-bold">coragem de crescer</strong>{" "}
+            a partir dela.
           </p>
         )}
 
