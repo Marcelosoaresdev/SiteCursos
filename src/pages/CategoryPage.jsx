@@ -54,7 +54,7 @@ function CategoryPage() {
       <CategoryHero {...categoryData} />
 
       <CoursesSection
-        id="courses-section"
+        id={isStudentVersion ? "student-courses-section" : "courses-section"}
         courses={courses} // ✅ AQUI: Passando a lista de cursos correta para o componente filho
         categorySlug={slug}
         backgroundColor={categoryData.coursesBackgroundColor}
