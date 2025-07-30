@@ -21,41 +21,40 @@ function EvolutionSection() {
         {/* Formas geométricas sutis */}
         <div className="absolute top-1/4 left-10 w-32 h-32 rounded-full bg-white/10 blur-2xl"></div>
         <div className="absolute bottom-1/3 right-12 w-40 h-40 rounded-full bg-white/10 blur-2xl"></div>
-
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Primeira linha com tamanho aumentado e ênfase */}
-          <p className="font-league text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] text-white mb-8 md:mb-12 leading-tight">
+          <p className="font-league text-5xl md:text-5xl lg:text-[3.5rem] text-white mb-8 md:mb-12 leading-tight">
             Não precisa de ser uma revolução.
             <br />
             Precisa de ser uma{" "}
-            <strong className="font-bold text-brand-yellow">EVOLUÇÃO</strong>.
+            <strong className="text-brand-yellow">EVOLUÇÃO</strong>.
           </p>
 
           {/* Separador decorativo */}
-          <div className="flex justify-center my-10 md:my-12">
+          <div className="flex justify-center md:my-12">
             <div className="w-24 h-1 bg-white/30 rounded-full"></div>
           </div>
 
           {/* Segunda parte com hierarquia clara */}
           <div className="space-y-6 md:space-y-8">
-            <p className="font-ttnorms text-xl sm:text-2xl md:text-3xl text-white/90 leading-relaxed">
+            <p className="font-league text-5xl md:text-5xl lg:text-[3.5rem] text-white/90 leading-relaxed">
               Sua história real começa quando você decide escrevê-la{" "}
-              <strong className="font-bold text-brand-yellow underline decoration-brand-yellow/50">
+              <strong className="text-6xl text-brand-yellow underline decoration-brand-yellow/50">
                 conscientemente
               </strong>
               :
             </p>
 
-            <p className="font-league text-3xl sm:text-4xl md:text-[3.5rem] text-brand-yellow tracking-tight">
+            <p className="font-league text-6xl md:text-6xl lg:text-[3.5rem] text-brand-yellow tracking-tight">
               Um passo, uma decisão
             </p>
 
-            <p className="font-ttnorms text-xl sm:text-2xl md:text-3xl text-white/90 leading-relaxed">
+            <p className="font-league text-5xl md:text-5xl lg:text-[3.5rem] text-white/90 leading-relaxed">
               que leva você a{" "}
-              <strong className="font-bold text-brand-yellow">
+              <strong className="text-brand-yellow">
                 várias conquistas
               </strong>
             </p>
