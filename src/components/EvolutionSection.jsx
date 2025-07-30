@@ -40,7 +40,7 @@ function EvolutionSection() {
 
           {/* Segunda parte com hierarquia clara */}
           <div className=" md:space-y-8">
-            <p className="font-league text-4xl md:text-5xl mb-8 lg:text-[3.5rem] text-white/90 leading-relaxed">
+            <p className="font-league text-4xl md:text-5xl mb-8 lg:text-[3.5rem] text-white/90 leading-tight">
               Sua história real começa quando você decide escrevê-la{" "}
               <strong className="text-6xl text-brand-yellow underline decoration-brand-yellow/50">
                 conscientemente
@@ -52,7 +52,7 @@ function EvolutionSection() {
               Um passo, uma decisão
             </p>
 
-            <p className="font-league text-4xl md:text-5xl lg:text-[3.5rem] text-white/90 leading-relaxed">
+            <p className="font-league text-4xl md:text-5xl lg:text-[3.5rem] text-white/90 leading-tight">
               que leva você a{" "}
               <strong className="text-brand-yellow">
                 várias conquistas
