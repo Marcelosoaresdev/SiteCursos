@@ -1,10 +1,20 @@
-import React from "react";
 import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
 import leaoImage from "../assets/leao.png";
 import universitariosImage from "../assets/universitarios.png";
+import React, { useMemo } from "react";
 
 function HeroSection() {
   const isStudentVersion = useIsStudentVersion();
+
+  const particles = useMemo(() => {
+    return [...Array(25)].map(() => ({
+      top: `${Math.random() * 100}%`,
+      left: `${Math.random() * 100}%`,
+      width: `${Math.random() * 15 + 8}px`, // Ajustei um pouco o tamanho para mais variedade
+      height: `${Math.random() * 15 + 8}px`,
+      animationDuration: `${Math.random() * 5 + 3}s`, // Ajustei a duração
+    }));
+  }, []);
 
   const content = {
     mainTitle: isStudentVersion ? "DESPERTE o SEU" : "TODO GIGANTE",
@@ -31,7 +41,8 @@ function HeroSection() {
           ></path>
         </svg>
       </>
-  ) : null};
+    ) : null,
+  };
 
   return (
     <div
@@ -42,16 +53,17 @@ function HeroSection() {
 
       {/* === EFEITO DE PARTÍCULAS === */}
       <div className="absolute inset-0 overflow-hidden z-0">
-        {[...Array(25)].map((_, i) => (
+        {/* 👇 3. Usamos a lista de partículas já calculada */}
+        {particles.map((particle, i) => (
           <div
             key={i}
             className="absolute rounded-full bg-white opacity-10 animate-pulse"
             style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              width: `${Math.random() * 25 + 8}px`,
-              height: `${Math.random() * 25 + 8}px`,
-              animationDuration: `${Math.random() * 5 + 2}s`,
+              top: particle.top,
+              left: particle.left,
+              width: particle.width,
+              height: particle.height,
+              animationDuration: particle.animationDuration,
             }}
           />
         ))}
