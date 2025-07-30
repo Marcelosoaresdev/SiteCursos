@@ -9,9 +9,8 @@ function Navbar() {
   // 👈 2. Verifique qual versão do site está ativa
   const isStudentVersion = useIsStudentVersion();
 
-  // 👈 3. Crie os links dinamicamente com base na versão
+  // 👈 3. Os links continuam dinâmicos, o que está correto para o seu caso.
   const navLinks = [
-    // ✅ CORREÇÃO: Adicionada a propriedade 'end: true' para o link de Início
     {
       title: "Início",
       path: isStudentVersion ? "/universitario" : "/",
@@ -43,7 +42,7 @@ function Navbar() {
     },
   ];
 
-  // Efeito para detectar scroll (sem alteração)
+  // Efeito para detectar scroll
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -52,7 +51,7 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Efeito para travar o scroll do body (sem alteração)
+  // Efeito para travar o scroll do body quando o menu mobile está aberto
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -76,7 +75,7 @@ function Navbar() {
         <nav className="container mx-auto px-4 sm:px-6 flex justify-between items-center">
           {/* Logo com link dinâmico */}
           <Link
-            to={isStudentVersion ? "/universitario" : "/"} // 👈 4. Link do logo corrigido
+            to={isStudentVersion ? "/universitario" : "/"}
             className={`font-league text-xl sm:text-2xl uppercase font-bold tracking-tight transition-colors ${
               scrolled ? "text-brand-purple" : "text-white"
             }`}
@@ -84,13 +83,13 @@ function Navbar() {
             Vitis Souls
           </Link>
 
-          {/* Links para Desktop (agora usam os links dinâmicos) */}
-          <div className="hidden lg:flex space-x-1">
+          {/* Links para Desktop */}
+          <div className="hidden lg:flex items-center space-x-1">
             {navLinks.map((link) => (
               <NavLink
                 key={link.title}
                 to={link.path}
-                end={link.end} // ✅ CORREÇÃO: Passando a propriedade 'end' para o NavLink
+                end={link.end}
                 className={({ isActive }) =>
                   `font-medium px-4 py-2 rounded-lg transition-all duration-300 ${
                     isActive
@@ -106,9 +105,19 @@ function Navbar() {
                 {link.title}
               </NavLink>
             ))}
+
+            {/* 👇 BOTÃO DE SAÍDA CONDICIONAL PARA DESKTOP */}
+            {isStudentVersion && (
+              <Link
+                to="/"
+                className="font-medium px-4 py-2 rounded-lg transition-all duration-300 bg-orange-100 text-orange-600 hover:bg-orange-200 ml-2"
+              >
+                Voltar ao site principal
+              </Link>
+            )}
           </div>
 
-          {/* Botão do Menu Hambúrguer para Mobile (sem alteração na lógica de clique) */}
+          {/* Botão do Menu Hambúrguer para Mobile */}
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -144,7 +153,7 @@ function Navbar() {
         </nav>
       </header>
 
-      {/* Painel do Menu Mobile (agora usa os links dinâmicos) */}
+      {/* Painel do Menu Mobile */}
       <div
         className={`fixed inset-0 z-40 bg-white/95 backdrop-blur-lg transition-all duration-300 lg:hidden pt-20 ${
           isMenuOpen
@@ -157,7 +166,7 @@ function Navbar() {
             <NavLink
               key={link.title}
               to={link.path}
-              end={link.end} // ✅ CORREÇÃO: Passando a propriedade 'end' também para o menu mobile
+              end={link.end}
               className={({ isActive }) =>
                 `w-full text-center py-4 px-6 mb-3 rounded-xl text-lg font-medium transition-all ${
                   isActive
@@ -170,6 +179,18 @@ function Navbar() {
               {link.title}
             </NavLink>
           ))}
+
+          {/* 👇 BOTÃO DE SAÍDA CONDICIONAL PARA MOBILE */}
+          {isStudentVersion && (
+            <Link
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+              className="w-full text-center py-4 px-6 mt-4 rounded-xl text-lg font-medium transition-all bg-orange-100 text-orange-700 hover:bg-orange-200"
+            >
+              Voltar ao site principal
+            </Link>
+          )}
+
           <div className="mt-8 flex flex-col items-center">
             <div className="bg-gray-200 w-32 h-1 rounded-full mb-6"></div>
             <p className="text-gray-500 text-sm">Vitis Souls Cursos</p>

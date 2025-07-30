@@ -77,7 +77,7 @@ function TestimonialSection() {
                   <span className="text-brand-yellow font-bold">
                     Condecorada
                   </span>{" "}
-                  pela Academia de Artes Ciências e Letras do Brasil
+                  pela Academia de Artes, Ciências e Letras do Brasil
                 </p>
               </div>
 
