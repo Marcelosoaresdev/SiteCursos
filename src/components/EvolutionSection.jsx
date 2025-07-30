@@ -22,14 +22,6 @@ function EvolutionSection() {
         <div className="absolute top-1/4 left-10 w-32 h-32 rounded-full bg-white/10 blur-2xl"></div>
         <div className="absolute bottom-1/3 right-12 w-40 h-40 rounded-full bg-white/10 blur-2xl"></div>
 
-        {/* Padrão de pontos */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-            backgroundSize: "20px 20px",
-          }}
-        ></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">

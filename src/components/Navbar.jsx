@@ -76,7 +76,7 @@ function Navbar() {
           {/* Logo com link dinâmico */}
           <Link
             to={isStudentVersion ? "/universitario" : "/"}
-            className={`font-league text-xl sm:text-2xl uppercase font-bold tracking-tight transition-colors ${
+            className={`font-league text-xl sm:text-2xl uppercase tracking-tight transition-colors ${
               scrolled ? "text-brand-purple" : "text-white"
             }`}
           >
