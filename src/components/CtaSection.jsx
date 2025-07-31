@@ -69,7 +69,7 @@ function CtaSection() {
 
               <Link
                 to="/universitario"
-                className="inline-block text-center font-league text-white text-xl md:text-2xl px-8 py-4 md:px-10 md:py-5 bg-button-gradient rounded-2xl shadow-[0_4px_0_0_#6b21a8] hover:translate-y-0.5 hover:shadow-[0_2px_0_0_#6b21a8] active:translate-y-1 active:shadow-none transition-all duration-150 mt-8 cursor-pointer select-none w-full max-w-xs md:max-w-sm"
+                className="inline-block text-center font-league text-black text-xl md:text-2xl px-8 py-4 md:px-10 md:py-5 bg-brand-yellow rounded-2xl shadow-[0_4px_0_0_#6b21a8] hover:translate-y-0.5 hover:shadow-[0_2px_0_0_#6b21a8] active:translate-y-1 active:shadow-none transition-all duration-150 mt-8 cursor-pointer select-none w-full max-w-xs md:max-w-sm"
               >
                 CLIQUE AQUI!
               </Link>
