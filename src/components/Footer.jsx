@@ -9,7 +9,7 @@ function Footer() {
   return (
     <motion.footer
       ref={scrollAnimation.ref}
-      className="relative w-full overflow-hidden bg-gradient-to-br from-purple-900 to-brand-purple text-white/60 py-10"
+      className="relative w-full overflow-hidden bg-gradient-to-br from-purple-900 to-brand-purple text-white/60 py-6"
       variants={scrollAnimation.variants}
       initial={scrollAnimation.initial}
       animate={scrollAnimation.animate}
@@ -30,7 +30,7 @@ function Footer() {
       </div>
 
       {/* Conteúdo */}
-      <div className="container relative z-10 px-4 mx-auto flex flex-col items-center gap-6 text-center">
+      <div className="container relative z-10 px-4 mx-auto flex flex-col items-center gap-2 text-center">
         <p className="text-white/70 text-sm md:text-base">
           &copy; {currentYear} Vitis Souls. Todos os direitos reservados.
         </p>

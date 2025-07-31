@@ -47,9 +47,17 @@ function CourseDetailsHero({ details }) {
               href={details.purchaseLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-white font-bold uppercase text-lg px-8 py-4 rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-95 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20"
+              className="relative group inline-block overflow-hidden font-ttnorms font-bold text-lg uppercase rounded-full px-8 py-4 
+               text-white shadow-lg transition-all duration-300 hover:scale-105 active:scale-95
+               bg-black/30 backdrop-blur-md border border-white/20 hover:bg-black/50 hover:border-white/40"
             >
-              Compre Agora
+              <span className="relative z-10">Compre Agora</span>
+
+              {/* Brilho animado no hover */}
+              <span
+                className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/10 via-white/5 to-transparent opacity-0 
+                 group-hover:opacity-20 transition-opacity duration-500 z-0"
+              />
             </a>
           </div>
         </div>

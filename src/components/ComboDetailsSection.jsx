@@ -56,17 +56,19 @@ function ComboDetailsSection({ content, id }) {
             ))}
           </div>
           <div className="mt-12">
-            {/* Transformamos o botão em um link (<a>) */}
             <a
-              href={content.included.buttonLink} // 1. Usamos o link do objeto de dados
-              target="_blank" // 2. Abre o link em uma nova aba
-              rel="noopener noreferrer" // 3. Boa prática de segurança para links externos
-              className="relative group inline-block overflow-hidden font-ttnorms font-bold text-saude-white text-md md:text-lg uppercase rounded-full px-8 py-4 border-2 border-saude-white hover:border-saude-dark-blue transition-all duration-300 hover:scale-105 active:scale-95"
+              href={content.included.buttonLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group inline-block overflow-hidden font-ttnorms font-bold text-md md:text-lg uppercase rounded-full px-8 py-4 border transition-all duration-300 hover:scale-105 active:scale-95
+               bg-black/40 backdrop-blur-md border-white/20 text-white shadow-lg hover:bg-black/50 hover:border-white/40"
             >
               <span className="relative z-10">
                 {content.included.buttonText}
               </span>
-              <span className="absolute top-0 left-0 w-full h-full bg-saude-dark-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out z-0" />
+
+              {/* Efeito de brilho animado ao hover */}
+              <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white/10 via-white/5 to-transparent opacity-0 group-hover:opacity-20 transition-opacity duration-500 z-0" />
             </a>
           </div>
         </div>

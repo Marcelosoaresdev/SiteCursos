@@ -113,7 +113,8 @@ export const categories = [
       borderColor: "border-saude-dark-blue",
       buttonLink: "https://pay.hotmart.com/A100523908T", // Link do pacote completo
       buttonClasses:
-        "bg-saude-white/40 backdrop-blur-md border border-white/40 hover:bg-saude-white/20",
+        "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
+   hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
     },
 
     comboDetails: {
@@ -152,7 +153,9 @@ export const categories = [
       buttonText: "QUERO TRANSFORMAR MINHA SAÚDE",
       gradient: "bg-gradient-to-r from-cyan-500 to-blue-500",
       textColor: "text-white",
-      buttonClasses: "bg-blue-900 text-white border-blue-900 hover:bg-blue-800",
+      buttonClasses:
+        "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
+   hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
     },
   },
   {
@@ -198,14 +201,15 @@ export const categories = [
       borderColor: "border-white",
       buttonLink: "https://pay.hotmart.com/M100510960L", // Coloque o link do pacote completo aqui
       buttonClasses:
-        "bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30",
+        "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
+   hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
     },
 
     comboDetails: {
       header: {
         title: "Premium Combo",
         subtitle: "Pacote",
-        image: capaFinanceiro1,
+        image: comboPackageFinanceiro,
       }, // ⚠️ Substitua pelo nome da sua variável de imagem
       included: {
         title: "O QUE ESTÁ INCLUSO:",
@@ -244,7 +248,9 @@ export const categories = [
       buttonText: "QUERO MINHA LIBERDADE FINANCEIRA",
       gradient: "bg-gradient-to-r from-lime-400 to-green-500",
       textColor: "text-green-900",
-      buttonClasses: "bg-green-900 text-white border-green-900 hover:bg-green-800",
+      buttonClasses:
+        "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
+   hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
     },
   },
   // ==========================================================
@@ -315,7 +321,8 @@ export const categories = [
       borderColor: "border-white",
       buttonLink: "https://pay.hotmart.com/P100552916T",
       buttonClasses:
-        "bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30",
+        "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
+   hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
     },
 
     comboDetails: {
@@ -363,7 +370,9 @@ export const categories = [
       buttonText: "QUERO CONQUISTAR AGORA",
       gradient: "bg-gradient-to-r from-amber-500 to-orange-500",
       textColor: "text-orange-900",
-      buttonClasses: "bg-orange-900 text-white border-orange-900 hover:bg-orange-800",
+      buttonClasses:
+        "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
+   hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
     },
   },
 
@@ -433,7 +442,8 @@ export const categories = [
       borderColor: "border-white",
       buttonLink: "https://pay.hotmart.com/H100554096D",
       buttonClasses:
-        "bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30",
+        "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
+   hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
     },
 
     comboDetails: {
@@ -482,7 +492,9 @@ export const categories = [
       buttonText: "COMEÇAR MINHA AUTOESTIMA",
       gradient: "bg-gradient-to-r from-fuchsia-500 to-purple-600",
       textColor: "text-white",
-      buttonClasses: "bg-purple-900 text-white border-purple-900 hover:bg-purple-800",
+      buttonClasses:
+        "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
+   hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
     },
   },
 
@@ -524,7 +536,8 @@ export const categories = [
       borderColor: "border-white",
       buttonLink: "https://pay.hotmart.com/D100554896F", // Inserir link do pacote
       buttonClasses:
-        "bg-white/20 backdrop-blur-md border border-white/30 hover:bg-white/30",
+        "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
+   hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
     },
     comboDetails: {
       header: {
