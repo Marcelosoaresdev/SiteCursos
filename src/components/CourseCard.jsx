@@ -162,9 +162,7 @@ function CourseCard({
                   <p className="text-white text-xl font-bold">
                     {priceInstallments}
                   </p>
-                  <span className="text-white/70 text-sm hidden sm:inline">
-                    |
-                  </span>
+                  
                   <p className="text-white text-lg font-bold">
                     {priceFull} à vista
                   </p>
