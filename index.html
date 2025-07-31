@@ -5,8 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cursos - Vitis Souls</title>
 
+    <!-- =================== SEO BÁSICO =================== -->
+    <meta
+      name="description"
+      content="Descubra os cursos Vitis Souls e transforme sua saúde, finanças e autoestima. Comece hoje sua jornada de evolução pessoal!"
+    />
+    <meta name="author" content="Vitis Souls" />
+
+    <!-- =================== FAVICON =================== -->
+    <link
+      rel="shortcut icon"
+      href="src/assets/arvoreVitis.png"
+      type="image/png"
+    />
+
+    <!-- =================== GOOGLE FONTS OTIMIZADO =================== -->
+    <!-- Preconnect para acelerar fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload das fonts mais usadas -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap"
+    />
+
+    <!-- Carregamento normal das fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Allura&display=swap"
       rel="stylesheet"
@@ -15,7 +45,19 @@
       href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="src/assets/arvoreVitis.png" type="png" />
+
+    <!-- =================== CSS CRÍTICO =================== -->
+    <link
+      rel="preload"
+      href="/assets/index-DbnEBsAK.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/index-DbnEBsAK.css"
+    />
+
+    <!-- =================== META PIXEL CODE =================== -->
     <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
@@ -43,17 +85,26 @@
       fbq("init", "2788688271521116");
       fbq("track", "PageView");
     </script>
+    <!-- =================== END META PIXEL =================== -->
   </head>
+
   <body>
+    <!-- Pixel para navegadores com JS desativado -->
     <noscript>
       <img
         height="1"
         width="1"
         style="display: none"
         src="https://www.facebook.com/tr?id=2788688271521116&ev=PageView&noscript=1"
+        alt="pixel"
       />
     </noscript>
+
     <div id="root"></div>
+
+    <!-- =================== SCRIPTS =================== -->
+    <!-- Em produção, o Vite gera um JS minificado. 
+         Ex: /assets/main-xxxxx.js (não usar /src/main.jsx) -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

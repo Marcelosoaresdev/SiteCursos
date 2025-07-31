@@ -26,6 +26,7 @@ function CategoryCard({
 
       {/* IMAGEM */}
       <img
+        loading="lazy"
         src={imageSrc}
         alt={title}
         className="h-32 lg:h-40 object-contain mb-3 pointer-events-none z-10 transition-all duration-500 group-hover/card:scale-110 group-hover/card:-translate-y-2"
