@@ -1,6 +1,6 @@
 import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
 import leaoImage from "../assets/leao.webp";
-import universitariosImage from "../assets/universitarios.webp";
+import universitariosImage from "../assets/estudante.webp";
 import React, { useMemo } from "react";
 
 function HeroSection() {
@@ -70,51 +70,55 @@ function HeroSection() {
       </div>
 
       {/* === MOBILE === */}
-      <div className="lg:hidden flex flex-col min-h-[85vh] pt-16 pb-8 px-6 relative z-10 text-center items-center">
-        <h1 className="font-league text-5xl sm:text-6xl uppercase tracking-tight leading-none mb-2 text-white drop-shadow-md">
-          {content.mainTitle}
-        </h1>
-        <h2 className="font-league text-[5rem] sm:text-[6.5rem] uppercase leading-[0.85] tracking-tighter text-white drop-shadow-lg mb-8">
-          {content.subTitle}
-        </h2>
+      <div className="lg:hidden flex flex-col min-h-screen pt-16 pb-8 px-6 relative z-10 text-center items-center justify-between">
+        <div className="flex-1 flex flex-col justify-center items-center">
+          <h1 className="font-league text-5xl sm:text-6xl uppercase tracking-tight leading-none mb-2 text-white drop-shadow-md">
+            {content.mainTitle}
+          </h1>
+          <h2 className="font-league text-[5rem] sm:text-[6.5rem] uppercase leading-[0.85] tracking-tighter text-white drop-shadow-lg mb-8">
+            {content.subTitle}
+          </h2>
 
-        <div className="relative w-full max-w-sm mb-8">
-          <div className="absolute inset-0 bg-white rounded-full blur-2xl opacity-20 animate-pulse" />
-          <img
-            preload="true"
-            fetchPriority="high"
-            src={content.image}
-            alt={content.imageAlt}
-            className={`relative w-full h-auto object-contain ${content.imageScaleClass}`}
-          />
+          <div className="relative w-full max-w-xs md:max-w-sm mb-8">
+            <div className="absolute inset-0 bg-white rounded-full blur-2xl opacity-20 animate-pulse" />
+            <img
+              preload="true"
+              fetchPriority="high"
+              src={content.image}
+              alt={content.imageAlt}
+              className={`relative w-full h-auto object-contain ${content.imageScaleClass} ${
+                isStudentVersion ? 'max-h-64 sm:max-h-72 md:max-h-80' : ''
+              }`}
+            />
+          </div>
+
+          {isStudentVersion ? (
+            <p className="font-ttnorms text-lg sm:text-xl md:text-2xl max-w-md md:max-w-lg leading-snug mb-6 whitespace-pre-line">
+              Chegou a sua hora, o mais importante é{" "}
+              <strong className="font-bold text-white">
+                dar o PRIMEIRO PASSO
+              </strong>{" "}
+              para transformar tudo! <br />
+              <br />
+              Comece agora a{" "}
+              <strong className="font-bold text-white">jornada</strong> rumo à
+              vida que você merece!
+            </p>
+          ) : (
+            <p className="font-ttnorms text-lg sm:text-xl md:text-2xl max-w-md md:max-w-lg leading-snug mb-6">
+              O que <strong className="text-white font-bold">TEMOS</strong> em
+              comum não é a{" "}
+              <strong className="text-white font-bold">
+                ausência de pequenez
+              </strong>{" "}
+              — mas sim a{" "}
+              <strong className="text-white font-bold">coragem de crescer</strong>{" "}
+              a partir dela.
+            </p>
+          )}
         </div>
 
-        {isStudentVersion ? (
-          <p className="font-ttnorms text-lg sm:text-xl max-w-md leading-snug mb-6 whitespace-pre-line">
-            Chegou a sua hora, o mais importante é{" "}
-            <strong className="font-bold text-white">
-              dar o PRIMEIRO PASSO
-            </strong>{" "}
-            para transformar tudo! <br />
-            <br />
-            Comece agora a{" "}
-            <strong className="font-bold text-white">jornada</strong> rumo à
-            vida que você merece!
-          </p>
-        ) : (
-          <p className="font-ttnorms text-lg sm:text-xl max-w-md leading-snug mb-6">
-            O que <strong className="text-white font-bold">TEMOS</strong> em
-            comum não é a{" "}
-            <strong className="text-white font-bold">
-              ausência de pequenez
-            </strong>{" "}
-            — mas sim a{" "}
-            <strong className="text-white font-bold">coragem de crescer</strong>{" "}
-            a partir dela.
-          </p>
-        )}
-
-        <div className="mt-auto animate-bounce">
+        <div className="pt-8 animate-bounce">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-10 w-10 text-white drop-shadow-lg"
@@ -163,12 +167,14 @@ jornada rumo à vida que você merece!`}
         </div>
 
         <div className="flex-1 flex items-center justify-center relative z-10">
-          <div className="relative w-[90%] max-w-4xl">
+          <div className="relative w-[70%] max-w-2xl">
             <div className="absolute inset-0 bg-white rounded-full blur-3xl opacity-10 animate-pulse" />
             <img
               src={content.image}
               alt={content.imageAlt}
-              className={`relative w-full h-auto object-contain ${content.imageScaleClass}`}
+              className={`relative w-full h-auto object-contain ${content.imageScaleClass} ${
+                isStudentVersion ? 'max-h-96 xl:max-h-[42rem]' : ''
+              }`}
             />
           </div>
         </div>
