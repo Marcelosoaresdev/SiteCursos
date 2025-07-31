@@ -1,6 +1,6 @@
 import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
-import leaoImage from "../assets/leao.png";
-import universitariosImage from "../assets/universitarios.png";
+import leaoImage from "../assets/leao.webp";
+import universitariosImage from "../assets/universitarios.webp";
 import React, { useMemo } from "react";
 
 function HeroSection() {
@@ -81,7 +81,7 @@ function HeroSection() {
         <div className="relative w-full max-w-sm mb-8">
           <div className="absolute inset-0 bg-white rounded-full blur-2xl opacity-20 animate-pulse" />
           <img
-            fetchpriority="high"
+            fetchPriority="high"
             src={content.image}
             alt={content.imageAlt}
             className={`relative w-full h-auto object-contain ${content.imageScaleClass}`}

@@ -1,46 +1,46 @@
 // Importações de imagens que serão usadas nas páginas
-import capaSaude1 from "../assets/saude/capa_saude1.png";
-import capaSaude2 from "../assets/saude/capa_saude2.png";
-import capaSaude3 from "../assets/saude/capa_saude3.png";
-import comboPackageSaude from "../assets/saude/combo_saude.png"; // Imagem do pacote combo
-import corrida from "../assets/corrida.png"; // Hero image da categoria Saúde Física
+import capaSaude1 from "../assets/saude/capa_saude1.webp";
+import capaSaude2 from "../assets/saude/capa_saude2.webp";
+import capaSaude3 from "../assets/saude/capa_saude3.webp";
+import comboPackageSaude from "../assets/saude/combo_saude.webp"; // Imagem do pacote combo
+import corrida from "../assets/corrida.webp"; // Hero image da categoria Saúde Física
 
 /*------------------------------------------------------------*/
 
-import capaFinanceiro1 from "../assets/financeiro/capa_financeiro1.png";
-import capaFinanceiro2 from "../assets/financeiro/capa_financeiro2.png";
-import capaFinanceiro3 from "../assets/financeiro/capa_financeiro3.png";
-import comboPackageFinanceiro from "../assets/financeiro/combo_financeiro.png";
-import heroFinanceiroImg from "../assets/financeiro.png"; // Hero image da categoria Financeiro
+import capaFinanceiro1 from "../assets/financeiro/capa_financeiro1.webp";
+import capaFinanceiro2 from "../assets/financeiro/capa_financeiro2.webp";
+import capaFinanceiro3 from "../assets/financeiro/capa_financeiro3.webp";
+import comboPackageFinanceiro from "../assets/financeiro/combo_financeiro.webp";
+import heroFinanceiroImg from "../assets/financeiro.webp"; // Hero image da categoria Financeiro
 
 /*------------------------------------------------------------*/
 
-import capaConquista1 from "../assets/conquista/capa_conquista1.png";
-import capaConquista2 from "../assets/conquista/capa_conquista2.png";
-import capaConquista3 from "../assets/conquista/capa_conquista3.png";
-import comboPackageConquista from "../assets/conquista/combo_conquista.png";
-import conquistaImg from "../assets/conquista.png"; // Hero image da categoria Conquista
+import capaConquista1 from "../assets/conquista/capa_conquista1.webp";
+import capaConquista2 from "../assets/conquista/capa_conquista2.webp";
+import capaConquista3 from "../assets/conquista/capa_conquista3.webp";
+import comboPackageConquista from "../assets/conquista/combo_conquista.webp";
+import conquistaImg from "../assets/conquista.webp"; // Hero image da categoria Conquista
 
 /*------------------------------------------------------------*/
 
-import capaAutoestima1 from "../assets/autoestima/capa_autoestima1.png";
-import capaAutoestima2 from "../assets/autoestima/capa_autoestima2.png";
-import capaAutoestima3 from "../assets/autoestima/capa_autoestima3.png";
-import comboPackageAutoestima from "../assets/autoestima/combo_autoestima.png";
-import autoestimaImg from "../assets/autoestima.png"; // Hero image da categoria Autoestima
+import capaAutoestima1 from "../assets/autoestima/capa_autoestima1.webp";
+import capaAutoestima2 from "../assets/autoestima/capa_autoestima2.webp";
+import capaAutoestima3 from "../assets/autoestima/capa_autoestima3.webp";
+import comboPackageAutoestima from "../assets/autoestima/combo_autoestima.webp";
+import autoestimaImg from "../assets/autoestima.webp"; // Hero image da categoria Autoestima
 
 /*------------------------------------------------------------*/
 
 // ✅ NOVAS IMAGENS PARA RELACIONAMENTO
-import capaRelacionamento1 from "../assets/relacionamento/capa_relacionamento1.png"; // Substitua com o nome real do arquivo
-import capaRelacionamento2 from "../assets/relacionamento/capa_relacionamento2.png"; // Substitua com o nome real do arquivo
-import capaRelacionamento3 from "../assets/relacionamento/capa_relacionamento3.png"; // Substitua com o nome real do arquivo
-import comboPackageRelacionamento from "../assets/relacionamento/combo_relacionamento.png"; // Substitua com o nome real do arquivo
-import heroRelacionamentoImg from "../assets/relacionamento.png"; // Substitua com o nome real do arquivo
+import capaRelacionamento1 from "../assets/relacionamento/capa_relacionamento1.webp"; // Substitua com o nome real do arquivo
+import capaRelacionamento2 from "../assets/relacionamento/capa_relacionamento2.webp"; // Substitua com o nome real do arquivo
+import capaRelacionamento3 from "../assets/relacionamento/capa_relacionamento3.webp"; // Substitua com o nome real do arquivo
+import comboPackageRelacionamento from "../assets/relacionamento/combo_relacionamento.webp"; // Substitua com o nome real do arquivo
+import heroRelacionamentoImg from "../assets/relacionamento.webp"; // Substitua com o nome real do arquivo
 
 /*------------------------------------------------------------*/
 
-import comboProductsImage from "../assets/books.png"; // Imagem de exemplo
+import comboProductsImage from "../assets/books.webp"; // Imagem de exemplo
 
 /*------------------------------------------------------------*/
 

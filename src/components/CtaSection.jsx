@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import studentImage from "../assets/estudante.png";
+import studentImage from "../assets/estudante.webp";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
