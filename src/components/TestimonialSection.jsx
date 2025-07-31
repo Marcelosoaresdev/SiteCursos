@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profilePic from "../assets/fotoFlavia.jpg";
+import profilePic from "../assets/fotoFlavia.webp";
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 function TestimonialSection() {
