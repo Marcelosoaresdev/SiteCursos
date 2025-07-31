@@ -46,7 +46,7 @@ function CallToActionSection({ content }) {
       <SvgNoiseTexture />
       <div className="relative z-10 container mx-auto max-w-6xl text-center flex flex-col items-center">
         <h2
-          className={`font-league text-6xl md:text-8xl lg:text-9xl font-bold leading-none tracking-tight ${content.textColor}`}
+          className={`font-league text-6xl md:text-8xl  leading-none tracking-tight ${content.textColor}`}
         >
           {content.text}
         </h2>

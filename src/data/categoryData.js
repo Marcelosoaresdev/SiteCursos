@@ -458,7 +458,7 @@ export const categories = [
           "<strong>Curso 1 – Autoestima Verdadeira</strong> – As Raízes da Confiança Autêntica",
           "<strong>Curso 2 – Transformando Sua História Pessoal</strong> – Reescreva Sua Narrativa",
           "<strong>Curso 3 – Autoestima na Prática</strong> – Vivendo Seu Valor Diariamente",
-          "<strong>Bônus:</strong> E-book gratuito + Caderno de exercícios + Jornada Integrada",
+          "<strong>Bônus:</strong> E-book gratuito + Caderno de exercícios + Jornada Integrada: Dissolva auto dúvida para sempre e construa confiança que vem de dentro",
         ],
         buttonText: "COMEÇAR MINHA TRANSFORMAÇÃO COMPLETA",
         buttonLink: "https://pay.hotmart.com/D100553828O",
@@ -1549,10 +1549,11 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "Módulos focados em autoconhecimento e cura.",
-          "Ferramentas para identificar seus padrões.",
-          "Exercícios práticos de amor-próprio.",
-          "BÔNUS: Guia de Primeiros Encontros Conscientes.",
+          "6 módulos transformadores (2,5 horas no total)",
+          "Todo o conteúdo do Curso 1 em vídeo",
+          "Ferramentas completas de mapeamento emocional",
+          "Roteiro de quebra de padrões de 90 diasncontros Conscientes.",
+          "BÔNUS: E-book GRÁTIS da nossa coleção especialmente selecionada + Caderno de exercícios",
         ],
         price: {
           original: "R$ 297,00",
@@ -1619,10 +1620,10 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "Scripts e role-playing para conversas difíceis.",
-          "Exercícios de escuta ativa para casais.",
-          "Guias para noites de encontro focadas em conexão.",
-          "BÔNUS: Meditações guiadas para intimidade.",
+          "6 módulos poderosos (2,5 horas no total)",
+          "Todo o conteúdo em vídeo do Curso 2",
+          "Scripts e templates completos de comunicação",
+          "Exercícios de construção de intimidade",
         ],
         price: {
           original: "R$ 297,00",
@@ -1690,10 +1691,10 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "Template para criar o 'Manifesto do Casal'.",
-          "Calendário de rituais de conexão.",
-          "Plano de crescimento pessoal e do casal.",
-          "BÔNUS: Workshop sobre metas e sonhos em conjunto.",
+          "6 módulos práticos (2,5 horas no total)",
+          "Todo o conteúdo em vídeo do Curso 3",
+          "Avaliações de evolução relacional",
+          "Templates de acordos conscientes de casal",
         ],
         price: {
           original: "R$ 297,00",
@@ -1789,7 +1790,7 @@ export const courses = [
     heading: "Pacote Premium Combo",
     imageSrc: comboPackageAutoestima,
     description:
-      "Acesso completo aos 3 cursos para construir uma confiança inabalável e transformar seu autovalor.",
+      "Pacote Completo de Transformação do Autovalor receba todos os 3 Cursos + Materiais Completos Reconstrua Seu Relacionamento Consigo Desde a Base",
     priceInstallments: "12x de R$ 58,95*",
     priceFull: "R$ 570,00",
     purchaseLink: "https://pay.hotmart.com/D100553828O",
@@ -1814,7 +1815,7 @@ export const courses = [
     heading: "Pacote Premium Combo",
     imageSrc: comboPackageRelacionamento,
     description:
-      "Receba todos os 3 Cursos e Materiais para transformar seus padrões e criar um amor consciente que evolui.",
+      "Pacote Completo de Transformação Relacional receba todos os 3 Cursos + Materiais Completos de Padrões Tóxicos para Amor Consciente Que Evolui",
     priceInstallments: "12x de R$ 58,95*",
     priceFull: "R$ 570,00",
     purchaseLink: "https://pay.hotmart.com/B100554508D",

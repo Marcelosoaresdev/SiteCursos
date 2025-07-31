@@ -169,10 +169,6 @@ function CourseCard({
                     {priceFull} à vista
                   </p>
                 </div>
-
-                <div className="mt-1 bg-white/10 text-white text-xs font-medium px-2 py-1 rounded-full">
-                  Economize até 30%
-                </div>
               </div>
             </div>
           ) : (
