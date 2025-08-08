@@ -1,42 +1,42 @@
 // Importações de imagens que serão usadas nas páginas
-import capaSaude1 from "../assets/saude/capa_saude1.webp";
-import capaSaude2 from "../assets/saude/capa_saude2.webp";
-import capaSaude3 from "../assets/saude/capa_saude3.webp";
-import comboPackageSaude from "../assets/saude/combo_saude.webp"; // Imagem do pacote combo
+import capaSaude1 from "../assets/espaco_Uni/capa_saude1_uni.webp";
+import capaSaude2 from "../assets/espaco_Uni/capa_saude2_uni.webp";
+import capaSaude3 from "../assets/espaco_Uni/capa_saude3_uni.webp";
+import comboPackageSaude from "../assets/espaco_Uni/capa_combosaude_uni.webp"; // Imagem do pacote combo
 import corrida from "../assets/corrida.webp"; // Hero image da categoria Saúde Física
 
 /*------------------------------------------------------------*/
 
-import capaFinanceiro1 from "../assets/financeiro/capa_financeiro1.webp";
-import capaFinanceiro2 from "../assets/financeiro/capa_financeiro2.webp";
-import capaFinanceiro3 from "../assets/financeiro/capa_financeiro3.webp";
-import comboPackageFinanceiro from "../assets/financeiro/combo_financeiro.webp";
+import capaFinanceiro1 from "../assets/espaco_Uni/capa_financeiro1_uni.webp";
+import capaFinanceiro2 from "../assets/espaco_Uni/capa_financeiro2_uni.webp";
+import capaFinanceiro3 from "../assets/espaco_Uni/capa_financeiro3_uni.webp";
+import comboPackageFinanceiro from "../assets/espaco_Uni/capa_combofinanceiro_uni.webp";
 import heroFinanceiroImg from "../assets/financeiro.webp"; // Hero image da categoria Financeiro
 
 /*------------------------------------------------------------*/
 
-import capaConquista1 from "../assets/conquista/capa_conquista1.webp";
-import capaConquista2 from "../assets/conquista/capa_conquista2.webp";
-import capaConquista3 from "../assets/conquista/capa_conquista3.webp";
-import comboPackageConquista from "../assets/conquista/combo_conquista.webp";
+import capaConquista1 from "../assets/espaco_Uni/capa_conquista1_uni.webp";
+import capaConquista2 from "../assets/espaco_Uni/capa_conquista2_uni.webp";
+import capaConquista3 from "../assets/espaco_Uni/capa_conquista3_uni.webp";
+import comboPackageConquista from "../assets/espaco_Uni/capa_comboconquista_uni.webp";
 import conquistaImg from "../assets/conquista.webp"; // Hero image da categoria Conquista
 
 /*------------------------------------------------------------*/
 
-import capaAutoestima1 from "../assets/autoestima/capa_autoestima1.webp";
-import capaAutoestima2 from "../assets/autoestima/capa_autoestima2.webp";
-import capaAutoestima3 from "../assets/autoestima/capa_autoestima3.webp";
-import comboPackageAutoestima from "../assets/autoestima/combo_autoestima.webp";
+import capaAutoestima1 from "../assets/espaco_Uni/capa_autoestima1_uni.webp";
+import capaAutoestima2 from "../assets/espaco_Uni/capa_autoestima3_uni.webp";
+import capaAutoestima3 from "../assets/espaco_Uni/capa_autoestima2_uni.webp";
+import comboPackageAutoestima from "../assets/espaco_Uni/capa_comboautoestima_uni.webp";
 import autoestimaImg from "../assets/autoestima.webp"; // Hero image da categoria Autoestima
 
 /*------------------------------------------------------------*/
 
 // ✅ NOVAS IMAGENS PARA RELACIONAMENTO
-import capaRelacionamento1 from "../assets/relacionamento/capa_relacionamento1.webp"; // Substitua com o nome real do arquivo
-import capaRelacionamento2 from "../assets/relacionamento/capa_relacionamento2.webp"; // Substitua com o nome real do arquivo
-import capaRelacionamento3 from "../assets/relacionamento/capa_relacionamento3.webp"; // Substitua com o nome real do arquivo
-import comboPackageRelacionamento from "../assets/relacionamento/combo_relacionamento.webp"; // Substitua com o nome real do arquivo
-import heroRelacionamentoImg from "../assets/relacionamento.webp"; // Substitua com o nome real do arquivo
+import capaRelacionamento1 from "../assets/espaco_Uni/capa_relacionamento1_uni.webp";
+import capaRelacionamento2 from "../assets/espaco_Uni/capa_relacionamento2_uni.webp";
+import capaRelacionamento3 from "../assets/espaco_Uni/capa_relacionamento3_uni.webp";
+import comboPackageRelacionamento from "../assets/espaco_Uni/capa_comborelacionamento_uni.webp";
+import heroRelacionamentoImg from "../assets/relacionamento.webp";
 
 /*------------------------------------------------------------*/
 
@@ -74,7 +74,7 @@ export const categories = [
       title: "O que está incluso:",
       items: [
         "6 módulos abrangentes (3 horas no total)",
-        "Todo o conteúdo em vídeo do Curso 1",
+        "Todo o conteúdo em vídeo do Módulo 1",
         "Checklist semanal de transformação",
         "Plano de ação personalizado de 90 dias",
         "BÔNUS: E-book gratuito da nossa coleção especialmente selecionada + Caderno de exercícios",
@@ -107,7 +107,7 @@ export const categories = [
       productImage: comboProductsImage,
       bonusParagraph:
         "Ao garantir o Pacote Completo da Transformação Financeira você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e um caderno de exercícios especial,  escrito por Flávia Cavalcante.",
-      buttonText: "QUERO GARANTIR O PACOTE",
+      buttonText: "Aproveitar o Combo com 3 Cursos",
       gradient: "bg-saude-gradient", // Já existia, vamos usar
       textColor: "text-saude-dark-blue",
       borderColor: "border-saude-dark-blue",
@@ -126,12 +126,12 @@ export const categories = [
       included: {
         title: "O que está incluso?",
         items: [
-          "<strong>Curso 1. Transforme Sua Vida</strong> – O Caminho Completo para Saúde e Vitalidade",
-          "<strong>Curso 2. Corra para a Vida</strong> – Transforme Corpo e Mente Através do Movimento",
-          "<strong>Curso 3. Corrida Elite</strong> – Performance, Longevidade e Transcendência",
+          "<strong>Módulo 1. Transforme Sua Vida</strong> – O Caminho Completo para Saúde e Vitalidade",
+          "<strong>Módulo 2. Corra para a Vida</strong> – Transforme Corpo e Mente Através do Movimento",
+          "<strong>Módulo 3. Corrida Elite</strong> – Performance, Longevidade e Transcendência",
           "<strong>Bônus: E-book grátis</strong> da nossa coleção especialmente selecionada + <strong>Caderno de exercícios</strong> + <strong>Sistema Integrado</strong> – Desperte o atleta interior, não importa onde você está começando.",
         ],
-        buttonText: "Começar minha transformação completa",
+        buttonText: "Quero Começar Minha Transformação",
         buttonLink: "https://pay.hotmart.com/A100523908T",
       },
       why: {
@@ -141,9 +141,9 @@ export const categories = [
         line2: "PACOTE COMPLETO?",
       },
       benefits: [
-        { title: "Curso 1", text: "Reprograma seus hábitos diários." },
-        { title: "Curso 2", text: "Canaliza essa energia no movimento." },
-        { title: "Curso 3", text: "Te eleva à performance de elite." },
+        { title: "Módulo 1", text: "Reprograma seus hábitos diários." },
+        { title: "Módulo 2", text: "Canaliza essa energia no movimento." },
+        { title: "Módulo 3", text: "Te eleva à performance de elite." },
       ],
       gradient: "bg-[linear-gradient(to_bottom,_#1e3a8a,_#0ea5e9)]",
       textColor: "text-saude-white",
@@ -167,12 +167,12 @@ export const categories = [
     subtitle: "A Jornada: Do Primeiro Real ao Império.",
     heroImage: heroFinanceiroImg, // ⚠️ Substitua pelo nome da sua variável de imagem
     gradient:
-      "bg-[radial-gradient(circle_at_top_left,_#f8fdf4,_#9efa93,_#61cd51)]",
+      "bg-[radial-gradient(circle_at_0%_0%,_#f8fdf4,_#9efa93,_#61cd51)]",
     titleColor1: "text-financeiro-dark-green",
     titleColor2: "text-financeiro-dark-green",
     subtitleColor: "text-financeiro-dark-green",
     coursesBackgroundColor:
-      "bg-[radial-gradient(circle_at_top_left,_#f8fdf4,_#9efa93,_#61cd51)]",
+      "bg-[radial-gradient(circle_at_0%_0%,_#f8fdf4,_#9efa93,_#61cd51)]",
 
     videoTestimonial: {
       text: "Do primeiro real ao seu próprio império – Não é sobre trabalhar mais, é sobre trabalhar diferente.",
@@ -214,9 +214,9 @@ export const categories = [
       included: {
         title: "O QUE ESTÁ INCLUSO:",
         items: [
-          "<strong>Curso 1. Mentalidade e Fundamentos da Independência Financeira</strong>",
-          "<strong>Curso 2. Mindset Empreendedor - Múltiplas Fontes de Renda</strong>",
-          "<strong>Curso 3. Escala e Investimentos Inteligentes para Empreendedores</strong>",
+          "<strong>Módulo 1. Mentalidade e Fundamentos da Independência Financeira</strong>",
+          "<strong>Módulo 2. Mindset Empreendedor - Múltiplas Fontes de Renda</strong>",
+          "<strong>Módulo 3. Escala e Investimentos Inteligentes para Empreendedores</strong>",
           "<strong>Bônus.</strong> E-book GRÁTIS da nossa coleção especialmente selecionada + caderno de exercícios",
           "<strong>Sistema Integrado</strong> - Reprograme seu DNA financeiro e construa riqueza que se multiplica",
         ],
@@ -230,13 +230,13 @@ export const categories = [
         line2: "PACOTE COMPLETO?",
       },
       benefits: [
-        { title: "Curso 1", text: "Reprograma sua consciência de riqueza." },
+        { title: "Módulo 1", text: "Reprograma sua consciência de riqueza." },
         {
-          title: "Curso 2",
+          title: "Módulo 2",
           text: "Te mostra como criar fontes de renda a partir de suas paixões.",
         },
         {
-          title: "Curso 3",
+          title: "Módulo 3",
           text: "Mostra como multiplicar essa renda enquanto você dorme.",
         },
       ],
@@ -283,9 +283,9 @@ export const categories = [
     inclusions: {
       title: "O que está incluso:",
       items: [
-        "Curso 1 – Conquiste Seus Objetivos – Objetivos Cristalinos",
-        "Curso 2 – Estratégia e Planejamento – Seu Mapa de Sucesso",
-        "Curso 3 – Execução e Hábitos – Sistemas Diários para Vitória",
+        "Módulo 1 – Conquiste Seus Objetivos – Objetivos Cristalinos",
+        "Módulo 2 – Estratégia e Planejamento – Seu Mapa de Sucesso",
+        "Módulo 3 – Execução e Hábitos – Sistemas Diários para Vitória",
         "Bônus – E-book grátis da nossa coleção especialmente selecionada",
         "Caderno de exercícios + Sistema Integrado – transforme 'algum dia' em 'feito' com métodos baseados em ciência.",
       ],
@@ -334,9 +334,9 @@ export const categories = [
       included: {
         title: "O QUE ESTÁ INCLUSO:",
         items: [
-          "<strong>Curso 1 – Conquiste Seus Objetivos</strong> – Objetivos Cristalinos",
-          "<strong>Curso 2 – Estratégia e Planejamento</strong> – Seu Mapa de Sucesso",
-          "<strong>Curso 3 – Execução e Hábitos</strong> – Sistemas Diários para Vitória",
+          "<strong>Módulo 1 – Conquiste Seus Objetivos</strong> – Objetivos Cristalinos",
+          "<strong>Módulo 2 – Estratégia e Planejamento</strong> – Seu Mapa de Sucesso",
+          "<strong>Módulo 3 – Execução e Hábitos</strong> – Sistemas Diários para Vitória",
           "<strong>Bônus:</strong> E-book grátis da nossa coleção especialmente selecionada + <strong>Caderno de exercícios + Sistema Integrado</strong> – transforme 'algum dia' em 'feito' com métodos baseados em ciência.",
         ],
         buttonText: "COMEÇAR MINHA TRANSFORMAÇÃO COMPLETA",
@@ -350,15 +350,15 @@ export const categories = [
       },
       benefits: [
         {
-          title: "Curso 1",
+          title: "Módulo 1",
           text: "Transforma seus desejos vagos em alvos que te puxam para frente.",
         },
         {
-          title: "Curso 2",
+          title: "Módulo 2",
           text: "Mostra como fazer uma estratégia à prova de falhas que transformam obstáculos em degraus.",
         },
         {
-          title: "Curso 3",
+          title: "Módulo 3",
           text: "Instala os sistemas diários e hábitos que tornam o sucesso automático.",
         },
       ],
@@ -403,9 +403,9 @@ export const categories = [
     inclusions: {
       title: "O que está incluso:",
       items: [
-        "Curso 1 – Autoestima Verdadeira – As Raízes da Confiança Autêntica",
-        "Curso 2 – Transformando Sua História Pessoal – Reescreva Sua Narrativa",
-        "Curso 3 – Autoestima na Prática – Vivendo Seu Valor Diariamente",
+        "Módulo 1 – Autoestima Verdadeira – As Raízes da Confiança Autêntica",
+        "Módulo 2 – Transformando Sua História Pessoal – Reescreva Sua Narrativa",
+        "Módulo 3 – Autoestima na Prática – Vivendo Seu Valor Diariamente",
         "Bônus – E-book GRÁTIS da nossa coleção + Caderno de Exercícios + Jornada Integrada: Dissolva auto dúvida para sempre e construa confiança que vem de dentro",
       ],
       price: {
@@ -455,9 +455,9 @@ export const categories = [
       included: {
         title: "O QUE ESTÁ INCLUSO:",
         items: [
-          "<strong>Curso 1 – Autoestima Verdadeira</strong> – As Raízes da Confiança Autêntica",
-          "<strong>Curso 2 – Transformando Sua História Pessoal</strong> – Reescreva Sua Narrativa",
-          "<strong>Curso 3 – Autoestima na Prática</strong> – Vivendo Seu Valor Diariamente",
+          "<strong>Módulo 1 – Autoestima Verdadeira</strong> – As Raízes da Confiança Autêntica",
+          "<strong>Módulo 2 – Transformando Sua História Pessoal</strong> – Reescreva Sua Narrativa",
+          "<strong>Módulo 3 – Autoestima na Prática</strong> – Vivendo Seu Valor Diariamente",
           "<strong>Bônus:</strong> E-book gratuito + Caderno de exercícios + Jornada Integrada: Dissolva auto dúvida para sempre e construa confiança que vem de dentro",
         ],
         buttonText: "COMEÇAR MINHA TRANSFORMAÇÃO COMPLETA",
@@ -471,15 +471,15 @@ export const categories = [
       },
       benefits: [
         {
-          title: "Curso 1",
+          title: "Módulo 1",
           text: "Revela seu valor autêntico que sempre esteve lá.",
         },
         {
-          title: "Curso 2",
+          title: "Módulo 2",
           text: "Ajuda você a reescrever a sua vida.",
         },
         {
-          title: "Curso 3",
+          title: "Módulo 3",
           text: "Mostra como ter uma confiança inabalável.",
         },
       ],
@@ -504,12 +504,13 @@ export const categories = [
     subtitle:
       "Seu padrão no amor não é má sorte - é programação que você pode mudar!",
     heroImage: heroRelacionamentoImg,
-    gradient: "bg-[radial-gradient(circle_at_top,_#fecaca,_#f87171,_#dc2626)]",
+    gradient:
+      "bg-[radial-gradient(circle_at_0%_0%,_#fecaca,_#f87171,_#dc2626)]",
     titleColor1: "text-[#7f1d1d]",
     titleColor2: "text-[#7f1d1d]",
     subtitleColor: "text-[#7f1d1d]",
     coursesBackgroundColor:
-      "bg-[radial-gradient(circle_at_top,_#fecaca,_#f87171,_#dc2626)]",
+      "bg-[radial-gradient(circle_at_0%_0%,_#fecaca,_#f87171,_#dc2626)]",
 
     // Seções de conteúdo da página da categoria
     videoTestimonial: {
@@ -548,9 +549,9 @@ export const categories = [
       included: {
         title: "O QUE ESTÁ INCLUSO:",
         items: [
-          "<strong>Curso 1. Revolução do Amor</strong> – Quebrando Ciclos, Construindo Fundações",
-          "<strong>Curso 2. Comunicação e Intimidade</strong> – A Arte da Conexão Real",
-          "<strong>Curso 3. Crescimento e Evolução</strong> – Relacionamentos Como Prática Espiritual",
+          "<strong>Módulo 1. Revolução do Amor</strong> – Quebrando Ciclos, Construindo Fundações",
+          "<strong>Módulo 2. Comunicação e Intimidade</strong> – A Arte da Conexão Real",
+          "<strong>Módulo 3. Crescimento e Evolução</strong> – Relacionamentos Como Prática Espiritual",
           "<strong>Bônus: E-book grátis</strong> da nossa coleção especialmente selecionada + <strong>Caderno de exercícios + Sistema Revolucionário</strong> - liberte-se de padrões tóxicos e construa amor que se aprofunda com o tempo.",
         ],
         buttonText: "COMEÇAR MINHA TRANSFORMAÇÃO COMPLETA",
@@ -564,15 +565,15 @@ export const categories = [
       },
       benefits: [
         {
-          title: "Curso 1",
+          title: "Módulo 1",
           text: "Constrói a base de amor-próprio que os relacionamentos saudáveis exigem.",
         },
         {
-          title: "Curso 2",
+          title: "Módulo 2",
           text: "Ensina a arte sagrada da intimidade verdadeira.",
         },
         {
-          title: "Curso 3",
+          title: "Módulo 3",
           text: "Eleva seu relacionamento a uma versão mais elevada.",
         },
       ],
@@ -598,7 +599,7 @@ export const courses = [
     categorySlug: "saude-fisica",
     slug: "transforme-sua-vida",
     // Dados para o card pequeno
-    title: "Curso 1",
+    title: "Módulo 1",
     imageSrc: capaSaude1,
     imageText: "Transforme sua vida",
     heading: "Transforme sua vida",
@@ -633,10 +634,10 @@ export const courses = [
       },
     },
 
-    // Dados para a PÁGINA DETALHADA do Curso 1
+    // Dados para a PÁGINA DETALHADA do Módulo 1
     details: {
       pageTitle: "TRANSFORME SUA VIDA",
-      pageSubtitle: "CURSO 1",
+      pageSubtitle: "Módulo 1",
       description:
         "Reprogramar seus hábitos diários e acender sua energia. Senso de largada.",
       longDescription:
@@ -657,7 +658,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos abrangentes (3 horas no total)",
-          "Todo o conteúdo em vídeo do Curso 1",
+          "Todo o conteúdo em vídeo do Módulo 1",
           "Checklist semanal de transformação",
           "Plano de ação personalizado de 90 dias",
           "BÔNUS: E-book gratuito da nossa coleção especialmente selecionada + Caderno de exercícios",
@@ -672,10 +673,10 @@ export const courses = [
   },
 
   {
-    // CURSO 2
+    // Módulo 2
     id: 2,
     categorySlug: "saude-fisica",
-    title: "Curso 2",
+    title: "Módulo 2",
     imageSrc: capaSaude2,
     imageText: "Corrida para a vida",
     heading: "Corrida para a vida",
@@ -712,7 +713,7 @@ export const courses = [
 
     details: {
       pageTitle: "CORRIDA PARA A VIDA",
-      pageSubtitle: "CURSO 2",
+      pageSubtitle: "Módulo 2",
       description: "Transforme Seu Corpo e Mente Através do Movimento",
       longDescription:
         "Do sofá aos 5Km e além - descubra como a corrida se torna meditação em movimento. Junte-se a milhares que transformaram suas vidas um passo de cada vez, independente da idade ou nível de condicionamento.",
@@ -734,7 +735,7 @@ export const courses = [
         items: [
           "7 módulos progressivos (3,5 horas no total)",
           "Plano de treino 5Km completo",
-          "Todo o conteúdo do Curso 2 em vídeo",
+          "Todo o conteúdo do Módulo 2 em vídeo",
         ],
         price: {
           original: "R$ 297,00",
@@ -745,11 +746,11 @@ export const courses = [
     },
   },
 
-  // CURSO 3
+  // Módulo 3
   {
     id: 3,
     categorySlug: "saude-fisica",
-    title: "Curso 3",
+    title: "Módulo 3",
     imageSrc: capaSaude3,
     imageText: "Corrida Elite",
     heading: "Corrida de Elite",
@@ -786,7 +787,7 @@ export const courses = [
 
     details: {
       pageTitle: "CORRIDA ELITE",
-      pageSubtitle: "CURSO 3",
+      pageSubtitle: "Módulo 3",
       description: "Performance, Longevidade e Transcendência",
       longDescription:
         "Para corredores prontos para quebrar barreiras e correr forte por décadas. Domine técnicas avançadas usadas por atletas olímpicos enquanto aprende a manter performance máxima em qualquer idade.",
@@ -807,7 +808,7 @@ export const courses = [
         items: [
           "7 módulos avançados (3,5 horas no total)",
           "Protocolos e planos de treino elite",
-          "Todo o conteúdo do Curso 3 em vídeo",
+          "Todo o conteúdo do Módulo 3 em vídeo",
         ],
         price: {
           original: "R$ 297,00",
@@ -821,7 +822,7 @@ export const courses = [
     id: 4,
     categorySlug: "financeiro",
     slug: "mentalidade-e-fundamentos",
-    title: "Curso 1",
+    title: "Módulo 1",
     imageSrc: capaFinanceiro1, // ⚠️ Use a variável da imagem correta
     imageText: "Mentalidade & Fundamentos",
     heading: "Mentalidade e Fundamentos",
@@ -830,7 +831,7 @@ export const courses = [
     priceInstallments: "12x de R$ 20,37*",
     priceFull: "R$ 197,00",
     isHighlighted: false,
-    purchaseLink: "https://pay.hotmart.com/P100490999L", // ⚠️ Link do curso 1
+    purchaseLink: "https://pay.hotmart.com/P100490999L", // ⚠️ Link do Módulo 1
 
     theme: {
       normal: {
@@ -857,17 +858,17 @@ export const courses = [
       },
     },
 
-    // ========= DETALHES DO CURSO 1 PREENCHIDOS =========
+    // ========= DETALHES DO Módulo 1 PREENCHIDOS =========
     details: {
       detailsBackgroundColor:
         "bg-gradient-to-r from-[#1a300f] via-[#3e722f] to-[#8aaf76]",
       pageTitle: "MENTALIDADE E FUNDAMENTOS DA INDEPENDÊNCIA FINANCEIRA",
-      pageSubtitle: "CURSO 1",
+      pageSubtitle: "Módulo 1",
       description: "Reprograme sua consciência de riqueza",
       longDescription:
         "O curso Mentalidade e Fundamentos da Independência Financeira oferece as bases cognitivas e estratégicas essenciais para quem deseja romper com ciclos de escassez e construir, de forma consistente, um caminho sólido rumo à liberdade financeira.",
       heroImage: capaFinanceiro1, // ⚠️ Use a variável da imagem correta
-      purchaseLink: "https://pay.hotmart.com/P100490999L", // ⚠️ Link do curso 1
+      purchaseLink: "https://pay.hotmart.com/P100490999L", // ⚠️ Link do Módulo 1
       domination: {
         title: "Você vai Dominar:",
         items: [
@@ -882,7 +883,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "7 módulos poderosos em vídeo (2+ horas no total)",
-          "Todo o conteúdo em vídeo do Curso 1",
+          "Todo o conteúdo em vídeo do Módulo 1",
           "Diagnósticos e calculadoras financeiras completas.",
           "Roteiro personalizado de liberdade para 5 anos",
           "BÔNUS: E-book gratuito da nossa coleção especialmente selecionada + caderno de exercícios",
@@ -899,7 +900,7 @@ export const courses = [
     id: 5,
     categorySlug: "financeiro",
     slug: "mindset-empreendedor",
-    title: "Curso 2",
+    title: "Módulo 2",
     imageSrc: capaFinanceiro2, // ⚠️ Use a variável da imagem correta
     imageText: "Mindset Empreendedor",
     heading: "Mindset Empreendedor",
@@ -907,7 +908,7 @@ export const courses = [
     priceInstallments: "12x de R$ 20,37*",
     priceFull: "R$ 197,00",
     isHighlighted: true,
-    purchaseLink: "https://pay.hotmart.com/K100501434N", // ⚠️ Link do curso 2
+    purchaseLink: "https://pay.hotmart.com/K100501434N", // ⚠️ Link do Módulo 2
 
     theme: {
       normal: {
@@ -934,17 +935,17 @@ export const courses = [
       },
     },
 
-    // ========= DETALHES DO CURSO 2 PREENCHIDOS =========
+    // ========= DETALHES DO Módulo 2 PREENCHIDOS =========
     details: {
       detailsBackgroundColor:
         "bg-gradient-to-r from-[#1a300f] via-[#3e722f] to-[#8aaf76]",
       pageTitle: "MINDSET EMPREENDEDOR",
-      pageSubtitle: "CURSO 2",
+      pageSubtitle: "Módulo 2",
       description: "Como criar fontes de renda a partir de suas paixões",
       longDescription:
         "Descubra um modelo estruturado para identificar habilidades pessoais com potencial de monetização, desenvolver visão estratégica e implementar fontes de renda alinhadas com propósito, gerando autonomia financeira com base em princípios validados do empreendedorismo moderno.",
       heroImage: capaFinanceiro2, // ⚠️ Use a variável da imagem correta
-      purchaseLink: "https://pay.hotmart.com/K100501434N", // ⚠️ Link do curso 2
+      purchaseLink: "https://pay.hotmart.com/K100501434N", // ⚠️ Link do Módulo 2
       domination: {
         title: "Você vai Dominar:",
         items: [
@@ -959,7 +960,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos abrangentes (3+ horas no total)",
-          "Todo o conteúdo em vídeo do Curso 2",
+          "Todo o conteúdo em vídeo do Módulo 2",
           "Templates de criação de produtos e sistemas",
           "Roteiro de escala do zero aos milhões",
         ],
@@ -975,7 +976,7 @@ export const courses = [
     id: 6,
     categorySlug: "financeiro",
     slug: "escala-e-investimentos",
-    title: "Curso 3",
+    title: "Módulo 3",
     imageSrc: capaFinanceiro3, // ⚠️ Use a variável da imagem correta
     imageText: "Escala e Investimentos",
     heading: "Escala e Investimentos",
@@ -984,7 +985,7 @@ export const courses = [
     priceInstallments: "12x de R$ 20,37*",
     priceFull: "R$ 197,00",
     isHighlighted: false,
-    purchaseLink: "https://pay.hotmart.com/I100501499Q", // ⚠️ Link do curso 3
+    purchaseLink: "https://pay.hotmart.com/I100501499Q", // ⚠️ Link do Módulo 3
 
     theme: {
       normal: {
@@ -1011,17 +1012,17 @@ export const courses = [
       },
     },
 
-    // ========= DETALHES DO CURSO 3 PREENCHIDOS =========
+    // ========= DETALHES DO Módulo 3 PREENCHIDOS =========
     details: {
       detailsBackgroundColor:
         "bg-gradient-to-r from-[#1a300f] via-[#3e722f] to-[#8aaf76]",
       pageTitle: "ESCALA E INVESTIMENTOS INTELIGENTES PARA EMPREENDEDORES",
-      pageSubtitle: "CURSO 3",
+      pageSubtitle: "Módulo 3",
       description: "Como multiplicar essa renda enquanto você dorme.",
       longDescription:
         "Uma abordagem estratégica para alavancar negócios e otimizar capital, integrando técnicas de crescimento escalável com inteligência financeira aplicada - ideal para quem busca alta performance e liberdade econômica real.",
       heroImage: capaFinanceiro3, // ⚠️ Use a variável da imagem correta
-      purchaseLink: "https://pay.hotmart.com/I100501499Q", // ⚠️ Link do curso 3
+      purchaseLink: "https://pay.hotmart.com/I100501499Q", // ⚠️ Link do Módulo 3
       domination: {
         title: "As Estratégias Avançadas Incluem:",
         items: [
@@ -1036,7 +1037,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos avançados (3 horas no total)",
-          "Todo o conteúdo em vídeo do Curso 3",
+          "Todo o conteúdo em vídeo do Módulo 3",
           "Calculadoras de investimento e templates de carteira",
           "Roteiro com cronogramas para alcançar o milhão",
         ],
@@ -1053,7 +1054,7 @@ export const courses = [
     id: 7,
     categorySlug: "conquista",
     slug: "conquiste-seus-objetivos",
-    title: "Curso 1",
+    title: "Módulo 1",
     imageSrc: capaConquista1,
     imageText: "Conquiste Seus Objetivos",
     heading: "Conquiste Seus Objetivos",
@@ -1088,7 +1089,7 @@ export const courses = [
 
     details: {
       pageTitle: "CONQUISTE SEUS OBJETIVOS",
-      pageSubtitle: "CURSO 1",
+      pageSubtitle: "Módulo 1",
       description: "Objetivos Claros e Diretos Que Te Puxam Para Frente",
       longDescription:
         "Esta jornada abrangente é um método prático e validado de definição, planejamento e execução de metas, desenvolvido para maximizar desempenho pessoal e acelerar resultados em qualquer área da vida.",
@@ -1110,7 +1111,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos transformadores (2.5 horas no total)",
-          "Todo o conteúdo em vídeo do Curso 1",
+          "Todo o conteúdo em vídeo do Módulo 1",
           "Ferramentas de avaliação da Zona de Gênio",
           "Roteiro de transformação de 90 dias",
           "BÔNUS: E-book gratuito da nossa coleção especialmente selecionada + caderno de exercícios",
@@ -1128,7 +1129,7 @@ export const courses = [
     id: 8,
     categorySlug: "conquista",
     slug: "estrategia-e-planejamento",
-    title: "Curso 2",
+    title: "Módulo 2",
     imageSrc: capaConquista2,
     imageText: "Estratégia e Planejamento",
     heading: "Estratégia e Planejamento",
@@ -1163,7 +1164,7 @@ export const courses = [
 
     details: {
       pageTitle: "ESTRATÉGIA E PLANEJAMENTO",
-      pageSubtitle: "CURSO 2",
+      pageSubtitle: "Módulo 2",
       description: "Seu Mapa de Sucesso",
       longDescription:
         "A diferença entre sonhadores e conquistadores não é talento – é ter um mapa. Crie seu GPS para o sucesso com estratégias que antecipam obstáculos antes que apareçam.",
@@ -1184,7 +1185,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos estratégicos (2,5 horas no total)",
-          "Todo o conteúdo em vídeo do Curso 2",
+          "Todo o conteúdo em vídeo do Módulo 2",
           "Templates e ferramentas completas de planejamento",
         ],
         price: {
@@ -1200,7 +1201,7 @@ export const courses = [
     id: 9,
     categorySlug: "conquista",
     slug: "execucao-e-habitos",
-    title: "Curso 3",
+    title: "Módulo 3",
     imageSrc: capaConquista3,
     imageText: "Execução e Hábitos",
     heading: "Execução e Hábitos",
@@ -1235,7 +1236,7 @@ export const courses = [
 
     details: {
       pageTitle: "EXECUÇÃO E HÁBITOS",
-      pageSubtitle: "CURSO 3",
+      pageSubtitle: "Módulo 3",
       description: "O Sistema de 1% Diário que Cria Resultados Incríveis",
       longDescription:
         "Planos sem execução são só desejos. Domine a ciência de micro gerenciar e construir hábitos automáticos que fazem o sucesso ser inevitável.",
@@ -1257,7 +1258,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 Módulos Práticos (de 2,5 horas no total)",
-          "Todo o conteúdo em vídeo do Curso 3",
+          "Todo o conteúdo em vídeo do Módulo 3",
           "Templates e ferramentas para acompanhamento de hábitos",
           "Protocolos personalizados de execução",
         ],
@@ -1274,7 +1275,7 @@ export const courses = [
     id: 10,
     categorySlug: "autoestima",
     slug: "autoestima-verdadeira",
-    title: "Curso 1",
+    title: "Módulo 1",
     imageSrc: capaAutoestima1,
     imageText: "Autoestima Verdadeira",
     heading: "Autoestima Verdadeira",
@@ -1307,7 +1308,7 @@ export const courses = [
     },
     details: {
       pageTitle: "AUTOESTIMA VERDADEIRA",
-      pageSubtitle: "CURSO 1",
+      pageSubtitle: "Módulo 1",
       description: "Mostrando o valor autêntico que sempre esteve com você",
       longDescription:
         "Propõe um modelo estruturado de desenvolvimento da autoestima baseado em ciência comportamental, promovendo mudanças na forma como você se posiciona, decide e age – impactando diretamente seus resultados pessoais e profissionais.",
@@ -1330,7 +1331,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos transformadores (2.5 horas no total)",
-          "Todo o conteúdo em vídeo do Curso 1 em Vídeo",
+          "Todo o conteúdo em vídeo do Módulo 1 em Vídeo",
           "Ferramentas completas de avaliação de autoestima",
           "Roteiro de transformação de 90 dias",
           "BÔNUS: E-book gratuito da nossa coleção especialmente selecionada + caderno de exercícios",
@@ -1347,14 +1348,14 @@ export const courses = [
     id: 11,
     categorySlug: "autoestima",
     slug: "transformando-sua-historia-pessoal",
-    title: "Curso 2",
+    title: "Módulo 2",
     imageSrc: capaAutoestima2,
     imageText: "Transformando Sua História Pessoal",
     heading: "Transformando Sua História Pessoal",
     description: "Rescreva Seu Passado para Empoderar Seu Futuro",
     priceInstallments: "12x de R$ 20,37*",
     priceFull: "R$ 197,00",
-    isHighlighted: true, // DESTAQUE ADICIONADO PARA CURSO 2
+    isHighlighted: true, // DESTAQUE ADICIONADO PARA Módulo 2
     purchaseLink: "https://pay.hotmart.com/M100553936N",
     theme: {
       normal: {
@@ -1380,7 +1381,7 @@ export const courses = [
     },
     details: {
       pageTitle: "TRANSFORMANDO SUA HISTÓRIA PESSOAL",
-      pageSubtitle: "CURSO 2",
+      pageSubtitle: "Módulo 2",
       description: "Rescreva Seu Passado para Empoderar Seu Futuro",
       longDescription:
         "É um convite para olhar com coragem para sua trajetória, ressignificar dores do passado e construir, com consciência e leveza, uma nova versão de si mesmo – mais alinhada com quem você realmente é.",
@@ -1403,7 +1404,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos poderosos (2.5 horas no total)",
-          "Todo o conteúdo em vídeo do Curso 2",
+          "Todo o conteúdo em vídeo do Módulo 2",
           "Templates de transformação de história",
           "Ferramentas de reconstrução de narrativa pessoal",
         ],
@@ -1419,7 +1420,7 @@ export const courses = [
     id: 12,
     categorySlug: "autoestima",
     slug: "autoestima-na-pratica",
-    title: "Curso 3",
+    title: "Módulo 3",
     imageSrc: capaAutoestima3,
     imageText: "Autoestima na Prática",
     heading: "Autoestima na Prática",
@@ -1452,7 +1453,7 @@ export const courses = [
     },
     details: {
       pageTitle: "AUTOESTIMA NA PRÁTICA",
-      pageSubtitle: "CURSO 3",
+      pageSubtitle: "Módulo 3",
       description: "Como ter uma Confiança Inabalável",
       longDescription:
         "Teoria sem prática é apenas pensamento desejoso. Construa os hábitos diários, limites e habilidades de comunicação que tornam a autoestima sua forma automática de ser.",
@@ -1475,7 +1476,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos práticos (2.5 horas no total)",
-          "Todo o conteúdo em vídeo do Curso 3",
+          "Todo o conteúdo em vídeo do Módulo 3",
           "Templates de práticas diárias e ferramentas de acompanhamento",
           "Scripts de limites e guias de comunicação",
         ],
@@ -1492,7 +1493,7 @@ export const courses = [
     id: 13,
     categorySlug: "relacionamento",
     slug: "revolucao-do-amor",
-    title: "Curso 1",
+    title: "Módulo 1",
     imageSrc: capaRelacionamento1,
     imageText: "Revolução do Amor",
     heading: "Revolução do Amor",
@@ -1525,7 +1526,7 @@ export const courses = [
     },
     details: {
       pageTitle: "REVOLUÇÃO DO AMOR",
-      pageSubtitle: "CURSO 1",
+      pageSubtitle: "Módulo 1",
       description:
         "Quebrando Ciclos, Construindo Fundações para um Amor Consciente.",
       longDescription:
@@ -1547,7 +1548,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos transformadores (2,5 horas no total)",
-          "Todo o conteúdo do Curso 1 em vídeo",
+          "Todo o conteúdo do Módulo 1 em vídeo",
           "Ferramentas completas de mapeamento emocional",
           "Roteiro de quebra de padrões de 90 diasncontros Conscientes",
           "BÔNUS: E-book GRÁTIS da nossa coleção especialmente selecionada + Caderno de exercícios",
@@ -1564,7 +1565,7 @@ export const courses = [
     id: 14,
     categorySlug: "relacionamento",
     slug: "comunicacao-e-intimidade",
-    title: "Curso 2",
+    title: "Módulo 2",
     imageSrc: capaRelacionamento2,
     imageText: "Comunicação e Intimidade",
     heading: "Comunicação e Intimidade",
@@ -1597,7 +1598,7 @@ export const courses = [
     },
     details: {
       pageTitle: "COMUNICAÇÃO E INTIMIDADE",
-      pageSubtitle: "CURSO 2",
+      pageSubtitle: "Módulo 2",
       description: "Aprenda a Arte da Conexão Emocional e Física Real.",
       longDescription:
         "Vá além das conversas superficiais. Este curso ensina as ferramentas para uma comunicação empática e vulnerável, criando um espaço seguro para que a intimidade emocional, mental e física floresça.",
@@ -1618,7 +1619,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos poderosos (2,5 horas no total)",
-          "Todo o conteúdo em vídeo do Curso 2",
+          "Todo o conteúdo em vídeo do Módulo 2",
           "Scripts e templates completos de comunicação",
           "Exercícios de construção de intimidade",
         ],
@@ -1634,7 +1635,7 @@ export const courses = [
     id: 15,
     categorySlug: "relacionamento",
     slug: "crescimento-e-evolucao",
-    title: "Curso 3",
+    title: "Módulo 3",
     imageSrc: capaRelacionamento3,
     imageText: "Crescimento e Evolução",
     heading: "Crescimento e Evolução",
@@ -1667,7 +1668,7 @@ export const courses = [
     },
     details: {
       pageTitle: "CRESCIMENTO E EVOLUÇÃO",
-      pageSubtitle: "CURSO 3",
+      pageSubtitle: "Módulo 3",
       description:
         "Transforme Seu Relacionamento em uma Jornada de Crescimento Mútuo.",
       longDescription:
@@ -1689,7 +1690,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos práticos (2,5 horas no total)",
-          "Todo o conteúdo em vídeo do Curso 3",
+          "Todo o conteúdo em vídeo do Módulo 3",
           "Avaliações de evolução relacional",
           "Templates de acordos conscientes de casal",
         ],

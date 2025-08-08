@@ -8,6 +8,7 @@ import CtaSection from "../components/CtaSection";
 import TestimonialSection from "../components/TestimonialSection";
 import EvolutionSection from "../components/EvolutionSection";
 import DecoratedBackground from "../components/DecoratedBackground";
+import Faq from "../components/Faq";
 
 // 👈 1. IMPORTE O NOSSO DETECTOR E AMBOS OS ARQUIVOS DE DADOS
 import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
@@ -41,6 +42,8 @@ function HomePage() {
         <CategoriesSection categories={categories} />
 
         <TestimonialSection />
+
+        <Faq />
       </main>
     </DecoratedBackground>
   );

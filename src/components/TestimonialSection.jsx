@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import profilePic from "../assets/fotoFlavia.webp";
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 function TestimonialSection() {
   const scrollAnimation = useScrollAnimation();
   return (
     <motion.section
       ref={scrollAnimation.ref}
-      className="relative w-full py-16 md:py-24 overflow-hidden bg-gradient-to-br from-purple-900 to-brand-purple"
+      className="relative w-full py-16 md:py-24 overflow-hidden bg-transparent -mb-px"
       variants={scrollAnimation.variants}
       initial={scrollAnimation.initial}
       animate={scrollAnimation.animate}
@@ -18,15 +18,6 @@ function TestimonialSection() {
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/3 -left-10 w-64 h-64 rounded-full bg-white/5 blur-3xl"></div>
         <div className="absolute bottom-1/4 -right-12 w-72 h-72 rounded-full bg-white/5 blur-3xl"></div>
-
-        {/* Padrão geométrico sutil */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-            backgroundSize: "30px 30px",
-          }}
-        ></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">

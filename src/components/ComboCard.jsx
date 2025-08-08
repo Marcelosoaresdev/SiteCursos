@@ -29,14 +29,6 @@ function ComboCard({
 
   return (
     <div className="w-full px-4 md:px-8 mt-24 md:mt-32">
-      {/* 3. BANNER ADICIONADO AQUI */}
-      {isStudentVersion && (
-        <div className="flex justify-center mb-4">
-          <div className="bg-red-600 text-white font-league text-4xl uppercase rounded-lg px-6 py-1.5 shadow-lg">
-            Espaço do Universitário
-          </div>
-        </div>
-      )}
 
       {/* 3. Título "Combo" agora usa a cor do tema */}
       <h2
@@ -80,7 +72,7 @@ function ComboCard({
               rel="noopener noreferrer"
               className={`font-bold uppercase text-sm px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-98 ${safeTheme.buttonBg} ${safeTheme.buttonText}`}
             >
-              Compre Agora
+              Garantir Meu Acesso com Desconto
             </a>
             <LearnMoreButton
               text="Saiba Mais"

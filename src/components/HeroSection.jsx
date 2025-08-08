@@ -6,6 +6,28 @@ import React, { useMemo } from "react";
 function HeroSection() {
   const isStudentVersion = useIsStudentVersion();
 
+  const handleScrollDown = () => {
+    // Tenta encontrar a próxima seção na ordem de prioridade
+    const selectors = [
+      '[class*="CtaSection"]',
+      '[class*="EvolutionSection"]',
+      '[class*="CategoriesSection"]',
+      "section:nth-of-type(2)",
+      'div[class*="Section"]:not([class*="Hero"])',
+    ];
+
+    for (const selector of selectors) {
+      const nextSection = document.querySelector(selector);
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: "smooth" });
+        return;
+      }
+    }
+
+    // Fallback: scroll para baixo uma altura de viewport
+    window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+  };
+
   const particles = useMemo(() => {
     return [...Array(25)].map(() => ({
       top: `${Math.random() * 100}%`,
@@ -86,9 +108,9 @@ function HeroSection() {
               fetchPriority="high"
               src={content.image}
               alt={content.imageAlt}
-              className={`relative w-full h-auto object-contain ${content.imageScaleClass} ${
-                isStudentVersion ? 'max-h-64 sm:max-h-72 md:max-h-80' : ''
-              }`}
+              className={`relative w-full h-auto object-contain ${
+                content.imageScaleClass
+              } ${isStudentVersion ? "max-h-64 sm:max-h-72 md:max-h-80" : ""}`}
             />
           </div>
 
@@ -112,7 +134,9 @@ function HeroSection() {
                 ausência de pequenez
               </strong>{" "}
               — mas sim a{" "}
-              <strong className="text-white font-bold">coragem de crescer</strong>{" "}
+              <strong className="text-white font-bold">
+                coragem de crescer
+              </strong>{" "}
               a partir dela.
             </p>
           )}
@@ -172,9 +196,9 @@ jornada rumo à vida que você merece!`}
             <img
               src={content.image}
               alt={content.imageAlt}
-              className={`relative w-full h-auto object-contain ${content.imageScaleClass} ${
-                isStudentVersion ? 'max-h-96 xl:max-h-[42rem]' : ''
-              }`}
+              className={`relative w-full h-auto object-contain ${
+                content.imageScaleClass
+              } ${isStudentVersion ? "max-h-96 xl:max-h-[42rem]" : ""}`}
             />
           </div>
         </div>
@@ -184,7 +208,11 @@ jornada rumo à vida que você merece!`}
             <p className="text-sm font-ttnorms mb-2 opacity-80 text-white drop-shadow-md">
               Role para ver mais
             </p>
-            <div className="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center bg-white/10 backdrop-blur-sm">
+            <button
+              onClick={handleScrollDown}
+              className="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+              aria-label="Rolar para próxima seção"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-8 w-8 text-white"
@@ -199,7 +227,7 @@ jornada rumo à vida que você merece!`}
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
-            </div>
+            </button>
           </div>
         </div>
       </div>

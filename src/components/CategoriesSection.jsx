@@ -74,14 +74,29 @@ function CategoriesSection() {
   return (
     <motion.section
       ref={scrollAnimation.ref}
-      className="text-text-light w-full py-12 px-4 sm:px-6 md:px-8"
+      className="relative w-full py-16 md:py-24 lg:py-32 overflow-hidden -mt-px -mb-px"
       variants={scrollAnimation.variants}
       initial={scrollAnimation.initial}
       animate={scrollAnimation.animate}
       transition={scrollAnimation.transition}
     >
-      <div className="container mx-auto text-center">
-        <h2 className="font-league text-4xl sm:text-5xl md:text-6xl uppercase mb-8 sm:mb-12">
+      {/* Fundo com o mesmo gradiente do Hero/Evolution */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#b362ff] to-[#761cc7]"></div>
+        {/* Formas sutis como na Evolution */}
+        <div className="absolute top-1/4 left-10 w-32 h-32 rounded-full bg-white/10 blur-2xl"></div>
+        <div className="absolute bottom-1/3 right-12 w-40 h-40 rounded-full bg-white/10 blur-2xl"></div>
+        {/* Partículas discretas */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-[12%] left-[20%] w-3 h-3 rounded-full bg-white/10 animate-pulse"></div>
+          <div className="absolute top-[35%] left-[70%] w-4 h-4 rounded-full bg-white/10 animate-pulse"></div>
+          <div className="absolute top-[62%] left-[28%] w-2.5 h-2.5 rounded-full bg-white/10 animate-pulse"></div>
+          <div className="absolute top-[78%] left-[82%] w-3.5 h-3.5 rounded-full bg-white/10 animate-pulse"></div>
+        </div>
+      </div>
+
+      <div className="container mx-auto text-center relative z-10 px-4 sm:px-6 md:px-8">
+        <h2 className="font-league text-4xl sm:text-5xl md:text-6xl uppercase mb-8 sm:mb-12 text-white">
           Escolha começar a mudar sua vida
         </h2>
 

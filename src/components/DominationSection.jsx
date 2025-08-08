@@ -15,7 +15,7 @@ function DominationSection({ data }) {
             // A MUDANÇA PARA O EFEITO DE VIDRO ESTÁ AQUI
             <div 
               key={index} 
-              className="bg-white/10 backdrop-blur-lg items-center flex border border-white/20 rounded-2xl p-6 transition-all duration-300 hover:bg-white/20 hover:scale-105 shadow-lg"
+              className="bg-white/10 backdrop-blur-lg items-center justify-center flex border border-white/20 rounded-2xl p-6 transition-all duration-300 hover:bg-white/20 hover:scale-105 shadow-lg"
             >
               <p className="font-ttnorms text-lg">{item}</p>
             </div>

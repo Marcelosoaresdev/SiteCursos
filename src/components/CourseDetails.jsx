@@ -51,7 +51,7 @@ function CourseDetailsHero({ details }) {
                text-white shadow-lg transition-all duration-300 hover:scale-105 active:scale-95
                bg-black/30 backdrop-blur-md border border-white/20 hover:bg-black/50 hover:border-white/40"
             >
-              <span className="relative z-10">Compre Agora</span>
+              <span className="relative z-10">Quero Comprar Agora</span>
 
               {/* Brilho animado no hover */}
               <span

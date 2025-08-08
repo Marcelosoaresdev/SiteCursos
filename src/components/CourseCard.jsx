@@ -65,7 +65,7 @@ function CourseCard({
       )}
 
       <div
-        className={`w-full h-full flex flex-col p-4 md:p-5 rounded-2xl border-2 transition-all duration-500 ease-out shadow-[12px_17px_51px_rgba(0,0,0,0.22)] md:hover:scale-105 active:scale-95 active:rotate-1.7 relative ${cardStyle.cardBg} ${cardStyle.borderColor}`}
+        className={`w-full h-full flex flex-col p-4 md:p-5 rounded-2xl border-2 transition-all duration-500 ease-out shadow-[12px_17px_51px_rgba(0,0,0,0.22)] md:hover:scale-105 relative ${cardStyle.cardBg} ${cardStyle.borderColor}`}
       >
         {isHighlighted && (
           <>

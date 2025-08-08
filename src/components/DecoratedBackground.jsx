@@ -7,7 +7,7 @@ function DecoratedBackground({ children }) {
       {/* Elementos decorativos de fundo */}
       <div className="absolute inset-0 z-0">
         {/* Gradiente complexo */}
-        <div className="absolute inset-0 bg-[#761cc7]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900 to-brand-purple"></div>
 
         {/* Padrão de pontos */}
         <div

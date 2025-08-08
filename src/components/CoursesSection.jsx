@@ -29,18 +29,21 @@ function CoursesSection({
     <section id={id} className={`${backgroundColor} py-20 px-6 relative`}>
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <p className="font-ttnorms text-gray-500 text-xl uppercase">
-            Pré-venda
-          </p>
-
-          {/* 4. USE A VARIÁVEL DO HOOK para mostrar o banner */}
-          {isStudentVersion && (
-            <div className="flex justify-center mb-4">
-              <div className="bg-red-600 text-white font-league text-2xl uppercase rounded-lg px-8 py-2 shadow-lg">
-                Espaço do Universitário
-              </div>
+          <div>
+            {/* Destaque principal */}
+            <div className="inline-block bg-gradient-to-r from-red-500 to-red-600 text-white font-ttnorms text-xl font-bold uppercase px-6 py-3 rounded-xl shadow-lg mb-2">
+              <span className="gap-2">
+                Valor de pré-lançamento
+              </span>
             </div>
-          )}
+
+            {/* Texto secundário ofuscado */}
+            <h3 className="text-gray-600 text-sm italic tracking-wide">
+              Lançamento em Setembro
+            </h3>
+          </div>
+
+          
 
           <h2
             className={`font-league text-7xl md:text-8xl ${titleColor} uppercase`}
