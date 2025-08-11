@@ -1,21 +1,17 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useRef, useLayoutEffect, memo } from "react";
+import { motion } from "framer-motion";
 
-// --- Componente Auxiliar para o Acordeão (FAQ) ---
-// Você pode manter isso no mesmo arquivo ou mover para um arquivo separado
-function AccordionItem({ question, answer }) {
+const AccordionItem = memo(function AccordionItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [height, setHeight] = useState(0);
+  const innerRef = useRef(null);
 
-  const iconVariants = {
-    opened: { rotate: 45 },
-    closed: { rotate: 0 },
-  };
-
-  // Animação leve com grid-rows (sem height:auto)
-  const containerVariants = {
-    opened: { gridTemplateRows: "1fr", opacity: 1 },
-    closed: { gridTemplateRows: "0fr", opacity: 0 },
-  };
+  // mede o conteúdo e anima para um valor fixo em px (sem auto)
+  useLayoutEffect(() => {
+    if (!innerRef.current) return;
+    const next = isOpen ? innerRef.current.scrollHeight : 0;
+    setHeight(next);
+  }, [isOpen, answer]); // se o texto mudar, recalcula
 
   return (
     <div className="border-b border-white/20">
@@ -28,10 +24,9 @@ function AccordionItem({ question, answer }) {
         </span>
 
         <motion.div
-          variants={iconVariants}
-          animate={isOpen ? "opened" : "closed"}
-          transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-          className="w-6 h-6 flex-shrink-0 will-change-transform transform-gpu"
+          animate={{ rotate: isOpen ? 45 : 0 }}
+          transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="w-6 h-6 flex-shrink-0 transform-gpu"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -50,26 +45,23 @@ function AccordionItem({ question, answer }) {
         </motion.div>
       </button>
 
-      <AnimatePresence initial={false}>
-        <motion.div
-          key="answer"
-          initial="closed"
-          animate={isOpen ? "opened" : "closed"}
-          exit="closed"
-          variants={containerVariants}
-          transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-          className="grid overflow-hidden will-change-[grid-template-rows,opacity]"
-        >
-          <div className="overflow-hidden">
-            <p className="font-ttnorms text-base sm:text-lg text-white/80 pb-6 px-6">
-              {answer}
-            </p>
-          </div>
-        </motion.div>
-      </AnimatePresence>
+      <motion.div
+        // anima height numérico (em px)
+        animate={{ height }}
+        initial={false}
+        transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+        className="overflow-hidden will-change-[height] [transform:translateZ(0)]"
+      >
+        {/* wrapper interno para medir */}
+        <div ref={innerRef}>
+          <p className="font-ttnorms text-base sm:text-lg text-white/80 pb-6 px-6">
+            {answer}
+          </p>
+        </div>
+      </motion.div>
     </div>
   );
-}
+});
 
 // --- Componente Principal da Seção FAQ ---
 function FaqSection() {
@@ -115,13 +107,12 @@ function FaqSection() {
           </h2>
           <div className="w-24 h-1 bg-brand-yellow mt-4 mx-auto"></div>
           <p className="font-ttnorms text-lg text-white/80 mt-6">
-            Tire suas dúvidas sobre os cursos, terapias e a jornada de
-            transformação com Flávia Cavalcante.
+            Tire suas dúvidas sobre os cursos aqui.
           </p>
         </div>
 
         {/* Lista de Perguntas (Acordeão) */}
-        <div className="max-w-3xl mx-auto bg-white/10 md:backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+        <div className="max-w-3xl mx-auto bg-white/10 rounded-xl border border-white/20 overflow-hidden [content-visibility:auto]">
           {faqData.map((item, index) => (
             <AccordionItem
               key={index}
