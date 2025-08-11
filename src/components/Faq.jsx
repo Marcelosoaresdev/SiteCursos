@@ -1,39 +1,66 @@
-import React, { useState, memo } from "react";
-import { motion } from "framer-motion";
+import React, {
+  useId,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+  memo,
+} from "react";
+import { motion, useReducedMotion } from "framer-motion";
 
-const AccordionItem = memo(function AccordionItem({ question, answer }) {
-  const [isOpen, setIsOpen] = useState(false);
+/** Hook para medir a altura do conteúdo sem usar height:auto */
+function useMeasuredHeight(isOpen) {
+  const ref = useRef(null);
+  const [height, setHeight] = useState(0);
 
-  // Variantes para controlar os estados da animação do conteúdo
-  const contentVariants = {
-    // Estado fechado: altura 0 e invisível
-    closed: {
-      height: 0,
-      opacity: 0,
-      transition: { duration: 0.22, ease: [0.22, 1, 0.36, 1] },
-    },
-    // Estado aberto: altura automática e visível
-    open: {
-      height: "auto",
-      opacity: 1,
-      transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
-    },
-  };
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const measure = () => setHeight(isOpen ? el.scrollHeight : 0);
+    measure();
+
+    // Observa mudanças internas (quebra de linha, fonts, imagens, etc.)
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [isOpen]);
+
+  return { ref, height };
+}
+
+const AccordionItem = memo(function AccordionItem({
+  idBase,
+  question,
+  answer,
+  defaultOpen = false,
+}) {
+  const [isOpen, setIsOpen] = useState(!!defaultOpen);
+  const { ref, height } = useMeasuredHeight(isOpen);
+  const reduceMotion = useReducedMotion();
+
+  const contentId = `${idBase}-content`;
+  const buttonId = `${idBase}-button`;
 
   return (
     <div className="border-b border-white/20">
       <button
+        id={buttonId}
+        aria-expanded={isOpen}
+        aria-controls={contentId}
         onClick={() => setIsOpen((v) => !v)}
-        className="flex justify-between items-center w-full py-5 px-6 text-left"
+        className="flex justify-between items-center w-full py-5 px-6 text-left select-none"
       >
         <span className="font-ttnorms text-lg sm:text-xl text-white">
           {question}
         </span>
 
-        <motion.div
-          animate={{ rotate: isOpen ? 45 : 0 }}
-          transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="w-6 h-6 flex-shrink-0" // Removido transform-gpu, motion cuida disso
+        {/* Ícone leve: rotação com CSS + transform-gpu */}
+        <span
+          className={`w-6 h-6 flex-shrink-0 transform-gpu transition-transform duration-200 ${
+            isOpen ? "rotate-45" : "rotate-0"
+          }`}
+          aria-hidden="true"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,87 +76,86 @@ const AccordionItem = memo(function AccordionItem({ question, answer }) {
               d="M12 4.5v15m7.5-7.5h-15"
             />
           </svg>
-        </motion.div>
+        </span>
       </button>
 
-      {/* Usamos as variantes aqui. O `motion.div` irá animar de `height: 0`
-        para `height: 'auto'` de forma otimizada.
-      */}
+      {/* Mantém sempre montado; anima a altura em px */}
       <motion.div
-        variants={contentVariants}
-        initial="closed"
-        animate={isOpen ? "open" : "closed"}
-        className="overflow-hidden" // Essencial para o efeito de altura funcionar
+        id={contentId}
+        role="region"
+        aria-labelledby={buttonId}
+        // Se "prefers-reduced-motion", não anima.
+        animate={{ height: reduceMotion ? (isOpen ? "auto" : 0) : height }}
+        initial={false}
+        transition={
+          reduceMotion
+            ? { duration: 0 }
+            : { duration: 0.2, ease: [0.22, 1, 0.36, 1] }
+        }
+        className="overflow-hidden will-change-[height] [transform:translateZ(0)]"
       >
-        {/* Não precisamos mais do innerRef ou de um wrapper extra */}
-        <p className="font-ttnorms text-base sm:text-lg text-white/80 pb-6 px-6">
-          {answer}
-        </p>
+        {/* Wrapper interno para medir a altura real */}
+        <div ref={ref}>
+          <p className="font-ttnorms text-base sm:text-lg text-white/80 pb-6 px-6">
+            {answer}
+          </p>
+        </div>
       </motion.div>
     </div>
   );
 });
 
-// --- Componente Principal da Seção FAQ ---
 function FaqSection() {
-  const faqData = [
-    {
-      question: "Preciso ter experiência prévia?",
-      answer:
-        "Não. Nossos cursos foram pensados para qualquer pessoa, independentemente do nível de conhecimento. Todo o conteúdo é apresentado de forma clara e progressiva.",
-    },
-    {
-      question: "Por quanto tempo terei acesso?",
-      answer:
-        "O acesso é vitalício. Você poderá assistir às aulas no seu próprio ritmo, quantas vezes quiser, e revisitar o conteúdo sempre que precisar.",
-    },
-    {
-      question: "Há garantia?",
-      answer:
-        "Sim. Você conta com nossa garantia de satisfação: dentro de 7 dias após a compra, se não estiver satisfeito, poderá solicitar o reembolso integral, conforme a política da Hotmart.",
-    },
-    {
-      question: "Como funciona o acesso ao conteúdo?",
-      answer:
-        "Após a confirmação do pagamento, você receberá um login e senha para acessar a plataforma online, onde todo o material estará disponível para você.",
-    },
-  ];
+  const faqData = useMemo(
+    () => [
+      {
+        q: "Preciso ter experiência prévia?",
+        a: "Não. Nossos cursos foram pensados para qualquer pessoa, independentemente do nível de conhecimento. Todo o conteúdo é apresentado de forma clara e progressiva.",
+      },
+      {
+        q: "Por quanto tempo terei acesso?",
+        a: "O acesso é vitalício. Você poderá assistir às aulas no seu próprio ritmo, quantas vezes quiser, e revisitar o conteúdo sempre que precisar.",
+      },
+      {
+        q: "Há garantia?",
+        a: "Sim. Você conta com nossa garantia de satisfação: dentro de 7 dias após a compra, se não estiver satisfeito, poderá solicitar o reembolso integral, conforme a política da Hotmart.",
+      },
+      {
+        q: "Como funciona o acesso ao conteúdo?",
+        a: "Após a confirmação do pagamento, você receberá um login e senha para acessar a plataforma online, onde todo o material estará disponível para você.",
+      },
+    ],
+    []
+  );
+
+  const uid = useId(); // base estável para ids acessíveis
 
   return (
-    // A mágica acontece aqui: A className desta section é uma cópia da TestimonialSection
-    <motion.section
-      className="relative w-full py-16 md:py-24 overflow-hidden bg-transparent -mt-px"
-      // Você pode adicionar animações de entrada aqui se desejar, como no outro componente
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-    >
-      {/* Conteúdo da Seção FAQ */}
+    <section className="relative w-full py-16 md:py-24 overflow-hidden bg-transparent -mt-px">
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        {/* Cabeçalho da Seção */}
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="font-league text-4xl sm:text-5xl md:text-6xl uppercase tracking-tight text-white">
             Perguntas <span className="text-brand-yellow">Frequentes</span>
           </h2>
-          <div className="w-24 h-1 bg-brand-yellow mt-4 mx-auto"></div>
+          <div className="w-24 h-1 bg-brand-yellow mt-4 mx-auto" />
           <p className="font-ttnorms text-lg text-white/80 mt-6">
             Tire suas dúvidas sobre os cursos aqui.
           </p>
         </div>
 
-        {/* Lista de Perguntas (Acordeão) */}
         <div className="max-w-3xl mx-auto bg-white/10 rounded-xl border border-white/20 overflow-hidden [content-visibility:auto]">
-          {faqData.map((item, index) => (
+          {faqData.map((item, i) => (
             <AccordionItem
-              key={index}
-              question={item.question}
-              answer={item.answer}
+              key={`${uid}-${i}`}
+              idBase={`${uid}-${i}`}
+              question={item.q}
+              answer={item.a}
+              defaultOpen={i === 0} // opcional: abre o primeiro
             />
           ))}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }
 
