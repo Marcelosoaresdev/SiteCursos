@@ -11,25 +11,27 @@ function AccordionItem({ question, answer }) {
     closed: { rotate: 0 },
   };
 
-  const answerVariants = {
-    opened: { opacity: 1, height: "auto", y: 0 },
-    closed: { opacity: 0, height: 0, y: -10 },
+  // Animação leve com grid-rows (sem height:auto)
+  const containerVariants = {
+    opened: { gridTemplateRows: "1fr", opacity: 1 },
+    closed: { gridTemplateRows: "0fr", opacity: 0 },
   };
 
   return (
     <div className="border-b border-white/20">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen((v) => !v)}
         className="flex justify-between items-center w-full py-5 px-6 text-left"
       >
         <span className="font-ttnorms text-lg sm:text-xl text-white">
           {question}
         </span>
+
         <motion.div
           variants={iconVariants}
           animate={isOpen ? "opened" : "closed"}
-          transition={{ duration: 0.3 }}
-          className="w-6 h-6 flex-shrink-0"
+          transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+          className="w-6 h-6 flex-shrink-0 will-change-transform transform-gpu"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -47,22 +49,23 @@ function AccordionItem({ question, answer }) {
           </svg>
         </motion.div>
       </button>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            key="answer"
-            initial="closed"
-            animate="opened"
-            exit="closed"
-            variants={answerVariants}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
+
+      <AnimatePresence initial={false}>
+        <motion.div
+          key="answer"
+          initial="closed"
+          animate={isOpen ? "opened" : "closed"}
+          exit="closed"
+          variants={containerVariants}
+          transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+          className="grid overflow-hidden will-change-[grid-template-rows,opacity]"
+        >
+          <div className="overflow-hidden">
             <p className="font-ttnorms text-base sm:text-lg text-white/80 pb-6 px-6">
               {answer}
             </p>
-          </motion.div>
-        )}
+          </div>
+        </motion.div>
       </AnimatePresence>
     </div>
   );
@@ -93,7 +96,6 @@ function FaqSection() {
     },
   ];
 
-
   return (
     // A mágica acontece aqui: A className desta section é uma cópia da TestimonialSection
     <motion.section
@@ -104,12 +106,6 @@ function FaqSection() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      {/* Exatamente os mesmos elementos decorativos de fundo */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/3 -left-10 w-64 h-64 rounded-full bg-white/5 blur-3xl"></div>
-        <div className="absolute bottom-1/4 -right-12 w-72 h-72 rounded-full bg-white/5 blur-3xl"></div>
-      </div>
-
       {/* Conteúdo da Seção FAQ */}
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Cabeçalho da Seção */}
@@ -125,7 +121,7 @@ function FaqSection() {
         </div>
 
         {/* Lista de Perguntas (Acordeão) */}
-        <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+        <div className="max-w-3xl mx-auto bg-white/10 md:backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
           {faqData.map((item, index) => (
             <AccordionItem
               key={index}
