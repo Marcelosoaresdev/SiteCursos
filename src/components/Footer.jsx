@@ -40,14 +40,14 @@ function Footer() {
         </p>
 
         {/* Ícones + nomes lado a lado */}
-        <div className="flex flex-col sm:flex-row items-center gap-6 mt-2">
+        <div className="flex flex-row items-center gap-6 mt-2">
           {/* Instagram */}
           <a
             href="https://www.instagram.com/vitissouls"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
-            className="flex items-center gap-2 hover:scale-105 transition-transform"
+            className="flex items-center gap-1 hover:scale-105 transition-transform"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="TikTok"
-            className="flex items-center gap-2 hover:scale-105 transition-transform"
+            className="flex items-center gap-1 hover:scale-105 transition-transform"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
