@@ -1,17 +1,24 @@
-import React, { useState, useRef, useLayoutEffect, memo } from "react";
+import React, { useState, memo } from "react";
 import { motion } from "framer-motion";
 
 const AccordionItem = memo(function AccordionItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [height, setHeight] = useState(0);
-  const innerRef = useRef(null);
 
-  // mede o conteúdo e anima para um valor fixo em px (sem auto)
-  useLayoutEffect(() => {
-    if (!innerRef.current) return;
-    const next = isOpen ? innerRef.current.scrollHeight : 0;
-    setHeight(next);
-  }, [isOpen, answer]); // se o texto mudar, recalcula
+  // Variantes para controlar os estados da animação do conteúdo
+  const contentVariants = {
+    // Estado fechado: altura 0 e invisível
+    closed: {
+      height: 0,
+      opacity: 0,
+      transition: { duration: 0.22, ease: [0.22, 1, 0.36, 1] },
+    },
+    // Estado aberto: altura automática e visível
+    open: {
+      height: "auto",
+      opacity: 1,
+      transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
+    },
+  };
 
   return (
     <div className="border-b border-white/20">
@@ -26,7 +33,7 @@ const AccordionItem = memo(function AccordionItem({ question, answer }) {
         <motion.div
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="w-6 h-6 flex-shrink-0 transform-gpu"
+          className="w-6 h-6 flex-shrink-0" // Removido transform-gpu, motion cuida disso
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,19 +52,19 @@ const AccordionItem = memo(function AccordionItem({ question, answer }) {
         </motion.div>
       </button>
 
+      {/* Usamos as variantes aqui. O `motion.div` irá animar de `height: 0`
+        para `height: 'auto'` de forma otimizada.
+      */}
       <motion.div
-        // anima height numérico (em px)
-        animate={{ height }}
-        initial={false}
-        transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-        className="overflow-hidden will-change-[height] [transform:translateZ(0)]"
+        variants={contentVariants}
+        initial="closed"
+        animate={isOpen ? "open" : "closed"}
+        className="overflow-hidden" // Essencial para o efeito de altura funcionar
       >
-        {/* wrapper interno para medir */}
-        <div ref={innerRef}>
-          <p className="font-ttnorms text-base sm:text-lg text-white/80 pb-6 px-6">
-            {answer}
-          </p>
-        </div>
+        {/* Não precisamos mais do innerRef ou de um wrapper extra */}
+        <p className="font-ttnorms text-base sm:text-lg text-white/80 pb-6 px-6">
+          {answer}
+        </p>
       </motion.div>
     </div>
   );
