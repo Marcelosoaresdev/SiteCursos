@@ -76,7 +76,46 @@
       fbq("init", "2788688271521116");
       fbq("track", "PageView");
     </script>
-    <!-- =================== END META PIXEL =================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Função para obter os parâmetros UTM e o parâmetro "sck" da URL
+        function getParameters() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const params = {};
+
+          urlParams.forEach((value, key) => {
+            // Captura parâmetros que começam com "utm_" ou que sejam exatamente "sck"
+            if (key.startsWith("utm_") || key === "sck") {
+              params[key] = value;
+            }
+          });
+
+          return params;
+        }
+
+        // Função para adicionar os parâmetros a uma URL
+        function appendParameters(url, params) {
+          const urlObject = new URL(url);
+
+          Object.keys(params).forEach((key) => {
+            urlObject.searchParams.set(key, params[key]);
+          });
+
+          return urlObject.href;
+        }
+
+        // Captura os parâmetros desejados da URL atual
+        const params = getParameters();
+        if (Object.keys(params).length > 0) {
+          // Seleciona todos os links da página e adiciona os parâmetros
+          document.querySelectorAll("a").forEach((link) => {
+            if (link.href) {
+              link.href = appendParameters(link.href, params);
+            }
+          });
+        }
+      });
+    </script>
   </head>
 
   <body>
