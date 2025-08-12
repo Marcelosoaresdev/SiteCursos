@@ -73,7 +73,7 @@ export const categories = [
     inclusions: {
       title: "O que está incluso:",
       items: [
-        "6 módulos abrangentes (3 horas no total)",
+        "6 módulos abrangentes",
         "Todo o conteúdo em vídeo do Módulo 1",
         "Checklist semanal de transformação",
         "Plano de ação personalizado de 90 dias",
@@ -644,7 +644,7 @@ export const courses = [
       description:
         "Reprogramar seus hábitos diários e acender sua energia. Senso de largada.",
       longDescription:
-        "Esta jornada abrangente de 3 horas ensina os pilares da verdadeira transformação da saúde através de pequenas mudanças sustentáveis que criam resultados extraordinários.",
+        "Esta jornada abrangente ensina os pilares da verdadeira transformação da saúde através de pequenas mudanças sustentáveis que criam resultados extraordinários.",
       heroImage: capaSaude1,
       purchaseLink: "https://pay.hotmart.com/I100520899F",
       detailsBackgroundColor: "bg-gradient-to-r from-[#203162] to-[#00afdb]",
@@ -660,7 +660,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos abrangentes (3 horas no total)",
+          "6 módulos abrangentes",
           "Todo o conteúdo em vídeo do Módulo 1",
           "Checklist semanal de transformação",
           "Plano de ação personalizado de 90 dias",
@@ -736,7 +736,7 @@ export const courses = [
       inclusions: {
         title: "O QUE ESTÁ INCLUSO?",
         items: [
-          "7 módulos progressivos (3,5 horas no total)",
+          "7 módulos progressivos",
           "Plano de treino 5Km completo",
           "Todo o conteúdo do Módulo 2 em vídeo",
         ],
@@ -809,7 +809,7 @@ export const courses = [
       inclusions: {
         title: "O QUE ESTÁ INCLUSO:",
         items: [
-          "7 módulos avançados (3,5 horas no total)",
+          "7 módulos avançados",
           "Protocolos e planos de treino elite",
           "Todo o conteúdo do Módulo 3 em vídeo",
         ],
@@ -885,7 +885,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "7 módulos poderosos em vídeo (2+ horas no total)",
+          "7 módulos poderosos em vídeo",
           "Todo o conteúdo em vídeo do Módulo 1",
           "Diagnósticos e calculadoras financeiras completas.",
           "Roteiro personalizado de liberdade para 5 anos",
@@ -962,7 +962,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos abrangentes (3+ horas no total)",
+          "6 módulos abrangentes",
           "Todo o conteúdo em vídeo do Módulo 2",
           "Templates de criação de produtos e sistemas",
           "Roteiro de escala do zero aos milhões",
@@ -1039,7 +1039,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos avançados (3 horas no total)",
+          "6 módulos avançados",
           "Todo o conteúdo em vídeo do Módulo 3",
           "Calculadoras de investimento e templates de carteira",
           "Roteiro com cronogramas para alcançar o milhão",
@@ -1113,7 +1113,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos transformadores (2.5 horas no total)",
+          "6 módulos transformadores",
           "Todo o conteúdo em vídeo do Módulo 1",
           "Ferramentas de avaliação da Zona de Gênio",
           "Roteiro de transformação de 90 dias",
@@ -1187,7 +1187,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos estratégicos (2,5 horas no total)",
+          "6 módulos estratégicos",
           "Todo o conteúdo em vídeo do Módulo 2",
           "Templates e ferramentas completas de planejamento",
         ],
@@ -1260,7 +1260,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 Módulos Práticos (de 2,5 horas no total)",
+          "6 Módulos Práticos",
           "Todo o conteúdo em vídeo do Módulo 3",
           "Templates e ferramentas para acompanhamento de hábitos",
           "Protocolos personalizados de execução",
@@ -1333,7 +1333,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos transformadores (2.5 horas no total)",
+          "6 módulos transformadores",
           "Todo o conteúdo em vídeo do Módulo 1 em Vídeo",
           "Ferramentas completas de avaliação de autoestima",
           "Roteiro de transformação de 90 dias",
@@ -1406,7 +1406,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos poderosos (2.5 horas no total)",
+          "6 módulos poderosos",
           "Todo o conteúdo em vídeo do Módulo 2",
           "Templates de transformação de história",
           "Ferramentas de reconstrução de narrativa pessoal",
@@ -1478,7 +1478,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos práticos (2.5 horas no total)",
+          "6 módulos práticos",
           "Todo o conteúdo em vídeo do Módulo 3",
           "Templates de práticas diárias e ferramentas de acompanhamento",
           "Scripts de limites e guias de comunicação",
@@ -1550,7 +1550,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos transformadores (2,5 horas no total)",
+          "6 módulos transformadores",
           "Todo o conteúdo do Módulo 1 em vídeo",
           "Ferramentas completas de mapeamento emocional",
           "Roteiro de quebra de padrões de 90 diasncontros Conscientes.",
@@ -1621,7 +1621,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos poderosos (2,5 horas no total)",
+          "6 módulos poderosos",
           "Todo o conteúdo em vídeo do Módulo 2",
           "Scripts e templates completos de comunicação",
           "Exercícios de construção de intimidade",
@@ -1692,7 +1692,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos práticos (2,5 horas no total)",
+          "6 módulos práticos",
           "Todo o conteúdo em vídeo do Módulo 3",
           "Avaliações de evolução relacional",
           "Templates de acordos conscientes de casal",
