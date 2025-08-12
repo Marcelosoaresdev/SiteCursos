@@ -1708,11 +1708,13 @@ export const courses = [
     id: 100,
     isCombo: true, // Flag para identificar que é o combo
     categorySlug: "saude-fisica",
-    title: "Combo",
-    heading: "Pacote Premium Combo",
+    title: "Sistema Corrida Pra Vida",
+    comboTitle:
+      "Sistema Corrida Pra Vida: Do sedentário à performance de elite",
+    heading: "Pacote Premium",
     imageSrc: comboPackageSaude,
     description:
-      "Pacote Completo de Transformação da Saúde: receba todos os 3 Cursos + Materiais Completos para máximos resultados.",
+      "Pacote Completo de Transformação da Saúde: receba todos os 3 módulos + Materiais Completos para máximos resultados.",
     priceInstallments: "12x de R$ 52,75*",
     priceFull: "R$ 510,00",
     purchaseLink: "https://pay.hotmart.com/A100523908T",
@@ -1733,11 +1735,12 @@ export const courses = [
     id: 101, // ID do Combo Financeiro
     isCombo: true,
     categorySlug: "financeiro",
-    title: "Combo",
-    heading: "Pacote Premium Combo",
+    title: "Sistema Escape",
+    comboTitle: "Sistema Escape: Construa Renda Automática Começando Hoje",
+    heading: "Pacote Premium",
     imageSrc: comboPackageFinanceiro, // ⚠️ Importe e use a variável da imagem do Combo Card
     description:
-      "Domine Todos os 3 Cursos + Materiais para Liberdade Financeira Total.",
+      "Domine todos os 3 módulos + Materiais para Liberdade Financeira Total.",
     priceInstallments: "12x de R$ 52,75*",
     priceFull: "R$ 510,00",
     purchaseLink: "https://pay.hotmart.com/M100510960L",
@@ -1758,11 +1761,13 @@ export const courses = [
     id: 102,
     isCombo: true,
     categorySlug: "conquista",
-    title: "Combo",
-    heading: "Pacote Premium Combo",
+    title: "Sistema Anti-Desistência",
+    comboTitle:
+      "Sistema Anti-Desistência: Transforme Seus Maiores Sonhos em Conquistas Inevitáveis",
+    heading: "Pacote Premium",
     imageSrc: comboPackageConquista, // Importe corretamente essa imagem se ainda não tiver
     description:
-      "Domine a Ciência de Transformar Sonhos em Realidade. Receba TODOS os 3 Cursos + Materiais Completos.",
+      "Domine a Ciência de Transformar Sonhos em Realidade. Receba todos os 3 módulos + Materiais Completos.",
     priceInstallments: "12x de R$ 52,75*",
     priceFull: "R$ 510,00",
     purchaseLink: "https://pay.hotmart.com/P100552916T",
@@ -1784,8 +1789,10 @@ export const courses = [
     id: 103,
     isCombo: true,
     categorySlug: "autoestima",
-    title: "Combo",
-    heading: "Pacote Premium Combo",
+    title: "Sistema Anti-Insegurança",
+    comboTitle:
+      "Sistema Anti-Insegurança: Transforme Suas Dúvidas em Confiança que Ninguém Derruba",
+    heading: "Pacote Premium",
     imageSrc: comboPackageAutoestima,
     description:
       "Acesso completo aos 3 cursos para construir uma confiança inabalável e transformar seu autovalor.",
@@ -1809,11 +1816,13 @@ export const courses = [
     id: 104,
     isCombo: true,
     categorySlug: "relacionamento",
-    title: "Combo",
-    heading: "Pacote Premium Combo",
+    title: "Sistema Intimidade Total",
+    comboTitle:
+      "Sistema Intimidade Total: Transforme Qualquer Relacionamento em Algo Extraordinário",
+    heading: "Pacote Premium",
     imageSrc: comboPackageRelacionamento,
     description:
-      "Pacote Completo de Transformação Relacional receba todos os 3 Cursos + Materiais de Padrões Tóxicos para Amor Consciente Que Evolui",
+      "Pacote Completo de Transformação Relacional receba todos os 3 módulos + Materiais de Padrões Tóxicos para Amor Consciente Que Evolui",
     priceInstallments: "12x de R$ 52,75*",
     priceFull: "R$ 510,00",
     purchaseLink: "https://pay.hotmart.com/D100554896F",

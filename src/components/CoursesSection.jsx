@@ -26,7 +26,10 @@ function CoursesSection({
   }
 
   return (
-    <section id={id} className={`${backgroundColor} py-20 px-6 relative`}>
+    <section
+      id={id}
+      className={`${backgroundColor} py-10 md:py-20 px-6 relative`}
+    >
       <div className="container mx-auto">
         <div className="text-center mb-8 md:mb-12">
           <div>
@@ -57,7 +60,6 @@ function CoursesSection({
             ))}
           </div>
         )}
-
       </div>
     </section>
   );

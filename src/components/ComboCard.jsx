@@ -14,6 +14,7 @@ function ComboCard({
   purchaseLink, // 1. Recebendo o link de compra
   theme, // 2. Recebendo o objeto de tema
   categorySlug, // 3. Adicionando categorySlug para redirecionamento
+  comboTitle, // 4. Adicionando comboTitle para exibir o nome específico do combo
 }) {
   const isStudentVersion = useIsStudentVersion();
   const navigate = useNavigate();
@@ -96,13 +97,38 @@ function ComboCard({
 
   const safeTheme = theme || {};
 
+  // Função para dividir o comboTitle em duas partes
+  const splitComboTitle = (title) => {
+    if (!title) return { mainTitle: "Combo", subtitle: "" };
+    
+    const parts = title.split(": ");
+    if (parts.length >= 2) {
+      return {
+        mainTitle: parts[0],
+        subtitle: parts.slice(1).join(": ")
+      };
+    }
+    return { mainTitle: title, subtitle: "" };
+  };
+
+  const { mainTitle, subtitle } = splitComboTitle(comboTitle);
+
   return (
     <div className="w-full px-4 md:px-8 mb-12 md:mb-24">
-      <h2
-        className={`text-center font-league text-7xl md:text-8xl ${safeTheme.titleColor} uppercase mb-8`}
-      >
-        Combo
-      </h2>
+      <div className="text-center mb-3">
+        <h2
+          className={`font-league text-4xl md:text-5xl lg:text-6xl ${safeTheme.titleColor} uppercase mb-2`}
+        >
+          {mainTitle}
+        </h2>
+        {subtitle && (
+          <h3
+            className={`font-league text-3xl lg:text-4xl ${safeTheme.titleColor} capitalize leading-tight`}
+          >
+            {subtitle}
+          </h3>
+        )}
+      </div>
 
       <div
         className={`flex flex-col md:flex-row items-center gap-6 md:gap-8 max-w-4xl mx-auto rounded-2xl border-2 p-4 md:p-5 shadow-[12px_17px_51px_rgba(0,0,0,0.22)] ${safeTheme.cardBg} ${safeTheme.cardBorder}`}
@@ -209,7 +235,7 @@ function ComboCard({
                       "hidden md:flex",
                       "md:self-center", // <-- centraliza verticalmente ao lado do preço
                       // ajuste fino opcional (descomente/edite um):
-                       "md:mb-6",              // empurra um pouco para baixo
+                      "md:mb-6", // empurra um pouco para baixo
                       // "md:-mt-1",             // puxa um pouco para cima
                       // "transform md:translate-y-1", // desloca 4px p/ baixo
                     ].join(" ")}
