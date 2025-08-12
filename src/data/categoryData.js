@@ -1816,7 +1816,7 @@ export const courses = [
     heading: "Pacote Premium Combo",
     imageSrc: comboPackageRelacionamento,
     description:
-      "Pacote Completo de Transformação Relacional receba todos os 3 Cursos + Materiais Completos de Padrões Tóxicos para Amor Consciente Que Evolui",
+      "Pacote Completo de Transformação Relacional receba todos os 3 Cursos + Materiais de Padrões Tóxicos para Amor Consciente Que Evolui",
     priceInstallments: "12x de R$ 58,95*",
     priceFull: "R$ 570,00",
     purchaseLink: "https://pay.hotmart.com/B100554508D",

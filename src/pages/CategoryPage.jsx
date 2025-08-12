@@ -61,11 +61,11 @@ function CategoryPage() {
         onLearnMoreClick={handleScrollToDetails}
         titleColor={categoryData.titleColor1}
       />
-      <VideoTestimonialSection content={categoryData.videoTestimonial} />
-
       <div id="combo-section">
         <ComboDetailsSection content={categoryData.comboDetails} />
       </div>
+      <VideoTestimonialSection content={categoryData.videoTestimonial} />
+
 
       <FinalCtaSection content={categoryData.finalCta} />
 
