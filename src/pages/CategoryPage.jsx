@@ -19,7 +19,10 @@ import VideoTestimonialSection from "../components/VideoTestimonialSection";
 import ComboDetailsSection from "../components/ComboDetailsSection";
 import FinalCtaSection from "../components/FinalCtaSection";
 import CourseDetails from "../components/CourseDetails";
-import CallToActionSection from '../components/CallToActionSection'; // 1. Importe o novo componente
+import CallToActionSection from "../components/CallToActionSection"; // 1. Importe o novo componente
+import TestimonialSection from "../components/TestimonialSection";
+import Faq from "../components/Faq";
+import Footer from "../components/Footer";
 
 function CategoryPage() {
   // 👈 2. DETECTA A VERSÃO E CARREGA OS DADOS CORRETOS
@@ -66,7 +69,6 @@ function CategoryPage() {
       </div>
       <VideoTestimonialSection content={categoryData.videoTestimonial} />
 
-
       <FinalCtaSection content={categoryData.finalCta} />
 
       {/* Loop que renderiza os detalhes de cada curso */}
@@ -78,6 +80,11 @@ function CategoryPage() {
         ))}
       </div>
       <CallToActionSection content={categoryData.callToAction} />
+      <TestimonialSection
+        backgroundClass={categoryData.sectionBackgroundColor}
+      />
+      <Faq backgroundClass={categoryData.sectionBackgroundColor} />
+      <Footer backgroundClass={categoryData.sectionBackgroundColor} />
     </div>
   );
 }

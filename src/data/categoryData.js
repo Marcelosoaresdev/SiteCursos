@@ -57,6 +57,7 @@ export const categories = [
     titleColor2: "text-saude-vivid-azure",
     subtitleColor: "text-saude-dark-gray",
     coursesBackgroundColor: "bg-saude-gradient",
+    sectionBackgroundColor: "bg-saude-dark-blue",
 
     // DADOS PARA A SEÇÃO 'DominationSection'
     domination: {
@@ -108,7 +109,7 @@ export const categories = [
       bonusParagraph:
         "Ao garantir o Pacote Completo da Transformação da Saúde você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e um caderno de exercícios especial,  escrito por Flávia Cavalcante.",
       buttonText: "Aproveitar o Combo com 3 Cursos",
-      gradient: "bg-saude-gradient", // Já existia, vamos usar
+      gradient: "bg-saude-gradient", 
       textColor: "text-saude-dark-blue",
       borderColor: "border-saude-dark-blue",
       buttonLink: "https://pay.hotmart.com/J100521738O", // Link do pacote completo
@@ -173,6 +174,7 @@ export const categories = [
     subtitleColor: "text-financeiro-dark-green",
     coursesBackgroundColor:
       "bg-[radial-gradient(circle_at_0%_0%,_#f8fdf4,_#9efa93,_#61cd51)]",
+    sectionBackgroundColor: "bg-financeiro-dark-green",
 
     videoTestimonial: {
       text: "Do primeiro real ao seu próprio império – Não é sobre trabalhar mais, é sobre trabalhar diferente.",
@@ -269,6 +271,7 @@ export const categories = [
     subtitleColor: "text-[#8c2100]",
     coursesBackgroundColor:
       "bg-[radial-gradient(circle_at_0%_0%,_#fbefb1,_#ffab1c,_#ffab1c,_#ff6c2e)]",
+    sectionBackgroundColor: "bg-[#8c2100]",
 
     domination: {
       title: "Você vai Dominar",
@@ -389,6 +392,7 @@ export const categories = [
     subtitleColor: "text-[#4c007a]",
     coursesBackgroundColor:
       "bg-[radial-gradient(circle_at_0%_0%,_#eac7ff,_#bc6cff,_#7d3cb5)]",
+    sectionBackgroundColor: "bg-[#4c007a]",
 
     domination: {
       title: "Você vai Descobrir",
@@ -511,6 +515,7 @@ export const categories = [
     subtitleColor: "text-[#7f1d1d]",
     coursesBackgroundColor:
       "bg-[radial-gradient(circle_at_0%_0%,_#fecaca,_#f87171,_#dc2626)]",
+    sectionBackgroundColor: "bg-[#7f1d1d]",
 
     // Seções de conteúdo da página da categoria
     videoTestimonial: {

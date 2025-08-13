@@ -12,7 +12,6 @@ import { AnimatePresence } from "framer-motion";
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
 /**
@@ -49,7 +48,6 @@ function App() {
         {/* Usamos nosso componente de rotas animadas que agora inclui as rotas de estudante */}
         <AnimatedRoutes />{" "}
       </main>
-      <Footer />{" "}
     </Router>
   );
 }

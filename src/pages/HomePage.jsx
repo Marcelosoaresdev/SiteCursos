@@ -9,6 +9,7 @@ import TestimonialSection from "../components/TestimonialSection";
 import EvolutionSection from "../components/EvolutionSection";
 import DecoratedBackground from "../components/DecoratedBackground";
 import Faq from "../components/Faq";
+import Footer from "../components/Footer";
 
 // 👈 1. IMPORTE O NOSSO DETECTOR E AMBOS OS ARQUIVOS DE DADOS
 import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
@@ -44,6 +45,8 @@ function HomePage() {
         <TestimonialSection />
 
         <Faq />
+
+        <Footer />
       </main>
     </DecoratedBackground>
   );

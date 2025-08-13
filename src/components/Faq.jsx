@@ -58,7 +58,7 @@ function AccordionItem({ question, answer }) {
   );
 }
 
-export default function FaqSection() {
+export default function FaqSection({ backgroundClass = "bg-transparent" }) {
   const faqData = [
     {
       question: "Preciso ter experiência prévia?",
@@ -83,7 +83,7 @@ export default function FaqSection() {
   ];
 
   return (
-    <section className="relative w-full bg-transparent py-16 md:py-24">
+    <section className={`relative w-full ${backgroundClass} py-16 md:py-24`}>
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Cabeçalho */}
         <div className="max-w-3xl mx-auto text-center mb-12">

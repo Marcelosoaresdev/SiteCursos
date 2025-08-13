@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 import profilePic from "../assets/fotoFlavia.webp";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
-function TestimonialSection() {
+function TestimonialSection({ backgroundClass = "bg-transparent" }) {
   const scrollAnimation = useScrollAnimation();
   return (
     <motion.section
       ref={scrollAnimation.ref}
-      className="relative w-full py-16 md:py-24 overflow-hidden bg-transparent -mb-px"
+      className={`relative w-full py-16 md:py-24 overflow-hidden ${backgroundClass} -mb-px`}
       variants={scrollAnimation.variants}
       initial={scrollAnimation.initial}
       animate={scrollAnimation.animate}
@@ -37,7 +37,7 @@ function TestimonialSection() {
 
               {/* Elementos decorativos */}
               <div className="absolute -top-6 -left-6 w-16 h-16 rounded-full bg-brand-yellow/20 border-2 border-white/30"></div>
-              <div className="absolute -bottom-6 -right-6 w-12 h-12 rotate-45 bg-brand-purple-light border-2 border-white/30"></div>
+              <div className="absolute -bottom-6 -right-6 w-12 h-12 rotate-45 bg-brand-purple-light/20 border-2 border-white/30"></div>
             </div>
           </div>
 

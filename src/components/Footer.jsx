@@ -2,35 +2,23 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
-function Footer() {
+function Footer({
+  backgroundClass = "bg-gradient-to-br from-purple-900 to-brand-purple",
+}) {
   const currentYear = new Date().getFullYear();
   const scrollAnimation = useScrollAnimation();
 
   return (
     <motion.footer
       ref={scrollAnimation.ref}
-      className="relative w-full overflow-hidden bg-gradient-to-br from-purple-900 to-brand-purple text-white/60 py-6"
+      className={`relative w-full overflow-hidden ${backgroundClass} text-white/60 py-6`}
       variants={scrollAnimation.variants}
       initial={scrollAnimation.initial}
       animate={scrollAnimation.animate}
       transition={scrollAnimation.transition}
     >
-      {/* Elementos decorativos */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/3 -left-10 w-64 h-64 rounded-full bg-white/5 blur-3xl"></div>
-        <div className="absolute bottom-1/4 -right-12 w-72 h-72 rounded-full bg-white/5 blur-3xl"></div>
-
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-            backgroundSize: "30px 30px",
-          }}
-        ></div>
-      </div>
-
       {/* Conteúdo */}
-      <div className="container relative z-10 px-4 mx-auto flex flex-col items-center gap-2 text-center">
+      <div className="container px-4 mx-auto flex flex-col items-center gap-2 text-center">
         <p className="text-white/70 text-sm md:text-base">
           &copy; {currentYear} Vitis Souls. Todos os direitos reservados.
         </p>
