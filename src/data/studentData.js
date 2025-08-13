@@ -106,7 +106,7 @@ export const categories = [
       },
       productImage: comboProductsImage,
       bonusParagraph:
-        "Ao garantir o seu Sistema Premium da Transformação da Saúde você recebe acesso aos três módulos do sistema e ainda leva gratuitamente um e-book e um caderno de exercícios especial,  escrito por Flávia Cavalcante.",
+        "Ao garantir o seu Sistema Premium da Corrida pra Vida você recebe acesso aos três módulos do sistema e ainda leva gratuitamente um e-book e um caderno de exercícios especial,  escrito por Flávia Cavalcante.",
       buttonText: "Quero garantir o sistema completo",
       gradient: "bg-saude-gradient", // Já existia, vamos usar
       textColor: "text-saude-dark-blue",
@@ -316,7 +316,7 @@ export const categories = [
       },
       productImage: comboProductsImage,
       bonusParagraph:
-        "Ao garantir o seu Sistema Premium de Conquista você recebe acesso aos três módulos do sistema e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+        "Ao garantir o seu Sistema Premium da Anti-Desistência você recebe acesso aos três módulos do sistema e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
       buttonText: "QUERO GARANTIR O SISTEMA COMPLETO",
       gradient: "bg-gradient-to-r from-[#8c2100] via-[#d14900] to-[#ff6c2e]",
       textColor: "text-white",
@@ -436,7 +436,7 @@ export const categories = [
       },
       productImage: comboProductsImage,
       bonusParagraph:
-        "Ao garantir o seu Sistema Premium de Transformação do Autovalor você recebe acesso aos três módulos do sistema e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+        "Ao garantir o seu Sistema Premium da Anti-Insegurança você recebe acesso aos três módulos do sistema e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
       buttonText: "QUERO GARANTIR O SISTEMA COMPLETO",
       // ✅ PADRONIZADO
       gradient: "bg-gradient-to-r from-[#4c007a] via-[#7e22ce] to-[#c084fc]",
@@ -502,7 +502,7 @@ export const categories = [
 
   {
     slug: "relacionamento",
-    title: "Relacionamento",
+    title: "CRIE CONEXÕES",
     subtitle: " ",
     heroImage: heroRelacionamentoImg,
     gradient:
