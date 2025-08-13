@@ -2,7 +2,7 @@
 import capaSaude1 from "../assets/espaco_Uni/capa_saude1_uni.webp";
 import capaSaude2 from "../assets/espaco_Uni/capa_saude2_uni.webp";
 import capaSaude3 from "../assets/espaco_Uni/capa_saude3_uni.webp";
-import comboPackageSaude from "../assets/espaco_Uni/capa_combosaude_uni.webp"; // Imagem do pacote combo
+import comboPackageSaude from "../assets/espaco_Uni/capa_combosaude_uni.webp"; // Imagem do sistema combo
 import corrida from "../assets/corrida.webp"; // Hero image da categoria Saúde Física
 
 /*------------------------------------------------------------*/
@@ -49,8 +49,8 @@ import comboProductsImage from "../assets/books.webp"; // Imagem de exemplo
 export const categories = [
   {
     slug: "saude-fisica",
-    title: "Saúde Física",
-    subtitle: "A Jornada Definitiva: Do Primeiro Passo ao Pódio",
+    title: "CORRIDA PRA VIDA",
+    subtitle: "",
     heroImage: corrida,
     gradient: "bg-saude-gradient",
     titleColor1: "text-saude-dark-blue",
@@ -74,8 +74,7 @@ export const categories = [
     inclusions: {
       title: "O que está incluso:",
       items: [
-        "6 módulos abrangentes",
-        "Todo o conteúdo em vídeo do Módulo 1",
+        "Módulo 1 completo em vídeo",
         "Checklist semanal de transformação",
         "Plano de ação personalizado de 90 dias",
         "BÔNUS: E-book gratuito da nossa coleção especialmente selecionada + Caderno de exercícios",
@@ -97,9 +96,9 @@ export const categories = [
     },
 
     finalCta: {
-      title: "A Transformação Completa:",
+      title: "PORQUE ESCOLHER O SISTEMA PREMIUM?",
       mainParagraph:
-        "Quando esses cursos trabalham juntos, algo mágico acontece. Os hábitos que você constrói se tornam a fundação para correr. A corrida se torna seu portal para performance física máxima eclareza mental — o mesmo estado focado que impulsiona sucesso nos negócios, relacionamentos e vida. No final, você não está apenas em forma — você está operando em um nível completamente diferente de potencial humano. É assim que pessoas comuns se tornam extraordinárias.",
+        "Quando esses módulos trabalham juntos, algo mágico acontece. Os hábitos que você constrói se tornam a fundação para correr. A corrida se torna seu portal para performance física máxima e clareza mental — o mesmo estado focado que impulsiona sucesso nos negócios, relacionamentos e vida. No final, você não está apenas em forma — você está operando em um nível completamente diferente de potencial humano. É assim que pessoas comuns se tornam extraordinárias.",
       price: {
         original: "R$675,00",
         installments: "R$52,75*",
@@ -107,12 +106,12 @@ export const categories = [
       },
       productImage: comboProductsImage,
       bonusParagraph:
-        "Ao garantir o Pacote Completo da Transformação da Saúde você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e um caderno de exercícios especial,  escrito por Flávia Cavalcante.",
-      buttonText: "Aproveitar o Combo com 3 Cursos",
+        "Ao garantir o seu Sistema Premium da Transformação da Saúde você recebe acesso aos três módulos do sistema do programa e ainda leva gratuitamente um e-book e um caderno de exercícios especial,  escrito por Flávia Cavalcante.",
+      buttonText: "Quero garantir o sistema completo",
       gradient: "bg-saude-gradient", // Já existia, vamos usar
       textColor: "text-saude-dark-blue",
       borderColor: "border-saude-dark-blue",
-      buttonLink: "https://pay.hotmart.com/A100523908T", // Link do pacote completo
+      buttonLink: "https://pay.hotmart.com/A100523908T", // Link do sistema completo
       buttonClasses:
         "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
    hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
@@ -120,8 +119,8 @@ export const categories = [
 
     comboDetails: {
       header: {
-        title: "Premium Combo",
-        subtitle: "Pacote",
+        title: "Premium",
+        subtitle: "Sistema",
         image: comboPackageSaude,
       },
       included: {
@@ -139,7 +138,7 @@ export const categories = [
         line1: "POR QUE ESCOLHER O",
         paragraph:
           " Cada curso desbloqueia um novo nível de potêncial do seu corpo e da sua saúde.",
-        line2: "PACOTE COMPLETO?",
+        line2: "SISTEMA PREMIUM?",
       },
       benefits: [
         { title: "Módulo 1", text: "Reprograma seus hábitos diários." },
@@ -164,8 +163,8 @@ export const categories = [
     //            INÍCIO DO OBJETO 'FINANCEIRO' ATUALIZADO
     // ==========================================================
     slug: "financeiro",
-    title: "Financeiro",
-    subtitle: "A Jornada: Do Primeiro Real ao Império.",
+    title: "DO PRIMEIRO REAL AO IMPÉRIO",
+    subtitle: " ",
     heroImage: heroFinanceiroImg, // ⚠️ Substitua pelo nome da sua variável de imagem
     gradient:
       "bg-[radial-gradient(circle_at_0%_0%,_#f8fdf4,_#9efa93,_#61cd51)]",
@@ -184,9 +183,9 @@ export const categories = [
     },
 
     finalCta: {
-      title: "A TRANSFORMAÇÃO COMPLETA:",
+      title: "PORQUE ESCOLHER O SISTEMA PREMIUM?",
       mainParagraph:
-        "Quando esses cursos se combinam, a transformação financeira se torna inevitável. As mudanças de mentalidade criam a coragem para começar. As habilidades empreendedoras criam a renda para investir. As estratégias de investimento criam riqueza geracional. Isso não é apenas sobre ter mais dinheiro - é sobre conquistar a liberdade, confiança e paz de espírito que vem com a verdadeira maestria financeira. É assim que pessoas comuns constroem impérios.",
+        "Quando esses módulos se combinam, a transformação financeira se torna inevitável. As mudanças de mentalidade criam a coragem para começar. As habilidades empreendedoras criam a renda para investir. As estratégias de investimento criam riqueza geracional. Isso não é apenas sobre ter mais dinheiro - é sobre conquistar a liberdade, confiança e paz de espírito que vem com a verdadeira maestria financeira. É assim que pessoas comuns constroem impérios.",
       price: {
         original: "R$675,00",
         installments: "12x de R$52,75*",
@@ -194,14 +193,14 @@ export const categories = [
       },
       productImage: comboProductsImage, // Use a imagem correta dos seus produtos
       bonusParagraph:
-        "Ao garantir o Pacote Completo da Transformação Financeira você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
-      buttonText: "QUERO GARANTIR O PACOTE",
+        "Ao garantir o seu Sistema Premium da Transformação Financeira você recebe acesso aos três módulos do sistema do programa e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+      buttonText: "QUERO GARANTIR O SISTEMA COMPLETO",
 
       // 👇 PROPRIEDADES ADICIONADAS E CORRIGIDAS
       gradient: "bg-[linear-gradient(to_bottom,_#065f46,_#10b981)]",
       textColor: "text-white",
       borderColor: "border-white",
-      buttonLink: "https://pay.hotmart.com/M100510960L", // Coloque o link do pacote completo aqui
+      buttonLink: "https://pay.hotmart.com/M100510960L", // Coloque o link do sistema completo aqui
       buttonClasses:
         "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
    hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
@@ -209,8 +208,8 @@ export const categories = [
 
     comboDetails: {
       header: {
-        title: "Premium Combo",
-        subtitle: "Pacote",
+        title: "Premium",
+        subtitle: "Sistema",
         image: comboPackageFinanceiro,
       }, // ⚠️ Substitua pelo nome da sua variável de imagem
       included: {
@@ -229,7 +228,7 @@ export const categories = [
         line1: "POR QUE ESCOLHER O",
         paragraph:
           "Descubra como libertar-se do ciclo salário a salário e construir riqueza que cresce enquanto você dorme.",
-        line2: "PACOTE COMPLETO?",
+        line2: "SISTEMA PREMIUM?",
       },
       benefits: [
         { title: "Módulo 1", text: "Reprograma sua consciência de riqueza." },
@@ -261,8 +260,8 @@ export const categories = [
 
   {
     slug: "conquista",
-    title: "Conquista",
-    subtitle: "Seus sonhos merecem um plano que realmente funciona",
+    title: "TRANSFORME SEUS MAIORES SONHOS",
+    subtitle: " ",
     heroImage: conquistaImg,
     gradient:
       "bg-[radial-gradient(circle_at_0%_0%,_#fbefb1,_#ffab1c,_#ffab1c,_#ff6c2e)]",
@@ -307,9 +306,9 @@ export const categories = [
     },
 
     finalCta: {
-      title: "O EFEITO MULTIPLICAÇÃO DO SUCESSO:",
+      title: "PORQUE ESCOLHER O SISTEMA PREMIUM?",
       mainParagraph:
-        "Quando esses cursos trabalham juntos, a conquista se torna inevitável. A clareza cria foco que corta através das distrações. As estratégias criam confiança que dissolve o medo. Os sistemas criam consistência que se transforma em resultados extraordinários. Isso não é apenas sobre marcar objetivos como concluídos – é sobre se tornar a pessoa que faz o impossível parecer fácil. É assim que pessoas comuns conquistam coisas extraordinárias.",
+        "Quando esses módulos trabalham juntos, a conquista se torna inevitável. A clareza cria foco que corta através das distrações. As estratégias criam confiança que dissolve o medo. Os sistemas criam consistência que se transforma em resultados extraordinários. Isso não é apenas sobre marcar objetivos como concluídos – é sobre se tornar a pessoa que faz o impossível parecer fácil. É assim que pessoas comuns conquistam coisas extraordinárias.",
       price: {
         original: "R$675,00",
         installments: "12x de R$52,75*",
@@ -317,8 +316,8 @@ export const categories = [
       },
       productImage: comboProductsImage,
       bonusParagraph:
-        "Ao garantir o Pacote Completo do Sistema de Conquista você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
-      buttonText: "QUERO GARANTIR O PACOTE",
+        "Ao garantir o seu Sistema Premium de Conquista você recebe acesso aos três módulos do sistema do programa e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+      buttonText: "QUERO GARANTIR O SISTEMA COMPLETO",
       gradient: "bg-gradient-to-r from-[#8c2100] via-[#d14900] to-[#ff6c2e]",
       textColor: "text-white",
       borderColor: "border-white",
@@ -330,8 +329,8 @@ export const categories = [
 
     comboDetails: {
       header: {
-        title: "PREMIUM COMBO",
-        subtitle: "Pacote",
+        title: "PREMIUM",
+        subtitle: "Sistema",
         image: comboPackageConquista,
       },
       included: {
@@ -349,7 +348,7 @@ export const categories = [
         line1: "POR QUE ESCOLHER O",
         paragraph:
           "Transforme seus sonhos em objetivos possíveis através de sistemas comprovados.",
-        line2: "PACOTE COMPLETO?",
+        line2: "SISTEMA PREMIUM?",
       },
       benefits: [
         {
@@ -381,9 +380,8 @@ export const categories = [
 
   {
     slug: "autoestima",
-    title: "Autoestima",
-    subtitle:
-      "Não é sobre fingir confiança, é construir um valor real que ninguém pode tirar de você.",
+    title: "Desenvolva uma confiança inabalável",
+    subtitle: " ",
     heroImage: autoestimaImg,
     gradient:
       "bg-[radial-gradient(circle_at_0%_0%,_#eac7ff,_#bc6cff,_#7d3cb5)]",
@@ -428,9 +426,9 @@ export const categories = [
     },
 
     finalCta: {
-      title: "O EFEITO COMPOSTO DA CONFIANÇA:",
+      title: "PORQUE ESCOLHER O SISTEMA PREMIUM?",
       mainParagraph:
-        "Quando esses cursos se unem, algo profundo acontece. A autoconfiança cria compaixão que derrete anos de crítica. A nova história cria permissão para brilhar sem pedir desculpas. As práticas diárias criam evidências que provam seu valor além de qualquer dúvida. Isso não é apenas sobre se sentir melhor – é sobre finalmente se tornar quem você deveria ser antes que o mundo te dissesse o contrário. É assim que pessoas que nunca se sentiram boas o suficiente se tornam imparáveis.",
+        "Quando esses módulos se unem, algo profundo acontece. A autoconfiança cria compaixão que derrete anos de crítica. A nova história cria permissão para brilhar sem pedir desculpas. As práticas diárias criam evidências que provam seu valor além de qualquer dúvida. Isso não é apenas sobre se sentir melhor – é sobre finalmente se tornar quem você deveria ser antes que o mundo te dissesse o contrário. É assim que pessoas que nunca se sentiram boas o suficiente se tornam imparáveis.",
       price: {
         original: "R$675,00",
         installments: "12x de R$52,75*",
@@ -438,8 +436,8 @@ export const categories = [
       },
       productImage: comboProductsImage,
       bonusParagraph:
-        "Ao garantir o Pacote Completo de Transformação do Autovalor você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
-      buttonText: "QUERO GARANTIR O PACOTE",
+        "Ao garantir o seu Sistema Premium de Transformação do Autovalor você recebe acesso aos três módulos do sistema do programa e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+      buttonText: "QUERO GARANTIR O SISTEMA COMPLETO",
       // ✅ PADRONIZADO
       gradient: "bg-gradient-to-r from-[#4c007a] via-[#7e22ce] to-[#c084fc]",
       textColor: "text-white",
@@ -452,8 +450,8 @@ export const categories = [
 
     comboDetails: {
       header: {
-        title: "PREMIUM COMBO",
-        subtitle: "Pacote",
+        title: "PREMIUM",
+        subtitle: "Sistema",
         image: comboPackageAutoestima,
       },
       included: {
@@ -471,7 +469,7 @@ export const categories = [
         line1: "POR QUE ESCOLHER O",
         paragraph:
           "Aprenda a brilhar sem pedir desculpas – é sobre finalmente se tornar quem você deveria ser.",
-        line2: "PACOTE COMPLETO?",
+        line2: "SISTEMA PREMIUM?",
       },
       benefits: [
         {
@@ -505,8 +503,7 @@ export const categories = [
   {
     slug: "relacionamento",
     title: "Relacionamento",
-    subtitle:
-      "Seu padrão no amor não é má sorte - é programação que você pode mudar!",
+    subtitle: " ",
     heroImage: heroRelacionamentoImg,
     gradient:
       "bg-[radial-gradient(circle_at_0%_0%,_#fecaca,_#f87171,_#dc2626)]",
@@ -525,9 +522,9 @@ export const categories = [
       textColor: "text-white",
     },
     finalCta: {
-      title: "O EFEITO MULTIPLICAÇÃO DO AMOR:",
+      title: "PORQUE ESCOLHER O SISTEMA PREMIUM?",
       mainParagraph:
-        "Quando esses cursos trabalham juntos, os relacionamentos se tornam mágicos. Os padrões curados criam espaço para o amor real crescer. As habilidades de comunicação criam segurança onde a vulnerabilidade se torna força. A mentalidade de crescimento transforma conflitos em catalisadores para conexão mais profunda. Isso não é apenas sobre encontrar ou consertar amor - é sobre se tornar alguém que cria relacionamentos extraordinários naturalmente. É assim que pessoas que foram feridas se tornam curadoras do amor.",
+        "Quando esses módulos trabalham juntos, os relacionamentos se tornam mágicos. Os padrões curados criam espaço para o amor real crescer. As habilidades de comunicação criam segurança onde a vulnerabilidade se torna força. A mentalidade de crescimento transforma conflitos em catalisadores para conexão mais profunda. Isso não é apenas sobre encontrar ou consertar amor - é sobre se tornar alguém que cria relacionamentos extraordinários naturalmente. É assim que pessoas que foram feridas se tornam curadoras do amor.",
       price: {
         original: "R$ 675,00",
         installments: "12x de R$52,75*",
@@ -535,20 +532,20 @@ export const categories = [
       },
       productImage: comboProductsImage, // Use a imagem correta do combo
       bonusParagraph:
-        "Ao garantir o Pacote Completo de Transformação Relacional você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
-      buttonText: "QUERO GARANTIR O PACOTE",
+        "Ao garantir o seu Sistema Premium de Intimidade Total você recebe acesso aos três módulos do sistema do programa e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+      buttonText: "QUERO GARANTIR O SISTEMA COMPLETO",
       gradient: "bg-gradient-to-r from-[#7f1d1d] via-[#b91c1c] to-[#ef4444]",
       textColor: "text-white",
       borderColor: "border-white",
-      buttonLink: "https://pay.hotmart.com/D100554896F", // Inserir link do pacote
+      buttonLink: "https://pay.hotmart.com/D100554896F", // Inserir link do sistema
       buttonClasses:
         "bg-black/50 backdrop-blur-md border border-white/20 text-white shadow-lg \
    hover:bg-black/50 hover:border-white/40 hover:scale-105 active:scale-95 transition-all duration-300 px-8 py-4 rounded-full font-ttnorms font-bold uppercase",
     },
     comboDetails: {
       header: {
-        title: "Premium Combo",
-        subtitle: "Pacote",
+        title: "Premium",
+        subtitle: "Sistema",
         image: comboPackageRelacionamento,
       },
       included: {
@@ -560,13 +557,13 @@ export const categories = [
           "<strong>Bônus: E-book grátis</strong> da nossa coleção especialmente selecionada + <strong>Caderno de exercícios + Sistema Revolucionário</strong> - liberte-se de padrões tóxicos e construa amor que se aprofunda com o tempo.",
         ],
         buttonText: "COMEÇAR MINHA TRANSFORMAÇÃO COMPLETA",
-        buttonLink: "https://pay.hotmart.com/D100554896F", // Inserir link do pacote
+        buttonLink: "https://pay.hotmart.com/D100554896F", // Inserir link do sistema
       },
       why: {
         line1: "POR QUE ESCOLHER O",
         paragraph:
           "Aprenda a construir o amor que você sempre quis, começando por dentro.",
-        line2: "PACOTE COMPLETO?",
+        line2: "SISTEMA PREMIUM?",
       },
       benefits: [
         {
@@ -587,7 +584,7 @@ export const categories = [
     },
     callToAction: {
       text: 'CRIE NATURALMENTE RELACIONAMENTOS EXTRAORDINÁRIOS, PASSANDO DE UMA PESSOA QUE FOI FERIDA, PARA ALGUÉM QUE SE TORNA "CURADORA DO AMOR".',
-      buttonText: "VIVER UM AMOR DE VERDADE",
+      buttonText: "QUERO VIVER UM AMOR DE VERDADE",
       gradient: "bg-gradient-to-r from-red-500 to-rose-500",
       textColor: "text-white",
       buttonClasses: "bg-rose-900 text-white border-rose-900 hover:bg-rose-800",
@@ -662,8 +659,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos abrangentes",
-          "Todo o conteúdo em vídeo do Módulo 1",
+          "Módulo 1 completo em vídeo",
           "Checklist semanal de transformação",
           "Plano de ação personalizado de 90 dias",
           "BÔNUS: E-book gratuito da nossa coleção especialmente selecionada + Caderno de exercícios",
@@ -738,9 +734,9 @@ export const courses = [
       inclusions: {
         title: "O QUE ESTÁ INCLUSO?",
         items: [
-          "7 módulos progressivos",
+          "7 Tópicos progressivos",
           "Plano de treino 5Km completo",
-          "Todo o conteúdo do Módulo 2 em vídeo",
+          "Todo conteúdo em vídeo",
         ],
         price: {
           original: "R$ 297,00",
@@ -805,15 +801,15 @@ export const courses = [
           "Quebrando platos de performance cientificamente",
           "Correndo forte através das décadas (adaptações específicas por idade)",
           "Estratégias de nutrição de alta performance",
-          "A dimensão mental e espiritual da ultra performance",
+          "A dimensão mental da ultra performance",
         ],
       },
       inclusions: {
         title: "O QUE ESTÁ INCLUSO:",
         items: [
-          "7 módulos avançados",
+          "7 Tópicos avançados",
           "Protocolos e planos de treino elite",
-          "Todo o conteúdo do Módulo 3 em vídeo",
+          "Todo conteúdo em vídeo",
         ],
         price: {
           original: "R$ 297,00",
@@ -887,8 +883,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "7 módulos poderosos em vídeo",
-          "Todo o conteúdo em vídeo do Módulo 1",
+          "7 tópicos poderosos em vídeo",
           "Diagnósticos e calculadoras financeiras completas.",
           "Roteiro personalizado de liberdade para 5 anos",
           "BÔNUS: E-book gratuito da nossa coleção especialmente selecionada + caderno de exercícios",
@@ -964,8 +959,8 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos abrangentes",
-          "Todo o conteúdo em vídeo do Módulo 2",
+          "6 tópicos abrangentes",
+          "Todo conteúdo em vídeo",
           "Templates de criação de produtos e sistemas",
           "Roteiro de escala do zero aos milhões",
         ],
@@ -1041,8 +1036,8 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos avançados",
-          "Todo o conteúdo em vídeo do Módulo 3",
+          "6 tópicos avançados",
+          "Todo conteúdo em vídeo",
           "Calculadoras de investimento e templates de carteira",
           "Roteiro com cronogramas para alcançar o milhão",
         ],
@@ -1115,7 +1110,7 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos transformadores",
+          "6 tópicos transformadores",
           "Todo o conteúdo em vídeo do Módulo 1",
           "Ferramentas de avaliação da Zona de Gênio",
           "Roteiro de transformação de 90 dias",
@@ -1189,8 +1184,8 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos estratégicos",
-          "Todo o conteúdo em vídeo do Módulo 2",
+          "6 tópicos estratégicos",
+          "Todo conteúdo em vídeo",
           "Templates e ferramentas completas de planejamento",
         ],
         price: {
@@ -1262,8 +1257,8 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 Módulos Práticos",
-          "Todo o conteúdo em vídeo do Módulo 3",
+          "6 tópicos práticos",
+          "Todo conteúdo em vídeo",
           "Templates e ferramentas para acompanhamento de hábitos",
           "Protocolos personalizados de execução",
         ],
@@ -1335,8 +1330,8 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos transformadores",
-          "Todo o conteúdo em vídeo do Módulo 1 em Vídeo",
+          "6 tópicos transformadores",
+          "Todo o conteúdo em vídeo",
           "Ferramentas completas de avaliação de autoestima",
           "Roteiro de transformação de 90 dias",
           "BÔNUS: E-book gratuito da nossa coleção especialmente selecionada + caderno de exercícios",
@@ -1409,7 +1404,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos poderosos",
-          "Todo o conteúdo em vídeo do Módulo 2",
+          "Todo conteúdo em vídeo",
           "Templates de transformação de história",
           "Ferramentas de reconstrução de narrativa pessoal",
         ],
@@ -1480,8 +1475,8 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos práticos",
-          "Todo o conteúdo em vídeo do Módulo 3",
+          "6 tópicos práticos",
+          "Todo conteúdo em vídeo",
           "Templates de práticas diárias e ferramentas de acompanhamento",
           "Scripts de limites e guias de comunicação",
         ],
@@ -1552,10 +1547,10 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos transformadores",
-          "Todo o conteúdo do Módulo 1 em vídeo",
+          "6 tópicos transformadores",
+          "Todo o conteúdo em vídeo",
           "Ferramentas completas de mapeamento emocional",
-          "Roteiro de quebra de padrões de 90 diasncontros Conscientes",
+          "Roteiro de quebra de padrões de 90 dias",
           "BÔNUS: E-book GRÁTIS da nossa coleção especialmente selecionada + Caderno de exercícios",
         ],
         price: {
@@ -1624,7 +1619,7 @@ export const courses = [
         title: "O que está incluso:",
         items: [
           "6 módulos poderosos",
-          "Todo o conteúdo em vídeo do Módulo 2",
+          "Todo conteúdo em vídeo",
           "Scripts e templates completos de comunicação",
           "Exercícios de construção de intimidade",
         ],
@@ -1694,8 +1689,8 @@ export const courses = [
       inclusions: {
         title: "O que está incluso:",
         items: [
-          "6 módulos práticos",
-          "Todo o conteúdo em vídeo do Módulo 3",
+          "6 tópicos práticos",
+          "Todo conteúdo em vídeo",
           "Avaliações de evolução relacional",
           "Templates de acordos conscientes de casal",
         ],
@@ -1716,10 +1711,10 @@ export const courses = [
     title: "Sistema Corrida Pra Vida",
     comboTitle:
       "Sistema Corrida Pra Vida: Do sedentário à performance de elite",
-    heading: "Pacote Premium",
+    heading: "Sistema Premium",
     imageSrc: comboPackageSaude,
     description:
-      "Pacote Completo de Transformação da Saúde: receba todos os 3 módulos + Materiais Completos para máximos resultados.",
+      "Seu sistema de Transformação da Saúde: Faça os 3 módulos + materiais completos para máximos resultados.",
     priceInstallments: "12x de R$ 52,75*",
     priceFull: "R$ 510,00",
     purchaseLink: "https://pay.hotmart.com/A100523908T",
@@ -1742,7 +1737,7 @@ export const courses = [
     categorySlug: "financeiro",
     title: "Sistema Escape",
     comboTitle: "Sistema Escape: Construa Renda Automática Começando Hoje",
-    heading: "Pacote Premium",
+    heading: "Sistema Premium",
     imageSrc: comboPackageFinanceiro, // ⚠️ Importe e use a variável da imagem do Combo Card
     description:
       "Domine todos os 3 módulos + Materiais para Liberdade Financeira Total.",
@@ -1769,10 +1764,10 @@ export const courses = [
     title: "Sistema Anti-Desistência",
     comboTitle:
       "Sistema Anti-Desistência: Transforme Seus Maiores Sonhos em Conquistas Inevitáveis",
-    heading: "Pacote Premium",
+    heading: "Sistema Premium",
     imageSrc: comboPackageConquista, // Importe corretamente essa imagem se ainda não tiver
     description:
-      "Domine a Ciência de Transformar Sonhos em Realidade. Receba todos os 3 módulos + Materiais Completos.",
+      " Domine a Ciência de Transformar Sonhos em Realidade. Faça os 3 módulos + materiais.",
     priceInstallments: "12x de R$ 52,75*",
     priceFull: "R$ 510,00",
     purchaseLink: "https://pay.hotmart.com/P100552916T",
@@ -1797,7 +1792,7 @@ export const courses = [
     title: "Sistema Anti-Insegurança",
     comboTitle:
       "Sistema Anti-Insegurança: Transforme Suas Dúvidas em Confiança que Ninguém Derruba",
-    heading: "Pacote Premium",
+    heading: "Sistema Premium",
     imageSrc: comboPackageAutoestima,
     description:
       "Acesso completo aos 3 cursos para construir uma confiança inabalável e transformar seu autovalor.",
@@ -1824,10 +1819,10 @@ export const courses = [
     title: "Sistema Intimidade Total",
     comboTitle:
       "Sistema Intimidade Total: Transforme Qualquer Relacionamento em Algo Extraordinário",
-    heading: "Pacote Premium",
+    heading: "Sistema Premium",
     imageSrc: comboPackageRelacionamento,
     description:
-      "Pacote Completo de Transformação Relacional receba todos os 3 módulos + Materiais de Padrões Tóxicos para Amor Consciente Que Evolui",
+      "Seu Sistema Premium de Intimidade total, tenha acesso aos 3 módulos + materiais de padrões tóxicos para Amor Consciente que Evolui.",
     priceInstallments: "12x de R$ 52,75*",
     priceFull: "R$ 510,00",
     purchaseLink: "https://pay.hotmart.com/D100554896F",

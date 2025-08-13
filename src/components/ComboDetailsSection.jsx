@@ -30,7 +30,7 @@ function ComboDetailsSection({ content, id }) {
           <div className="md:w-1/2 flex justify-center md:justify-start">
             <img
               src={content.header.image}
-              alt="Pacote Combo"
+              alt="Sistema Combo"
               className="w-full max-w-sm rounded-lg"
             />
           </div>

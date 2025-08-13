@@ -1,8 +1,8 @@
 // FinalCtaSection.jsx - VERSÃO REATORADA
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import React from "react";
+import { motion } from "framer-motion";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 function FinalCtaSection({ content }) {
   if (!content) {
@@ -37,21 +37,33 @@ function FinalCtaSection({ content }) {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mt-16 max-w-4xl mx-auto">
           <div className="md:w-1/3 text-center md:text-right">
             <h3 className="font-league text-center text-5xl md:text-6xl uppercase leading-none">
-              Preço <br /> Especial do <br /> Pacote:
+              Preço <br /> especial de <br /> pré-lançamento:
             </h3>
           </div>
 
           <div className="md:w-2/3 flex justify-center md:justify-start">
             {/* 3. Cor do texto e bordas dos preços agora são dinâmicos */}
-            <div className={`flex flex-col items-center gap-3 font-ttnorms ${content.textColor} w-full`}>
-              <p className="text-xl line-through opacity-80">De {content.price.original}</p>
+            <div
+              className={`flex flex-col items-center gap-3 font-ttnorms ${content.textColor} w-full`}
+            >
+              <p className="text-xl line-through opacity-80">
+                De {content.price.original}
+              </p>
               <p className="text-xl font-semibold">por 12x de</p>
-              <div className={`border-2 ${content.borderColor} rounded-full px-8 py-3 w-full max-w-xs text-center`}>
-                <p className="font-bold text-4xl sm:text-5xl">{content.price.installments}</p>
+              <div
+                className={`border-2 ${content.borderColor} rounded-full px-8 py-3 w-full max-w-xs text-center`}
+              >
+                <p className="font-bold text-4xl sm:text-5xl">
+                  {content.price.installments}
+                </p>
               </div>
               <p className="text-xl font-bold uppercase">ou</p>
-              <div className={`border-2 ${content.borderColor} rounded-full px-8 py-3 w-full max-w-xs text-center`}>
-                <p className="font-bold text-4xl sm:text-5xl">{content.price.full}</p>
+              <div
+                className={`border-2 ${content.borderColor} rounded-full px-8 py-3 w-full max-w-xs text-center`}
+              >
+                <p className="font-bold text-4xl sm:text-5xl">
+                  {content.price.full}
+                </p>
               </div>
               <p className="text-xl font-semibold">à vista</p>
             </div>
@@ -61,10 +73,16 @@ function FinalCtaSection({ content }) {
         {/* SEÇÃO DOS PRODUTOS INCLUSOS */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-12 max-w-4xl mx-auto">
           <div className="w-full md:w-1/2 flex justify-center">
-            <img src={content.productImage} alt="Produtos do combo" className="max-w-xs w-full"/>
+            <img
+              src={content.productImage}
+              alt="Produtos do combo"
+              className="max-w-xs w-full"
+            />
           </div>
           <div className="w-full md:w-1/2 text-center md:text-left">
-            <p className="font-ttnorms text-lg leading-relaxed">{content.bonusParagraph}</p>
+            <p className="font-ttnorms text-lg leading-relaxed">
+              {content.bonusParagraph}
+            </p>
           </div>
         </div>
 

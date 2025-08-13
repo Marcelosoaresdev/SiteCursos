@@ -18,16 +18,16 @@ function CategoryHero({
     const phrases = {
       "Energia e Disciplina":
         "Domine os pilares fundamentais de uma saúde física impecável e desperte seu máximo potencial",
-      "Saúde Física":
-        "Domine os pilares fundamentais de uma saúde física impecável e desperte seu máximo potencial",
-      Financeiro:
+      "CORRIDA PRA VIDA":
+        "Do primeiro passo ao pódio, domine os pilares fundamentais de uma saúde física impecável e desperte seu máximo potencial.",
+      "DO PRIMEIRO REAL AO IMPÉRIO":
         "Construa uma mentalidade milionária e conquiste sua independência financeira total",
-      Conquista:
-        "Transforme seus maiores sonhos em conquistas inevitáveis através de estratégias comprovadas",
-      Autoestima:
-        "Desenvolva uma confiança inabalável e torne-se a versão mais poderosa de si mesmo",
-      Relacionamento:
-        "Crie conexões profundas e relacionamentos extraordinários que duram para sempre",
+      "TRANSFORME SEUS MAIORES SONHOS":
+        "Em conquistas inevitáveis através de estratégias comprovadas, seus sonhos merecem um plano que realmente funcione.",
+      "Confiança inabalável":
+        "Desenvolva uma confiança inabalável e torne-se a versão mais poderosa de si mesmo. Não é sobre fingir confiança, é construir um valor real que ninguém pode tirar de você.",
+      "CRIE CONEXÕES":
+        "Profundas e relacionamentos extraordinários que duram para sempre, seu padrão no amor não é má sorte - é programação que pode mudar!",
     };
     return (
       phrases[categoryTitle] ||
