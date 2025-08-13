@@ -79,7 +79,10 @@ function CategoryPage() {
           </div>
         ))}
       </div>
-      <CallToActionSection content={categoryData.callToAction} />
+      <CallToActionSection
+        content={categoryData.callToAction}
+        comboLink={categoryData.finalCta?.buttonLink}
+      />
       <TestimonialSection
         backgroundClass={categoryData.sectionBackgroundColor}
       />

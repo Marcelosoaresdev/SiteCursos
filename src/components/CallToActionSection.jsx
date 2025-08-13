@@ -1,8 +1,6 @@
 // src/components/CallToActionSection.jsx - MODIFICADO
 
 import React from "react";
-// 1. Importe o hook que detecta a versão de estudante
-import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
 
 // Componente para a textura de ruído SVG (continua o mesmo)
 const SvgNoiseTexture = () => (
@@ -22,21 +20,20 @@ const SvgNoiseTexture = () => (
   </svg>
 );
 
-function CallToActionSection({ content }) {
-  // 2. Chame o hook para saber em qual página estamos
-  const isStudentVersion = useIsStudentVersion();
-
+function CallToActionSection({ content, comboLink }) {
   if (!content) {
     return null;
   }
 
-  const handleScrollToCourses = () => {
-    // 3. LÓGICA CONDICIONAL: Escolhe o ID do alvo com base na página
-    const targetId = isStudentVersion
-      ? "student-courses-section" // ID para a página de universitários
-      : "courses-section"; // ID para as páginas normais de categoria
-
-    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+  const handleButtonClick = () => {
+    if (comboLink) {
+      // Se temos o link do combo, abre em nova aba
+      window.open(comboLink, "_blank");
+    } else {
+      // Fallback: scroll para a seção de cursos
+      const targetId = "courses-section";
+      document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -51,7 +48,7 @@ function CallToActionSection({ content }) {
           {content.text}
         </h2>
         <button
-          onClick={handleScrollToCourses}
+          onClick={handleButtonClick}
           className={`mt-12 font-bold uppercase rounded-full text-lg px-12 py-5 border-2 transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl ${content.buttonClasses}`}
         >
           {content.buttonText}
