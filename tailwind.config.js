@@ -39,7 +39,7 @@ export default {
       // Aqui definimos nossas fontes customizadas
       fontFamily: {
         league: ["League Gothic", "sans-serif"], // Nomes que vamos usar nas classes
-        ttnorms: ["TT Norms", "sans-serif"],
+        ttnorms: ["Inter", "sans-serif"],
         allura: ["Allura", "cursive"],
       },
       keyframes: {

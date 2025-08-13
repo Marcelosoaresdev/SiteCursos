@@ -1,10 +1,58 @@
 import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
 import leaoImage from "../assets/leao.webp";
 import universitariosImage from "../assets/estudante.webp";
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect, useState } from "react";
 
 function HeroSection() {
   const isStudentVersion = useIsStudentVersion();
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  // Preload da imagem relevante
+  useEffect(() => {
+    const imageToPreload = isStudentVersion ? universitariosImage : leaoImage;
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = imageToPreload;
+    document.head.appendChild(link);
+    
+    return () => {
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+    };
+  }, [isStudentVersion]);
+
+  // Font Loading API para evitar FOUT
+  useEffect(() => {
+    const loadFonts = async () => {
+      try {
+        // Verifica se as fontes estão disponíveis
+        if ('fonts' in document) {
+          await Promise.allSettled([
+            document.fonts.load('400 1em "League Gothic"'),
+            document.fonts.load('400 1em "Allura"'),
+            document.fonts.load('400 1em "Inter"'),
+          ]);
+          
+          setFontsLoaded(true);
+          document.documentElement.classList.add('fonts-loaded');
+        } else {
+          // Fallback para navegadores sem Font Loading API
+          setTimeout(() => {
+            setFontsLoaded(true);
+            document.documentElement.classList.add('fonts-loaded');
+          }, 100);
+        }
+      } catch (error) {
+        console.warn('Font loading failed:', error);
+        setFontsLoaded(true);
+        document.documentElement.classList.add('fonts-loaded');
+      }
+    };
+
+    loadFonts();
+  }, []);
 
   const handleScrollDown = () => {
     // Tenta encontrar a próxima seção na ordem de prioridade
@@ -94,10 +142,10 @@ function HeroSection() {
       {/* === MOBILE === */}
       <div className="lg:hidden flex flex-col min-h-screen pt-16 pb-8 px-6 relative z-10 text-center items-center justify-between">
         <div className="flex-1 flex flex-col justify-center items-center">
-          <h1 className="font-league text-5xl sm:text-6xl uppercase tracking-tight leading-none mb-2 text-white drop-shadow-md">
+          <h1 className={`font-league text-5xl sm:text-6xl uppercase tracking-tight leading-none mb-2 text-white drop-shadow-md hero-text ${!fontsLoaded ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}`}>
             {content.mainTitle}
           </h1>
-          <h2 className="font-league text-[5rem] sm:text-[6.5rem] uppercase leading-[0.85] tracking-tighter text-white drop-shadow-lg mb-8">
+          <h2 className={`font-league text-[5rem] sm:text-[6.5rem] uppercase leading-[0.85] tracking-tighter text-white drop-shadow-lg mb-8 hero-text ${!fontsLoaded ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}`}>
             {content.subTitle}
           </h2>
 
@@ -163,10 +211,10 @@ function HeroSection() {
       {/* === DESKTOP === */}
       <div className="hidden lg:flex min-h-screen items-center relative z-10">
         <div className="flex-1 flex flex-col justify-center pl-20 z-20">
-          <h1 className="font-league text-7xl xl:text-8xl uppercase tracking-tight leading-none mb-4 text-white drop-shadow-md">
+          <h1 className={`font-league text-7xl xl:text-8xl uppercase tracking-tight leading-none mb-4 text-white drop-shadow-md hero-text ${!fontsLoaded ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}`}>
             {content.mainTitle}
           </h1>
-          <h2 className="font-league text-[12rem] leading-[0.85] uppercase tracking-tighter mb-16 drop-shadow-[8px_8px_0_rgba(0,0,0,0.4)]">
+          <h2 className={`font-league text-[12rem] leading-[0.85] uppercase tracking-tighter mb-16 drop-shadow-[8px_8px_0_rgba(0,0,0,0.4)] hero-text ${!fontsLoaded ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}`}>
             {content.subTitle}
           </h2>
 
