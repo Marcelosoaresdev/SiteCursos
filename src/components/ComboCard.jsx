@@ -100,12 +100,12 @@ function ComboCard({
   // Função para dividir o comboTitle em duas partes
   const splitComboTitle = (title) => {
     if (!title) return { mainTitle: "Combo", subtitle: "" };
-    
+
     const parts = title.split(": ");
     if (parts.length >= 2) {
       return {
         mainTitle: parts[0],
-        subtitle: parts.slice(1).join(": ")
+        subtitle: parts.slice(1).join(": "),
       };
     }
     return { mainTitle: title, subtitle: "" };

@@ -106,7 +106,7 @@ export const categories = [
       },
       productImage: comboProductsImage,
       bonusParagraph:
-        "Ao garantir o Pacote Completo da Transformação Financeira você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e um caderno de exercícios especial,  escrito por Flávia Cavalcante.",
+        "Ao garantir o Pacote Completo da Transformação da Saúde você recebe acesso aos três cursos do programa e ainda leva gratuitamente um e-book e um caderno de exercícios especial,  escrito por Flávia Cavalcante.",
       buttonText: "Aproveitar o Combo com 3 Cursos",
       gradient: "bg-saude-gradient", // Já existia, vamos usar
       textColor: "text-saude-dark-blue",
