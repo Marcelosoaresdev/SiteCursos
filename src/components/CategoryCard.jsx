@@ -38,7 +38,7 @@ function CategoryCard({
       </h3>
 
       {/* DESCRIÇÃO */}
-      <p className="z-10 text-sm lg:text-base font-ttnorms mt-2 text-text-light/70 group-hover/card:text-white/90 duration-500">
+      <p className="z-10 text-xs lg:text-base font-ttnorms mt-2 text-text-light/70 group-hover/card:text-white/90 duration-500">
         {description}
       </p>
 
