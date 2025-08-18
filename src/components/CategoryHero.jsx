@@ -60,7 +60,6 @@ function CategoryHero({
     };
   }, [heroImage]);
 
-
   // Frase de impacto baseada na categoria
   const getImpactPhrase = (categoryTitle) => {
     const phrases = {
@@ -158,17 +157,19 @@ function CategoryHero({
           {/* Título e subtítulo com animação de carregamento de fonte */}
           <div className="space-y-6 max-w-md">
             {/* Título principal */}
-            <h1 className={`font-league text-5xl sm:text-5xl uppercase leading-tight font-extrabold drop-shadow-md text-left hero-text ${
-              !fontsLoaded
-                ? "opacity-0"
-                : "opacity-100 transition-opacity duration-300"
-            }`}>
+            <h1
+              className={`font-league text-5xl sm:text-5xl uppercase  text-centerleading-tight font-extrabold drop-shadow-md text-center hero-text ${
+                !fontsLoaded
+                  ? "opacity-0"
+                  : "opacity-100 transition-opacity duration-300"
+              }`}
+            >
               <span className={`${titleColor1}`}>{title}</span>
             </h1>
 
             {/* Frase de impacto */}
             <h2
-              className={`font-ttnorms text-xl sm:text-2xl ${titleColor1} font-bold leading-tight text-left ${
+              className={`font-ttnorms text-xl sm:text-2xl ${titleColor1} font-bold leading-tight text-center ${
                 !fontsLoaded
                   ? "opacity-0"
                   : "opacity-100 transition-opacity duration-300"
@@ -191,7 +192,7 @@ function CategoryHero({
         </div>
 
         {/* Seta para baixo - CENTRALIZADA */}
-        <div className="flex justify-center">
+        <div className="flex justify-center pb-8">
           <button
             onClick={handleScrollDown}
             className="animate-bounce bg-white/30 backdrop-blur-sm rounded-full p-4 hover:bg-white/40 transition-all duration-300 shadow-lg border border-white/20"
@@ -223,11 +224,13 @@ function CategoryHero({
         {/* Texto com animações de carregamento de fonte */}
         <div className="w-1/2 relative z-10 space-y-8">
           {/* Título principal */}
-          <h1 className={`font-league text-6xl xl:text-9xl leading-none uppercase font-extrabold tracking-tight hero-text ${
-            !fontsLoaded
-              ? "opacity-0"
-              : "opacity-100 transition-opacity duration-300"
-          }`}>
+          <h1
+            className={`font-league text-6xl xl:text-9xl leading-none uppercase font-extrabold tracking-tight hero-text ${
+              !fontsLoaded
+                ? "opacity-0"
+                : "opacity-100 transition-opacity duration-300"
+            }`}
+          >
             <span className={`${titleColor1} drop-shadow-lg`}>{title}</span>
           </h1>
 
@@ -258,12 +261,12 @@ function CategoryHero({
         <div className="relative w-1/2 flex justify-end">
           <div className="relative w-[85%] max-w-2xl">
             <div className="absolute inset-0 bg-white rounded-full blur-3xl opacity-10 animate-pulse" />
-            <img 
+            <img
               preload="true"
               fetchPriority="high"
-              src={heroImage} 
-              alt={title} 
-              className="relative w-full object-contain" 
+              src={heroImage}
+              alt={title}
+              className="relative w-full object-contain"
             />
           </div>
         </div>
