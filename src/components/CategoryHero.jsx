@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useIsStudentVersion } from "../hooks/useIsStudentVersion";
 
 function CategoryHero({
@@ -12,6 +12,54 @@ function CategoryHero({
 }) {
   // Detecta se está no modo universitário
   const isStudentVersion = useIsStudentVersion();
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  // Font Loading API para evitar FOUT (igual ao HeroSection)
+  useEffect(() => {
+    const loadFonts = async () => {
+      try {
+        // Verifica se as fontes estão disponíveis
+        if ("fonts" in document) {
+          await Promise.allSettled([
+            document.fonts.load('400 1em "League Gothic"'),
+            document.fonts.load('400 1em "Allura"'),
+            document.fonts.load('400 1em "Inter"'),
+          ]);
+
+          setFontsLoaded(true);
+          document.documentElement.classList.add("fonts-loaded");
+        } else {
+          // Fallback para navegadores sem Font Loading API
+          setTimeout(() => {
+            setFontsLoaded(true);
+            document.documentElement.classList.add("fonts-loaded");
+          }, 100);
+        }
+      } catch (error) {
+        console.warn("Font loading failed:", error);
+        setFontsLoaded(true);
+        document.documentElement.classList.add("fonts-loaded");
+      }
+    };
+
+    loadFonts();
+  }, []);
+
+  // Preload da imagem relevante
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = heroImage;
+    document.head.appendChild(link);
+
+    return () => {
+      if (document.head.contains(link)) {
+        document.head.removeChild(link);
+      }
+    };
+  }, [heroImage]);
+
 
   // Frase de impacto baseada na categoria
   const getImpactPhrase = (categoryTitle) => {
@@ -66,7 +114,7 @@ function CategoryHero({
     >
       {/* Padrão de grade no fundo */}
       <div
-        className="absolute inset-0 opacity-50 "
+        className="absolute inset-0 opacity-50 z-0"
         style={{
           backgroundImage: `
             linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px),
@@ -93,32 +141,49 @@ function CategoryHero({
       >
         {/* Conteúdo principal */}
         <div className="flex flex-col justify-center flex-1 space-y-8">
-          {/* Imagem simples - SEM efeitos */}
+          {/* Imagem com efeitos de brilho */}
           <div className="flex justify-center">
-            <img
-              src={heroImage}
-              alt={title}
-              className="w-80 sm:w-96 object-contain"
-            />
+            <div className="relative">
+              <div className="absolute inset-0 bg-white rounded-full blur-2xl opacity-20 animate-pulse" />
+              <img
+                preload="true"
+                fetchPriority="high"
+                src={heroImage}
+                alt={title}
+                className="relative w-80 sm:w-96 object-contain"
+              />
+            </div>
           </div>
 
-          {/* Título e subtítulo - SEGUNDO */}
+          {/* Título e subtítulo com animação de carregamento de fonte */}
           <div className="space-y-6 max-w-md">
             {/* Título principal */}
-            <h1 className="font-league text-5xl sm:text-5xl uppercase leading-tight font-extrabold drop-shadow-md text-left">
+            <h1 className={`font-league text-5xl sm:text-5xl uppercase leading-tight font-extrabold drop-shadow-md text-left hero-text ${
+              !fontsLoaded
+                ? "opacity-0"
+                : "opacity-100 transition-opacity duration-300"
+            }`}>
               <span className={`${titleColor1}`}>{title}</span>
             </h1>
 
             {/* Frase de impacto */}
             <h2
-              className={`font-ttnorms text-xl sm:text-2xl ${titleColor1} font-bold leading-tight text-left`}
+              className={`font-ttnorms text-xl sm:text-2xl ${titleColor1} font-bold leading-tight text-left ${
+                !fontsLoaded
+                  ? "opacity-0"
+                  : "opacity-100 transition-opacity duration-300"
+              }`}
             >
               {impactPhrase}
             </h2>
 
             {/* Texto descritivo */}
             <p
-              className={`font-ttnorms text-base sm:text-lg ${subtitleColor} leading-relaxed opacity-90 text-left`}
+              className={`font-ttnorms text-base sm:text-lg ${subtitleColor} leading-relaxed opacity-90 text-left ${
+                !fontsLoaded
+                  ? "opacity-0"
+                  : "opacity-100 transition-opacity duration-300"
+              }`}
             >
               {subtitle}
             </p>
@@ -155,31 +220,52 @@ function CategoryHero({
           isStudentVersion ? "min-h-[85vh]" : "min-h-[100vh]"
         }`}
       >
-        {/* Texto */}
+        {/* Texto com animações de carregamento de fonte */}
         <div className="w-1/2 relative z-10 space-y-8">
           {/* Título principal */}
-          <h1 className="font-league text-6xl xl:text-9xl leading-none uppercase font-extrabold tracking-tight">
+          <h1 className={`font-league text-6xl xl:text-9xl leading-none uppercase font-extrabold tracking-tight hero-text ${
+            !fontsLoaded
+              ? "opacity-0"
+              : "opacity-100 transition-opacity duration-300"
+          }`}>
             <span className={`${titleColor1} drop-shadow-lg`}>{title}</span>
           </h1>
 
           {/* Frase de impacto */}
           <h2
-            className={`font-ttnorms text-3xl ${titleColor1} font-bold leading-tight max-w-2xl`}
+            className={`font-ttnorms text-3xl ${titleColor1} font-bold leading-tight max-w-2xl ${
+              !fontsLoaded
+                ? "opacity-0"
+                : "opacity-100 transition-opacity duration-300"
+            }`}
           >
             {impactPhrase}
           </h2>
 
           {/* Texto descritivo */}
           <p
-            className={`font-ttnorms text-xl xl:text-2xl ${subtitleColor} font-medium max-w-xl leading-relaxed opacity-90`}
+            className={`font-ttnorms text-xl xl:text-2xl ${subtitleColor} font-medium max-w-xl leading-relaxed opacity-90 ${
+              !fontsLoaded
+                ? "opacity-0"
+                : "opacity-100 transition-opacity duration-300"
+            }`}
           >
             {subtitle}
           </p>
         </div>
 
-        {/* Imagem simples */}
+        {/* Imagem com efeitos de brilho */}
         <div className="relative w-1/2 flex justify-end">
-          <img src={heroImage} alt={title} className="w-[85%] max-w-2xl" />
+          <div className="relative w-[85%] max-w-2xl">
+            <div className="absolute inset-0 bg-white rounded-full blur-3xl opacity-10 animate-pulse" />
+            <img 
+              preload="true"
+              fetchPriority="high"
+              src={heroImage} 
+              alt={title} 
+              className="relative w-full object-contain" 
+            />
+          </div>
         </div>
 
         {/* Seta para baixo centralizada no desktop */}

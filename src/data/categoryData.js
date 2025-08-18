@@ -107,7 +107,7 @@ export const categories = [
       },
       productImage: comboProductsImage,
       bonusParagraph:
-        "Ao garantir o seu Sistema Premium da Corrida pra Vida você recebe acesso aos três módulos do sistema e ainda leva gratuitamente um e-book e um caderno de exercícios especial,  escrito por Flávia Cavalcante.",
+        "Ao garantir o seu Sistema Premium da Corrida pra Vida, você recebe acesso aos três módulos do sistema e ainda leva, gratuitamente, um e-book e um caderno de exercícios especial, escrito por Flávia Cavalcante.",
       buttonText: "Quero garantir o sistema completo",
       gradient: "bg-saude-gradient",
       textColor: "text-saude-dark-blue",
@@ -194,7 +194,7 @@ export const categories = [
       },
       productImage: comboProductsImage, // Use a imagem correta dos seus produtos
       bonusParagraph:
-        "Ao garantir o seu Sistema Premium da Transformação Financeira você recebe acesso aos três módulos do sistema e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+        "Ao garantir o seu Sistema Premium da Transformação Financeira, você recebe acesso aos três módulos do sistema e ainda leva, gratuitamente, um e-book e um caderno de exercícios especial, escrito por Flávia Cavalcante.",
       buttonText: "QUERO GARANTIR O SISTEMA COMPLETO",
 
       // 👇 PROPRIEDADES ADICIONADAS E CORRIGIDAS
@@ -317,7 +317,7 @@ export const categories = [
       },
       productImage: comboProductsImage,
       bonusParagraph:
-        "Ao garantir o seu Sistema Premium da Anti-Desistência você recebe acesso aos três módulos do sistema e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+        "Ao garantir o seu Sistema Premium da Anti-Desistência, você recebe acesso aos três módulos do sistema e ainda leva, gratuitamente, um e-book e um caderno de exercícios especial, escrito por Flávia Cavalcante.",
       buttonText: "QUERO GARANTIR O SISTEMA COMPLETO",
       gradient: "bg-gradient-to-r from-[#8c2100] via-[#d14900] to-[#ff6c2e]",
       textColor: "text-white",
@@ -437,7 +437,7 @@ export const categories = [
       },
       productImage: comboProductsImage,
       bonusParagraph:
-        "Ao garantir o seu Sistema Premium da Anti-Insegurança você recebe acesso aos três módulos do sistema e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+        "Garanta agora o seu Sistema Premium da Anti-Insegurança e tenha acesso aos três módulos completos! E mais: leve totalmente grátis um e-book exclusivo e um caderno de exercícios especial, escritos por Flávia Cavalcante.",
       buttonText: "QUERO GARANTIR O SISTEMA COMPLETO",
       // ✅ PADRONIZADO
       gradient: "bg-gradient-to-r from-[#4c007a] via-[#7e22ce] to-[#c084fc]",
@@ -533,7 +533,7 @@ export const categories = [
       },
       productImage: comboProductsImage, // Use a imagem correta do combo
       bonusParagraph:
-        "Ao garantir o seu Sistema Premium de Intimidade Total você recebe acesso aos três módulos do sistema e ainda leva gratuitamente um e-book e caderno de exercícios especial, escrito por Flávia Cavalcante.",
+        "Ao garantir o seu Sistema Premium de Intimidade Total, você recebe acesso aos três módulos do sistema e ainda leva, gratuitamente, um e-book e um caderno de exercícios especial, escrito por Flávia Cavalcante.",
       buttonText: "QUERO GARANTIR O SISTEMA COMPLETO",
       gradient: "bg-gradient-to-r from-[#7f1d1d] via-[#b91c1c] to-[#ef4444]",
       textColor: "text-white",
@@ -1744,7 +1744,7 @@ export const courses = [
     heading: "Sistema Premium",
     imageSrc: comboPackageFinanceiro, // ⚠️ Importe e use a variável da imagem do Combo Card
     description:
-      "Domine todos os 3 módulos + Materiais para Liberdade Financeira Total.",
+      "Seu sistema de Transformação Financeira: Faça os 3 módulos + materiais completos. Sistema para Liberdade Financeira Total.",
     priceInstallments: "12x de R$ 58,95*",
     priceFull: "R$ 570,00",
     purchaseLink: "https://pay.hotmart.com/L100489758W",
@@ -1771,7 +1771,7 @@ export const courses = [
     heading: "Sistema Premium",
     imageSrc: comboPackageConquista, // Importe corretamente essa imagem se ainda não tiver
     description:
-      " Domine a Ciência de Transformar Sonhos em Realidade. Faça os 3 módulos + materiais.",
+      "Seu sistema de Anti-Desistência: Faça os 3 módulos + materiais completos. Domine a Ciência de Transformar Sonhos em Realidade.",
     priceInstallments: "12x de R$ 58,95*",
     priceFull: "R$ 570,00",
     purchaseLink: "https://pay.hotmart.com/T100552518H",
@@ -1799,7 +1799,7 @@ export const courses = [
     heading: "Sistema Premium",
     imageSrc: comboPackageAutoestima,
     description:
-      "Seu sistema de Transformação do Autovalor Faça os 3 módulos + materiais completos Reconstrua Seu Relacionamento Consigo Desde a Base",
+      "Seu sistema de Transformação de Anti-Insegurança: Faça os 3 módulos + materiais completos. Reconstrua Seu Relacionamento Consigo, Desde a Base.",
     priceInstallments: "12x de R$ 58,95*",
     priceFull: "R$ 570,00",
     purchaseLink: "https://pay.hotmart.com/D100553828O",
